@@ -1,7 +1,9 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learnode</title>
   <link rel="canonical" href="https://www.learnode.com/">
@@ -28,199 +30,561 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- flowbite cdn  -->
   <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-</head>
-<body class="bg-gray-50">
-  <!-- header  -->
-  <header class="mb-8">
-    <nav class="bg-[#7F95D1] text-white shadow-lg">
-      <div class="max-w-7xl px-6 py-4 mx-auto flex justify-between items-center">
-        <div class="flex items-center space-x-2">
-          <div class="bg-[#7F95D1] rounded-full w-8 h-8 flex items-center justify-center">
-            <img src="images/logo1.png" alt="logo" class="w-6 h-6">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="bg-[#575366] text-white">
+        <div
+          class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+        >
+          <div class="flex items-center space-x-2">
+            <div class="bg-[#7F95D1] rounded-full w-9 h-9">
+              <img src="pages/imgs/Ellipse 4.png" alt="" />
+            </div>
+            <span class="text-lg font-bold">Learnode</span>
           </div>
-          <span class="text-lg font-bold">Learnode</span>
+          <ul class="hidden md:flex space-x-6">
+            <li><a href="#" class="hover:text-purple-400">Home</a></li>
+            <li><a href="pages/CourseEducation.html" class="hover:text-purple-400">Courses</a></li>
+            <li><a href="pages/Training Course.html" class="hover:text-purple-400">About</a></li>
+            <li><a href="pages/ContactUs.html" class="hover:text-purple-400">Contact</a></li>
+          </ul>
+          <button
+            class="bg-[#7F95D1] px-4 py-2 rounded text-white hover:bg-purple-500"
+          >
+            Login
+          </button>
         </div>
-        <ul class="hidden md:flex space-x-8">
-          <li><a href="#" class="hover:text-purple-400 transition-colors">Home</a></li>
-          <li><a href="pages/CourseEducation.html" class="hover:text-purple-400 transition-colors">Courses</a></li>
-          <li><a href="pages/Training Course.html" class="hover:text-purple-400 transition-colors">About</a></li>
-          <li><a href="pages/ContactUs.html" class="hover:text-purple-400 transition-colors">Contact</a></li>
-        </ul>
-        <button class="bg-[#7F95D1] px-6 py-2 rounded-md text-white hover:bg-purple-500 transition-colors">
-          Login
-        </button>
+      </nav>
+      <div class="bg-[#7F95D1] text-white text-center py-3">
+        <p class="text-sm font-medium">Explore our new website today!</p>
       </div>
-    </nav>
-  </header> 
-  <main  class="max-w-7xl mx-auto px-6"></main>
+    </header>
+    <main class="max-w-7xl mx-auto px-4 mb-0">
+      <!-- Hero -->
+      <section class="mt-2 relative">
+        <div
+          class="relative rounded-2xl overflow-hidden mb-8 shadow-2xl image-container hover-lift"
+        >
+          <!-- Floating particles background -->
+          <div class="particles" id="particles"></div>
 
-  <!-- main content -->
-  <section class="max-w-7xl mx-auto px-6">
-    <!-- popular course section -->
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-gray-800 mb-8">Popular Courses</h2>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-        <!-- course card 1 -->
-        <div class="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow">
-          <a href="#">
-            <img class="rounded-t-lg w-full h-48 object-cover" src="images/web dev.jpg" alt="web dev" />
-          </a>
-          <div class="p-5">
-            <a href="#">
-              <h5 class="text-xl font-semibold tracking-tight text-gray-900 mb-1">Web Dev Bootcamp</h5>
-              <small class="text-gray-500">Johney sin :PhD CS From RuPP</small>
-            </a>
-            <p class="mt-2 text-sm text-gray-600">Learn full-stack web development from scratch.</p>
-            <div class="flex items-center mt-3 mb-4">
-              <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg class="w-4 h-4 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-              </div>
-              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">5.0</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-xl font-bold text-gray-900">$599</span>
-              <button class="text-white bg-[#7F95D1] hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center transition-colors">
-                Enroll Now
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- course card 2 -->
-        <div class="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow">
-          <a href="#">
-            <img class="rounded-t-lg w-full h-48 object-cover" src="https://www.infoworld.com/wp-content/uploads/2025/05/2263137-0-24139200-1747637392-shutterstock_1361674454-100939444-orig.jpg?quality=50&strip=all&w=1024" alt="JavaScript" />
-          </a>
-          <div class="p-5">
-            <a href="#">
-              <h5 class="text-xl font-semibold tracking-tight text-gray-900 mb-1">JavaScript Mastery</h5>
-              <small class="text-gray-500">Jonas Schmedtmann :Web Developer, Designer</small>
-            </a>
-            <p class="mt-2 text-sm text-gray-600">Learn JavaScript from Zero to Hero.</p>
-            <div class="flex items-center mt-3 mb-4">
-              <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg class="w-4 h-4 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-              </div>
-              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">5.0</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-xl font-bold text-gray-900">$599</span>
-              <button class="text-white bg-[#7F95D1] hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center transition-colors">
-                Enroll Now
-              </button>
-            </div>
-          </div>
-        </div>
+          <!-- Decorative floating elements -->
 
-        <!-- course card 3 -->
-        <div class="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow">
-          <a href="#">
-            <img class="rounded-t-lg w-full h-48 object-cover" src="https://blog.adobe.com/en/publish/2019/09/25/media_19a03340c6a3b5e760e8a8e03735d9e2c43c26da8.jpeg?width=750&format=jpeg&optimize=medium" alt="UI/UX Design" />
-          </a>
-          <div class="p-5">
-            <a href="#">
-              <h5 class="text-xl font-semibold tracking-tight text-gray-900 mb-1">UI/UX Design</h5>
-              <small class="text-gray-500">Sarah Johnson :Senior Designer at Adobe</small>
-            </a>
-            <p class="mt-2 text-sm text-gray-600">Master modern UI/UX design.</p>
-            <div class="flex items-center mt-3 mb-4">
-              <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg class="w-4 h-4 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
+          <img
+            src="images/smilestudy.jpg"
+            alt="Students studying together"
+            class="w-full h-[500px] object-cover enhanced-image brightness-50"
+          />
+
+          <div
+            class="absolute inset-0 enhanced-overlay flex items-end justify-start py-16 px-8"
+          >
+            <div class="text-white max-w-4xl relative z-10">
+              <!-- Glass morphism container -->
+              <div class="glass-content fade-element animate-slide-in-bottom">
+                <h1
+                  class="text-5xl text-shadow-md font-bold mb-4 fade-element animate-fade-in-left delay-1"
+                >
+            Learn Anything, Anytime, Anywhere 
+                </h1>
+
+                <p
+                  class="mb-6 text-lg opacity-95 leading-relaxed text-shadow-soft fade-element animate-fade-in-up delay-3"
+                >
+                  
+                  <br />
+                  Whether you're learning your first line of code or building your next big project — we’re here to guide you every step of the way.
+                  <br />such as Teachers, Teaching Assistants, Office and
+                  Catering <br />Requirements are met.
+                </p>
               </div>
-              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">5.0</span>
             </div>
-            <div class="flex items-center justify-between">
-              <span class="text-xl font-bold text-gray-900">$599</span>
-              <button class="text-white bg-[#7F95D1] hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center transition-colors">
-                Enroll Now
-              </button>
+          </div>
+
+          <!-- Corner accent elements -->
+          <div
+            class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-400 to-transparent opacity-30"
+          ></div>
+          <div
+            class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-500 to-transparent opacity-20"
+          ></div>
+        </div>
+      </section>
+
+      <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+          <h2 class="text-3xl font-bold mb-10">Popular Courses</h2>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8"
+          >
+            <!-- Course Card 1 -->
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <img
+                src="/pages/imgs/pic5.jpg"
+                alt="Food Safety Course"
+                class="w-full h-58 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                  Level 2 Safeguarding Children
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ CPD Certified</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ RoSPA Assured</span
+                  >
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">Duration</p>
+                    <p class="text-sm text-gray-600">2-3 Hours</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-2xl font-bold text-gray-900">
+                      $70.80<span class="text-sm text-gray-500 font-normal"
+                        >+ VAT</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 m-7">
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      −
+                    </button>
+                    <span class="text-sm font-medium px-2">1</span>
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    Enroll Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card2 -->
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <img
+                src="pages/imgs/pic3.jpg"
+                alt="Food Safety Course"
+                class="w-full h-58 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                  Level 3 Food Safety and Hygiene for Supervisors
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ CPD Certified</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ RoSPA Assured</span
+                  >
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">Duration</p>
+                    <p class="text-sm text-gray-600">2-3 Hours</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-2xl font-bold text-gray-900">
+                      $70.80<span class="text-sm text-gray-500 font-normal"
+                        >+ VAT</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 m-7">
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      −
+                    </button>
+                    <span class="text-sm font-medium px-2">1</span>
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    Enroll Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card 3 -->
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <img
+                src="pages/imgs/pic2.jpg"
+                alt="Food Safety Course"
+                class="w-full h-58 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                  Level 2 Food Safety & Hygiene for Catering
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ CPD Certified</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ RoSPA Assured</span
+                  >
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">Duration</p>
+                    <p class="text-sm text-gray-600">2-3 Hours</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-2xl font-bold text-gray-900">
+                      $70.80<span class="text-sm text-gray-500 font-normal"
+                        >+ VAT</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 m-7">
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      −
+                    </button>
+                    <span class="text-sm font-medium px-2">1</span>
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    Enroll Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card4 -->
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <img
+                src="pages/imgs/pic10.jpg"
+                alt="Food Safety Course"
+                class="w-full h-58 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                  Manual Handling in the Workplace
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ CPD Certified</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ RoSPA Assured</span
+                  >
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">Duration</p>
+                    <p class="text-sm text-gray-600">2-3 Hours</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-2xl font-bold text-gray-900">
+                      $70.80<span class="text-sm text-gray-500 font-normal"
+                        >+ VAT</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 m-7">
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      −
+                    </button>
+                    <span class="text-sm font-medium px-2">1</span>
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    Enroll Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card5 -->
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <img
+                src="pages/imgs/pic9.jpg"
+                alt="Food Safety Course"
+                class="w-full h-58 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                The Essentials of Data Protection (GDPR)
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ CPD Certified</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ RoSPA Assured</span
+                  >
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">Duration</p>
+                    <p class="text-sm text-gray-600">2-3 Hours</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-2xl font-bold text-gray-900">
+                      $70.80<span class="text-sm text-gray-500 font-normal"
+                        >+ VAT</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 m-7">
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      −
+                    </button>
+                    <span class="text-sm font-medium px-2">1</span>
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    Enroll Now
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course Card 6 -->
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <img
+                src="pages/imgs/pic6.jpg"
+                alt="Food Safety Course"
+                class="w-full h-58 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                 Safeguarding Children Level 3
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ CPD Certified</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ RoSPA Assured</span
+                  >
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">Duration</p>
+                    <p class="text-sm text-gray-600">2-3 Hours</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-2xl font-bold text-gray-900">
+                      $70.80<span class="text-sm text-gray-500 font-normal"
+                        >+ VAT</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 m-7">
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      −
+                    </button>
+                    <span class="text-sm font-medium px-2">1</span>
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    Enroll Now
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <!-- course card 4 -->
-        <div class="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow">
-          <a href="#">
-            <img class="rounded-t-lg w-full h-48 object-cover" src="https://www.khmer168.com/wp-content/uploads/2024/01/chris-ried-ieic5Tq8YMk-unsplash.jpg" alt="Data Science" />
-          </a>
-          <div class="p-5">
-            <a href="#">
-              <h5 class="text-xl font-semibold tracking-tight text-gray-900 mb-1">Data Science</h5>
-              <small class="text-gray-500">Dr. Smith :Data Scientist at Google</small>
-            </a>
-            <p class="mt-2 text-sm text-gray-600">Introduction to Data Science and Machine Learning.</p>
-            <div class="flex items-center mt-3 mb-4">
-              <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg class="w-4 h-4 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-              </div>
-              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">5.0</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-xl font-bold text-gray-900">$599</span>
-              <button class="text-white bg-[#7F95D1] hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center transition-colors">
-                Enroll Now
-              </button>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-gray-700 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <!-- Organized by Section -->
+          <div class="flex flex-col items-center text-center">
+            <h3 class="text-lg font-semibold mb-4">Organized by</h3>
+            <img
+              src="./pages/imgs/ISTAD_Logo.jpg"
+              alt="logo"
+              class="w-24 h-24 mb-4 rounded-full"
+            />
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Institute of Science and Technology<br />
+              Advanced Development
+            </p>
+          </div>
+
+          <!-- Solutions Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Solutions</h3>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Our Learning Philosophy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Our Training Platform</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Bespoke Training Solutions - Notes</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Legal</h3>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Cookie Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- G4 E-Learning Section -->
+          <div class="flex flex-col items-center text-center">
+            <h3 class="text-lg font-semibold mb-4">G4<br />E-Learning</h3>
+            <img src="./pages/imgs/Ellipse 4.png" alt="" />
+            <p class="text-sm text-gray-300">
+              Just Smart with<br />
+              Hard
+            </p>
+          </div>
+
+          <!-- Contact Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact</h3>
+            <div class="flex space-x-3">
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
+              >
+                <i class="fab fa-facebook-f text-sm"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"
+              >
+                <i class="fab fa-instagram text-sm"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors"
+              >
+                <i class="fab fa-twitter text-sm"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors"
+              >
+                <i class="fas fa-envelope text-sm"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </section>
-<!-- Footer -->
-                                                                                                                                                                                      
-</body>
+    </footer>
+  </body>
 </html>
