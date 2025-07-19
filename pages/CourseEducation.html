@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../src/output.css">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+      :root {
+        --primary-color: #7f95d1;
+        --secondary-color: #575366;
+        
+        /*========== Font and typography ==========*/
+        --body-font: "Poppins", sans-serif;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeInRight {
+        from {
+          opacity: 0;
+          transform: translateX(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes shimmer {
+        0% {
+          background-position: -200% 0;
+        }
+        100% {
+          background-position: 200% 0;
+        }
+      }
+
+      .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      .animate-fade-in-left {
+        animation: fadeInLeft 0.8s ease-out forwards;
+      }
+
+      .animate-fade-in-right {
+        animation: fadeInRight 0.8s ease-out forwards;
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(
+          135deg,
+          #7f95d1 0%,
+          #5a7bc8 50%,
+          #4a6cb8 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .gradient-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          45deg,
+          transparent 30%,
+          rgba(255, 255, 255, 0.1) 50%,
+          transparent 70%
+        );
+        background-size: 200% 200%;
+        animation: shimmer 3s ease-in-out infinite;
+      }
+
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .button-glow {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .button-glow:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .image-container {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .image-container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          45deg,
+          transparent 0%,
+          rgba(127, 149, 209, 0.3) 100%
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .image-container:hover::after {
+        opacity: 1;
+      }
+
+      .image-container img {
+        transition: transform 0.5s ease;
+      }
+
+      .image-container:hover img {
+        transform: scale(1.05);
+      }
+
+      /* Delayed animations */
+      .delay-1 {
+        animation-delay: 0.2s;
+      }
+      .delay-2 {
+        animation-delay: 0.4s;
+      }
+      .delay-3 {
+        animation-delay: 0.6s;
+      }
+      .delay-4 {
+        animation-delay: 0.8s;
+      }
+
+      /* Initially hidden elements */
+      .fade-element {
+        opacity: 0;
+      }
+
+      /* Particle background effect */
+      .particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .particle {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        animation: particle-float 6s infinite linear;
+      }
+
+      @keyframes particle-float {
+        0% {
+          transform: translateY(100vh) rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100px) rotate(360deg);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-white text-gray-800">
+    <header>
+      <!-- Navbar -->
+      <nav class="bg-[#575366] text-white">
+        <div
+          class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+        >
+          <div class="flex items-center space-x-2">
+            <div class="bg-[#7F95D1] rounded-full w-9 h-9">
+              <img src="./imgs/Ellipse 4.png" alt="" />
+            </div>
+            <span class="text-lg font-bold">Learnode</span>
+          </div>
+          <ul class="hidden md:flex space-x-6">
+            <li><a href="#" class="hover:text-purple-400">Home</a></li>
+            <li><a href="#" class="hover:text-purple-400">Courses</a></li>
+            <li><a href="#" class="hover:text-purple-400">About</a></li>
+            <li><a href="#" class="hover:text-purple-400">Contact</a></li>
+          </ul>
+          <button
+            class="bg-[#7F95D1] px-4 py-2 rounded text-white hover:bg-purple-500"
+          >
+            Login
+          </button>
+        </div>
+      </nav>
+      <div class="bg-[#7F95D1] text-white text-center py-3">
+        <p class="text-sm font-medium">Explore our new website today!</p>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 text-center">
+      <!-- Hero -->
+      <section class="mt-2 relative">
+        <div
+          class="relative rounded-2xl overflow-hidden mb-8 shadow-2xl image-container hover-lift"
+        >
+          <!-- Floating particles background -->
+          <div class="particles" id="particles"></div>
+
+          <!-- Decorative floating elements -->
+
+          <img
+            src="./imgs/pic1.jpg"
+            alt="Students studying together"
+            class="w-full h-[500px] object-cover enhanced-image brightness-50"
+          />
+
+          <div
+            class="absolute inset-0 enhanced-overlay flex items-end justify-start py-16 px-8"
+          >
+            <div class="text-white max-w-4xl relative z-10">
+              <!-- Glass morphism container -->
+              <div class="glass-content fade-element animate-slide-in-bottom">
+                <h1
+                  class="text-5xl text-shadow-md font-bold mb-4 fade-element animate-fade-in-left delay-1"
+                >
+                  Education Courses
+                </h1>
+                
+                <p
+                  class="mb-6 text-lg opacity-95 leading-relaxed text-shadow-soft fade-element animate-fade-in-up delay-3"
+                >
+                  Our collection of CPD approved education training courses
+                 <br> cover everything you need to ensure those working in education
+                 <br>such as Teachers, Teaching Assistants, Office and Catering
+                 <br>Requirements are met.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Corner accent elements -->
+          <div
+            class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-400 to-transparent opacity-30"
+          ></div>
+          <div
+            class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-500 to-transparent opacity-20"
+          ></div>
+        </div>
+      </section>
+
+      <!-- Sort Section -->
+      <div class="flex justify-end mb-6">
+        <select
+          class="border border-gray-300 rounded-lg px-4 py-2 text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option>Sort By</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Duration</option>
+          <option>Popularity</option>
+        </select>
+      </div>
+      <!-- Popular Courses -->
+      <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+          <h2 class="text-3xl font-bold mb-10">Popular Courses</h2>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8"
+          >
+            <!-- Course Card 1 -->
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <img
+                src="./imgs/pic2.jpg"
+                alt="Food Safety Course"
+                class="w-full h-58 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                  Level 2 Food Safety & Hygiene for Catering
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ CPD Certified</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ RoSPA Assured</span
+                  >
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">Duration</p>
+                    <p class="text-sm text-gray-600">2-3 Hours</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-2xl font-bold text-gray-900">
+                      $70.80<span class="text-sm text-gray-500 font-normal"
+                        >+ VAT</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2 m-7">
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      −
+                    </button>
+                    <span class="text-sm font-medium px-2">1</span>
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    Add to basket
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course Card 2 -->
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <img
+                src="./imgs/pic3.jpg"
+                alt="Food Safety Supervisors Course"
+                class="w-full h-58 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                  Level 3 Food Safety and Hygiene for Supervisors
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ RoSPA Assured</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ CPD Certified</span
+                  >
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">Duration</p>
+                    <p class="text-sm text-gray-600">6-9 Hours</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-2xl font-bold text-gray-900">
+                      $79.00
+                      <span class="text-sm text-gray-500 font-normal"
+                        >+ VAT</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      −
+                    </button>
+                    <span class="text-sm font-medium px-2">1</span>
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    Add to basket
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card 3 -->
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <img
+                src="./imgs/pic4.jpg"
+                alt="Food Allergy Course"
+                class="w-full h-58 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                  Food Allergy Awareness and Level 2 Food Hygiene Training
+                  Package
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ RoSPA Assured</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ CPD Certified</span
+                  >
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">Duration</p>
+                    <p class="text-sm text-gray-600">3-4 Hours</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-sm line-through text-red-500">£39.00</p>
+                    <p class="text-2xl font-bold text-gray-900">
+                      $72.00
+                      <span class="text-sm text-gray-500 font-normal"
+                        >+ VAT</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      −
+                    </button>
+                    <span class="text-sm font-medium px-2">1</span>
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    Add to basket
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card 4 -->
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <img
+                src="./imgs/pic5.jpg"
+                alt="Safeguarding Children Course"
+                class="w-full h-58 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                  Level 2 Safeguarding Children
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ CPD Certified</span
+                  >
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">Duration</p>
+                    <p class="text-sm text-gray-600">1-2 Hours</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-2xl font-bold text-gray-900">
+                      $50.00
+                      <span class="text-sm text-gray-500 font-normal"
+                        >+ VAT</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      −
+                    </button>
+                    <span class="text-sm font-medium px-2">1</span>
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    Add to basket
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course Card 5 -->
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <img
+                src="./imgs/pic6.jpg"
+                alt="Safeguarding Level 3 Course"
+                class="w-full h-58 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                  Safeguarding Children Level 3
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ CPD Certified</span
+                  >
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">Duration</p>
+                    <p class="text-sm text-gray-600">2-3 Hours</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-2xl font-bold text-gray-900">
+                      $65.00
+                      <span class="text-sm text-gray-500 font-normal"
+                        >+ VAT</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      −
+                    </button>
+                    <span class="text-sm font-medium px-2">1</span>
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    Add to basket
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card 6 -->
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <img
+                src="./imgs/pic7.jpg"
+                alt="Level 1 Food Safety Course"
+                class="w-full h-58 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                  Level 1 Food Safety and Hygiene
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ CPD Certified</span
+                  >
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">Duration</p>
+                    <p class="text-sm text-gray-600">1-2 Hours</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-2xl font-bold text-gray-900">
+                      $55.00
+                      <span class="text-sm text-gray-500 font-normal"
+                        >+ VAT</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      −
+                    </button>
+                    <span class="text-sm font-medium px-2">1</span>
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    Add to basket
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course Card 7 -->
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <img
+                src="./imgs/pic8.jpg"
+                alt="First Aid Course"
+                class="w-full h-58 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                  First Aid at Work Course: Primary Survey
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ RoSPA Assured</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ CPD Certified</span
+                  >
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">Duration</p>
+                    <p class="text-sm text-gray-600">30 - 45 Minutes</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-2xl font-bold text-gray-900">
+                      $60.00
+                      <span class="text-sm text-gray-500 font-normal"
+                        >+ VAT</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      −
+                    </button>
+                    <span class="text-sm font-medium px-2">1</span>
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    Add to basket
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course Card 8 -->
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <img
+                src="./imgs/pic9.jpg"
+                alt="Data Protection Course"
+                class="w-full h-58 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                  The Essentials of Data Protection (GDPR)
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ CPD Certified</span
+                  >
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">Duration</p>
+                    <p class="text-sm text-gray-600">1-2 Hours</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-2xl font-bold text-gray-900">
+                      $55.00
+                      <span class="text-sm text-gray-500 font-normal"
+                        >+ VAT</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      −
+                    </button>
+                    <span class="text-sm font-medium px-2">1</span>
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    Add to basket
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card 9 - Container -->
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-2"
+            >
+              <img
+                src="./imgs/pic10.jpg"
+                alt="Manual Handling Course"
+                class="w-full h-58 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                  Manual Handling in the Workplace
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ RoSPA Assured</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium"
+                    >✓ CPD Certified</span
+                  >
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">Duration</p>
+                    <p class="text-sm text-gray-600">30 - 45 Minutes</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-2xl font-bold text-gray-900">
+                      $64.00
+                      <span class="text-sm text-gray-500 font-normal"
+                        >+ VAT</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      −
+                    </button>
+                    <span class="text-sm font-medium px-2">1</span>
+                    <button
+                      class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-300 transition-colors"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    Add to basket
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="flex justify-center gap-4">
+            <button
+              class="bg-gray-400 text-white px-6 py-2 rounded-lg font-medium cursor-not-allowed"
+              disabled
+            >
+              Previous
+            </button>
+            <button
+              class="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section>
+        <!-- Enhanced Bottom Hero Section -->
+        <div class="gradient-bg text-white mt-16 relative">
+          <!-- Floating particles background -->
+          <div class="particles" id="particles"></div>
+
+          <div class="max-w-7xl mx-auto px-4 py-20 relative z-10">
+            <div
+              class="flex flex-col lg:flex-row items-center justify-between gap-12"
+            >
+              <!-- Left Content -->
+              <div class="lg:w-1/2 fade-element animate-fade-in-left">
+                <div class="glass-effect p-8 rounded-2xl">
+                  <h2
+                    class="text-4xl lg:text-5xl font-bold mb-6 leading-tight text-shadow fade-element animate-fade-in-up delay-1"
+                  >
+                    High-quality online education courses
+                  </h2>
+                  <p
+                    class="text-xl mb-10 opacity-90 leading-relaxed fade-element animate-fade-in-up delay-2"
+                  >
+                    Our collection of Education training courses covers
+                    everything you need to ensure your staff are fully compliant
+                    with the latest legislation and guidance or have access to
+                    soft skills and professional development training.
+                  </p>
+                  <div
+                    class="flex flex-wrap gap-6 fade-element animate-fade-in-up delay-3"
+                  >
+                    <button
+                      class="bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 button-glow hover:scale-105"
+                    >
+                      Get a demo
+                    </button>
+                    <button
+                      class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-xl font-semibold transition-all duration-300 button-glow hover:scale-105"
+                    >
+                      View all education courses
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Content -->
+              <div class="lg:w-1/2 fade-element animate-fade-in-right delay-2">
+                <div class="relative animate-float">
+                  <div
+                    class="image-container rounded-2xl overflow-hidden shadow-2xl"
+                  >
+                    <img
+                      src="./imgs/pic11.jpg"
+                      alt="Students in classroom"
+                      class="w-full h-72 lg:h-96 object-cover"
+                    />
+                  </div>
+                  <!-- Decorative elements -->
+                  <div
+                    class="absolute -top-4 -right-4 w-24 h-24 bg-white bg-opacity-20 rounded-full animate-pulse"
+                  ></div>
+                  <div
+                    class="absolute -bottom-6 -left-6 w-16 h-16 bg-yellow-400 bg-opacity-30 rounded-full animate-bounce"
+                    style="animation-delay: 1s"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Comparison Section -->
+      <!-- class="max-w-7xl  mx-auto px-4 text-center" -->
+      <section class="max-w-7xl mx-auto px-4 text-center">
+        <div
+          class="bg-white rounded-3xl p-20 flex flex-col justify-between relative overflow-hidden"
+        >
+          <!-- Header -->
+          <div class="text-center mb-12">
+            <h2 class="text-5xl font-bold text-gray-800 leading-tight">
+              Whilst we think our training is great<br />
+              <span class="text-gray-600">don't just take our word for it</span>
+            </h2>
+          </div>
+
+          <!-- Testimonials Grid -->
+          <div class="grid grid-cols-3 gap-10 mb-12">
+            <!-- Testimonial 1 -->
+            <div
+              class="bg-gray-50 rounded-2xl p-8 border-l-4 border-[var(--primary-color)] hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+            >
+              <div class="flex mb-4">
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+              </div>
+              <div class="text-sm text-gray-500 mb-2">13th July 2025</div>
+              <h3
+                class="text-lg font-semibold text-gray-800 mb-4 leading-tight"
+              >
+                Easy to find a course
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-5">
+                Easy to find a course and purchase. Can have a refund and return
+                when you want.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500 font-medium"
+                  >Dawn Lockyer</span
+                >
+                <div class="flex items-center text-xs text-green-600">
+                  <div
+                    class="w-4 h-4 bg-green-600 rounded-full flex items-center justify-center text-white text-xs mr-1"
+                  >
+                    ✓
+                  </div>
+                  Verified
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div
+              class="bg-gray-50 rounded-2xl p-8 border-l-4 border-[var(--primary-color)] hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+            >
+              <div class="flex mb-4">
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+              </div>
+              <div class="text-sm text-gray-500 mb-2">13th July 2025</div>
+              <h3
+                class="text-lg font-semibold text-gray-800 mb-4 leading-tight"
+              >
+                It was a quick and easy process to...
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-5">
+                It was a quick and easy process to complete the course, it was
+                clearly set up and easy to understand.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500 font-medium">San Tse</span>
+                <div class="flex items-center text-xs text-green-600">
+                  <div
+                    class="w-4 h-4 bg-green-600 rounded-full flex items-center justify-center text-white text-xs mr-1"
+                  >
+                    ✓
+                  </div>
+                  Verified
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div
+              class="bg-gray-50 rounded-2xl p-8 border-l-4 border-[var(--primary-color)] hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+            >
+              <div class="flex mb-4">
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  clascos="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+              </div>
+              <div class="text-sm text-gray-500 mb-2">12th July 2025</div>
+              <h3
+                class="text-lg font-semibold text-gray-800 mb-4 leading-tight"
+              >
+                Excellent and affordable
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-5">
+                L2 Food Safety and Hygiene for Catering🥘<br />
+                🥇
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500 font-medium"
+                  >Jimmy Chan</span
+                >
+                <div class="flex items-center text-xs text-green-600">
+                  <div
+                    class="w-4 h-4 bg-green-600 rounded-full flex items-center justify-center text-white text-xs mr-1"
+                  >
+                    ✓
+                  </div>
+                  Verified
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Navigation -->
+          <div class="flex items-center justify-center mb-8">
+            <div
+              class="w-10 h-10 rounded-full bg-gray-100 border-2 border-gray-300 flex items-center justify-center cursor-pointer hover:bg-emerald-400 hover:border-emerald-400 hover:text-white transition-all duration-300 mr-4"
+            >
+              <span class="text-lg">‹</span>
+            </div>
+
+            <div class="flex space-x-3">
+              <div
+                class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer"
+              ></div>
+              <div
+                class="w-3 h-3 rounded-full bg-emerald-400 cursor-pointer"
+              ></div>
+              <div
+                class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer"
+              ></div>
+              <div
+                class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer"
+              ></div>
+              <div
+                class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer"
+              ></div>
+            </div>
+
+            <div
+              class="w-10 h-10 rounded-full bg-gray-100 border-2 border-gray-300 flex items-center justify-center cursor-pointer hover:bg-emerald-400 hover:border-emerald-400 hover:text-white transition-all duration-300 ml-4"
+            >
+              <span class="text-lg">›</span>
+            </div>
+          </div>
+
+          <!-- Trustpilot Section -->
+          <div class="text-center">
+            <div
+              class="inline-flex items-center bg-trustpilot-green text-black px-4 py-2 rounded-md font-semibold mb-4"
+            >
+              <span class="mr-5">Excellent</span>
+              <div class="flex mr-3">
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+                <div
+                  class="w-5 h-5 bg-[var(--primary-color)] star flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+                </div>
+              </div>
+
+              <span class="ml-3 text-lg font-bold">4.7 out of 5</span>
+            </div>
+
+            <div class="text-gray-700 mb-2">
+              <span class="font-semibold">15840</span> Reviews on
+              <span class="inline-flex items-center">
+                <div class="w-4 h-4 bg-trustpilot-green star mr-1"></div>
+                <span class="font-semibold">Trustpilot</span>
+              </span>
+            </div>
+
+            <button
+              class="bg-[var(--primary-color)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-600 hover:-translate-y-1 transition-all duration-300 shadow-lg"
+            >
+              See all reviews on Trustpilot
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Virtual College Section -->
+      <section class="enhanced-bg py-20 relative">
+        <!-- Floating particles -->
+        <div class="particles" id="particles"></div>
+        
+        <!-- Decorative blobs -->
+        <div class="decorative-blob w-64 h-64 -top-32 -left-32 absolute" style="animation-delay: 0s;"></div>
+        <div class="decorative-blob w-48 h-48 -bottom-24 -right-24 absolute" style="animation-delay: 2s;"></div>
+        <div class="decorative-blob w-32 h-32 top-1/3 -right-16 absolute" style="animation-delay: 4s;"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left Content -->
+                <div class="space-y-10">
+                    <!-- Header -->
+                    <div class="fade-element animate-fade-in-left">
+                        <h2 class="text-5xl lg:text-6xl font-bold gradient-text mb-6 leading-tight">
+                            Why choose Virtual College?
+                        </h2>
+                        <div class="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mb-4"></div>
+                        <p class="text-xl text-vc-gray leading-relaxed">We stand out by offering:</p>
+                    </div>
+
+                    <!-- Enhanced Features List -->
+                    <div class="space-y-4 fade-element animate-fade-in-up delay-2">
+                        <div class="feature-item fade-element animate-slide-in-bottom delay-1">
+                            <div class="flex items-start space-x-4">
+                                <div class="check-icon flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700 font-semibold text-lg">
+                                    Over 350 accredited and certified courses
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item fade-element animate-slide-in-bottom delay-2">
+                            <div class="flex items-start space-x-4">
+                                <div class="check-icon flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700 font-semibold text-lg">
+                                    Bitesize, engaging content
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item fade-element animate-slide-in-bottom delay-3">
+                            <div class="flex items-start space-x-4">
+                                <div class="check-icon flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700 font-semibold text-lg">
+                                    Developed with industry experts
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item fade-element animate-slide-in-bottom delay-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="check-icon flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700 font-semibold text-lg">
+                                    Instant certification upon completion
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item fade-element animate-slide-in-bottom delay-5">
+                            <div class="flex items-start space-x-4">
+                                <div class="check-icon flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700 font-semibold text-lg">
+                                    Flexible, anytime learning, anywhere
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item fade-element animate-slide-in-bottom delay-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="check-icon flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700 font-semibold text-lg">
+                                    Always up to date content
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item fade-element animate-slide-in-bottom delay-7">
+                            <div class="flex items-start space-x-4">
+                                <div class="check-icon flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700 font-semibold text-lg">
+                                    Experienced and dedicated team
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Action Buttons -->
+                    <div class="flex flex-wrap gap-6 fade-element animate-fade-in-up delay-8">
+                        <button class="enhanced-button bg-[#7f95d1] text-white px-8 py-4 rounded-xl font-semibold hover:bg-indigo-700 transition-all duration-300 shadow-lg">
+                            Search for a course
+                        </button>
+                        <button class="enhanced-button bg-[#6b7280] text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-600 transition-all duration-300 shadow-lg">
+                            About us
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Enhanced Right Image -->
+                <div class="lg:pl-8 fade-element animate-fade-in-right delay-4">
+                    <div class="relative image-container animate-float">
+                        <div class="bg-gradient-to-br from-gray-100 via-white to-gray-200 rounded-3xl p-10 shadow-2xl glass-container">
+                            <div class="image-card bg-white rounded-2xl p-6 shadow-xl transform rotate-3 hover:rotate-0 transition-all duration-500 relative overflow-hidden">
+                                <!-- Shimmer effect on image card -->
+                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 hover:opacity-20 transition-opacity duration-500 transform -skew-x-12 hover:animate-pulse"></div>
+                                <img 
+                                    src="./imgs/pic12.jpg" 
+                                    alt="Virtual College Learning Experience" 
+                                    class="w-full h-64 object-cover rounded-xl transition-transform duration-500 hover:scale-105"
+                                />
+                            </div>
+                            <!-- Floating decorative elements around image -->
+                            <div class="absolute -top-3 -right-3 w-6 h-6 bg-green-400 rounded-full animate-bounce-custom opacity-70"></div>
+                            <div class="absolute -bottom-2 -left-2 w-4 h-4 bg-blue-400 rounded-full animate-bounce-custom opacity-70" style="animation-delay: 1s;"></div>
+                            <div class="absolute top-1/2 -right-4 w-3 h-3 bg-purple-400 rounded-full animate-bounce-custom opacity-70" style="animation-delay: 0.5s;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Featured Resources Section -->
+      <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="flex justify-between items-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800">Featured Resources</h2>
+            <button
+              class="bg-vc-blue text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors duration-300"
+            >
+              View all resources
+            </button>
+          </div>
+
+          <!-- Resources Grid -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Resource Card 1 -->
+            <div
+              class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <img src="./imgs/pic13.jpg" alt="" />
+              <div class="p-6">
+                <h3
+                  class="text-xl font-semibold text-gray-800 mb-3 leading-tight"
+                >
+                  Safeguarding in Education - Remaining Compliant and Driving
+                  Standards
+                </h3>
+                <p class="text-vc-gray text-sm leading-relaxed mb-4">
+                  In September 2018, we will see a change to the legislation
+                  regarding safeguarding in schools, when Keeping Children Safe
+                  in Education (KCSIE) 2018 is released.
+                </p>
+                <div class="flex items-center space-x-2">
+                  <span
+                    class="bg-[#7f95d1] text-white text-xs px-2 py-1 rounded-full font-medium"
+                    >Education</span
+                  >
+                  <span
+                    class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full font-medium"
+                    >Article</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Resource Card 2 -->
+            <div
+              class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <img src="./imgs/pic14.jpg" alt="" />
+              <div class="p-6">
+                <h3
+                  class="text-xl font-semibold text-gray-800 mb-3 leading-tight"
+                >
+                  E-learning to be at the forefront of education by 2025
+                </h3>
+                <p class="text-vc-gray text-sm leading-relaxed mb-4">
+                  Online learning is expected to be at the forefront of
+                  education by 2025 according to Polycom.
+                </p>
+                <div class="flex items-center space-x-2">
+                  <span
+                    class="bg-[#7f95d1] text-white text-xs px-2 py-1 rounded-full font-medium"
+                    >Education</span
+                  >
+                  <span
+                    class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full font-medium"
+                    >Article</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Resource Card 3 -->
+            <div
+              class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <img src="./imgs/pic15.jpg" alt="" />
+              <div class="p-6">
+                <h3
+                  class="text-xl font-semibold text-gray-800 mb-3 leading-tight"
+                >
+                  Higher education gives a nod to online learning benefits
+                </h3>
+                <p class="text-vc-gray text-sm leading-relaxed mb-4">
+                  A report from the Australian shows that an increasing number
+                  of academic institutions are looking to online learning
+                  solutions.
+                </p>
+                <div class="flex items-center space-x-2">
+                  <span
+                    class="bg-[#7f95d1] text-white text-xs px-2 py-1 rounded-full font-medium"
+                    >Education</span
+                  >
+                  <span
+                    class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full font-medium"
+                    >Article</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-gray-700 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <!-- Organized by Section -->
+          <div class="flex flex-col items-center text-center">
+            <h3 class="text-lg font-semibold mb-4">Organized by</h3>
+            <img
+              src="./imgs/ISTAD_Logo.jpg"
+              alt="logo"
+              class="w-24 h-24 mb-4 rounded-full"
+            />
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Institute of Science and Technology<br />
+              Advanced Development
+            </p>
+          </div>
+
+          <!-- Solutions Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Solutions</h3>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Our Learning Philosophy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Our Training Platform</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Bespoke Training Solutions - Notes</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Legal</h3>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Cookie Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- G4 E-Learning Section -->
+          <div class="flex flex-col items-center text-center">
+            <h3 class="text-lg font-semibold mb-4">G4<br />E-Learning</h3>
+            <img src="./imgs/Ellipse 4.png" alt="" />
+            <p class="text-sm text-gray-300">
+              Just Smart with<br />
+              Hard
+            </p>
+          </div>
+
+          <!-- Contact Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact</h3>
+            <div class="flex space-x-3">
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
+              >
+                <i class="fab fa-facebook-f text-sm"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"
+              >
+                <i class="fab fa-instagram text-sm"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors"
+              >
+                <i class="fab fa-twitter text-sm"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors"
+              >
+                <i class="fas fa-envelope text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Intersection Observer for animations
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.animationPlayState = "running";
+          }
+        });
+      }, observerOptions);
+
+      // Observe all fade elements
+      document.querySelectorAll(".fade-element").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Create floating particles
+      function createParticle() {
+        const particle = document.createElement("div");
+        particle.className = "particle";
+
+        const size = Math.random() * 6 + 2;
+        particle.style.width = size + "px";
+        particle.style.height = size + "px";
+        particle.style.left = Math.random() * 100 + "%";
+        particle.style.animationDuration = Math.random() * 4 + 6 + "s";
+        particle.style.animationDelay = Math.random() * 2 + "s";
+
+        document.getElementById("particles").appendChild(particle);
+
+        // Remove particle after animation
+        setTimeout(() => {
+          if (particle.parentNode) {
+            particle.parentNode.removeChild(particle);
+          }
+        }, 8000);
+      }
+
+      // Generate particles continuously
+      setInterval(createParticle, 800);
+
+      // Create initial particles
+      for (let i = 0; i < 10; i++) {
+        setTimeout(createParticle, i * 100);
+      }
+
+      // Add scroll-triggered animations
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const parallaxElements = document.querySelectorAll(".animate-float");
+
+        parallaxElements.forEach((element) => {
+          const speed = 0.5;
+          element.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+      });
+    </script>
+  </body>
+</html>
