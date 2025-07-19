@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <!-- nav -->
+    <header>
+        <nav class="bg-gray-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="bg-white-600 rounded-full w-9 h-8">
+                        <img src="./img/logoimg.png" alt="" />
+                    </div>
+                    <span class="text-lg font-bold">Learnode</span>
+                </div>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#" class="hover:text-purple-400">Home</a></li>
+                    <li><a href="#" class="hover:text-purple-400">Courses</a></li>
+                    <li><a href="#" class="hover:text-purple-400">About</a></li>
+                    <li><a href="#" class="hover:text-purple-400">Contact</a></li>
+                </ul>
+                <button class="bg-[#7F95D1] px-4 py-2 rounded text-white hover:bg-purple-500">
+                    Login
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="bg-gray-50">
+            <!-- Hero Section -->
+            <div class="relative bg-gray-100 py-16 h-screen">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-600/10"></div>
+                <div class="relative max-w-7xl mx-auto px-6 h-full flex items-center justify-center">
+                    <div class="flex-1">
+                        <img src="./img/pic1.jpg" alt="Hero Image"
+                            class="w-full h-full object-cover rounded-lg shadow-lg" />
+                    </div>
+                </div>
+            </div>
+            <div class="listpay">
+                <div class="pricing-container">
+                    <div class="pricing-card">
+                        <div class="plan-title">Up to 100 users</div>
+                        <div class="plan-subtitle">Per User</div>
+                        <div class="price">£22</div>
+                        <div class="price-period">Per Year</div>
+                        <a href="#" class="cta-button">Get Started</a>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="plan-title">Up to 200 Users</div>
+                        <div class="plan-subtitle">Per User</div>
+                        <div class="price">£18</div>
+                        <div class="price-period">Per Year</div>
+                        <a href="#" class="cta-button">Get Started</a>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="plan-title">Up to 300 Users</div>
+                        <div class="plan-subtitle">Per User</div>
+                        <div class="price">£8</div>
+                        <div class="price-period">Per Year</div>
+                        <a href="#" class="cta-button">Get Started</a>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="plan-title">400+ Users</div>
+                        <div class="plan-subtitle">Per User</div>
+                        <div class="price">£4</div>
+                        <div class="price-period">Per Year</div>
+                        <a href="#" class="cta-button">Get Started</a>
+                    </div>
+                </div>
+                <!-- Features Column -->
+                <div class="lg:col-span-2">
+                    <div class="border-green-500 rounded-lg p-8 h-full">
+                        <h3 class="text-2xl font-bold text-white mb-8">
+                            Features & Services for All Plans
+                        </h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
+                                <p class="text-gray-300 leading-relaxed">
+                                    Access to our full training catalogue
+                                </p>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
+                                <p class="text-gray-300 leading-relaxed">
+                                    Dedicated account manager and onboarding
+                                </p>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
+                                <p class="text-gray-300 leading-relaxed">
+                                    communication support from day one
+                                </p>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
+                                <p class="text-gray-300 leading-relaxed">
+                                    Flexible branding to match your organisation
+                                </p>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
+                                <p class="text-gray-300 leading-relaxed">
+                                    Self-enroll or automated training allocation
+                                </p>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
+                                <p class="text-gray-300 leading-relaxed">
+                                    Set your own deadlines with auto reminders
+                                </p>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
+                                <p class="text-gray-300 leading-relaxed">
+                                    Bespoke learning plans and categories
+                                </p>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
+                                <p class="text-gray-300 leading-relaxed">
+                                    Upload your own training materials
+                                </p>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
+                                <p class="text-gray-300 leading-relaxed">
+                                    Behavioural compliance tracking and reports
+                                </p>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
+                                <p class="text-gray-300 leading-relaxed">
+                                    Line Manager tools for department oversight
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-50">
+            <!-- Hero Section -->
+            <div class="bg-white py-16 px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <!-- Left Content -->
+                        <div class="space-y-6">
+                            <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                                Why choose our subscription?
+                            </h1>
+
+                            <div class="space-y-4 text-gray-600">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2"></div>
+                                    <p>
+                                        Perfect for organisations that require ongoing training
+                                        and compliance <br />management
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                                    <p>
+                                        Full Library Access – Unlimited access to our entire
+                                        catalogue of <br />accredited and certified courses.
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                                    <p>
+                                        Effortless Compliance Tracking – Monitor employee progress
+                                        with <br />user-friendly dashboards and reporting tools.
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                                    <p>
+                                        Flexible Training Packages – Tailored to fit your
+                                        organisation’s <br />specific compliance needs.
+                                    </p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                                    <p>
+                                        Rapid Deployment – Get your teams trained and compliant in
+                                        as little <br />as 48 hours.
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                                    <p>
+                                        Simplify Learning Management – Consolidate all learning
+                                        activities <br />in one easy-to-use system.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                                <p>
+                                    Dedicated Account Management – maximise the value of the
+                                    training <br />platform with expert guidance from day one.
+                                </p>
+                            </div>
+                            <button
+                                class="bg-purple-400 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                                Enquire now
+                            </button>
+                        </div>
+                        <!-- Right Image -->
+                        <div class="flex justify-center">
+                            <img src="./img/pic2.jpg" alt="Hero Image"
+                                class="w-full h-full object-cover rounded-lg shadow-lg" />
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Training Benefits Section -->
+        <section class="bg-gray-800 text-white py-16 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Image -->
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                            alt="Business training session" class="w-full h-80 object-cover rounded-2xl" />
+                    </div>
+
+                    <!-- Right Content -->
+                    <div class="space-y-6">
+                        <h2 class="text-3xl lg:text-4xl font-bold">
+                            Key benefits of a training subscription
+                        </h2>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <span class="text-white text-sm font-bold">.</span>
+                                </div>
+                                <div>
+                                    <p class="text-gray-300">
+                                        Predictable Budgeting – Fixed pricing plans to help you
+                                        <br />
+                                        control costs <br />efficiently.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <span class="text-white text-sm font-bold">.</span>
+                                </div>
+                                <div>
+                                    <p class="text-gray-300">
+                                        Cost-Effective & Scalable – Reduce face-to-face training
+                                        expenses <br />without compromising quality.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <span class="text-white text-sm font-bold">.</span>
+                                </div>
+                                <div>
+                                    <p class="text-gray-300">
+                                        Continuous Development – Keep employees up to date with
+                                        the <br />latest industry trends and evolving regulations.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <span class="text-white text-sm font-bold">.</span>
+                                </div>
+                                <div>
+                                    <p class="text-gray-300">
+                                        Risk Mitigation – Ensure compliance and adapt training as
+                                        your <br />
+                                        business needs evolve.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Solution Section -->
+        <section class="bg-white py-16 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Content -->
+                    <div class="space-y-6">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">
+                            Our learning solution
+                        </h2>
+
+                        <p class="text-gray-600 text-lg">
+                            Our training is designed to upskill and reskill employees at all
+                            levels, addressing critical business challenges.
+                        </p>
+
+                        <div class="space-y-4 text-gray-600">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">
+                                        Onboarding New Employees – Ensuring seamless integration
+                                        and compliance readiness.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">
+                                        Leadership & Management Development – Building confident,
+                                        <br />effective leaders.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">
+                                        Health & Safety Compliance – Meeting workplace safety and
+                                        legal requirements.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-900">
+                                        Progress tracking & feedback
+                                    </h3>
+                                    <p>
+                                        Monitor your learning journey with detailed analytics and
+                                        personalized feedback.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-900">
+                                        Community support
+                                    </h3>
+                                    <p>
+                                        Connect with fellow learners and get support from our
+                                        active community.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button
+                            class="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                            Explore courses
+                        </button>
+                    </div>
+                    <!-- Right Image -->
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+                            alt="Students collaborating and learning"
+                            class="w-full h-80 object-cover rounded-2xl shadow-lg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-indigo-400 py-16 px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-white text-3xl md:text-4xl font-bold mb-6">
+                    Speak to us today
+                </h2>
+
+                <p class="text-white text-base md:text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
+                    If you would like a demo of our training platform or would like to
+                    speak to<br />
+                    someone about your specific training requirements get in touch. Our
+                    skilled and<br />
+                    knowledgeable team are always happy to helps. To find out more about
+                    now <br />
+                    you can save with us view our special offers and volume discounts.
+                </p>
+
+                <button
+                    class="bg-black text-indigo-400 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition-colors duration-200">
+                    Contact us
+                </button>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full bg-gray-700 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <!-- Organized by Section -->
+                <div class="flex flex-col items-center text-center">
+                    <h3 class="text-lg font-semibold mb-4">Organized by</h3>
+                    <img src="./img/logoistad.png" alt="logo" class="w-24 h-24 mb-4 rounded-full" />
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        Institute of Science and Technology<br />
+                        Advanced Development
+                    </p>
+                </div>
+
+                <!-- Solutions Section -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Solutions</h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li>
+                            <a href="#" class="hover:text-white transition-colors">Our Learning Philosophy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-white transition-colors">Our Training Platform</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-white transition-colors">Bespoke Training Solutions -
+                                Notes</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Legal Section -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li>
+                            <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- G4 E-Learning Section -->
+                <div class="flex flex-col items-center text-center">
+                    <h3 class="text-lg font-semibold mb-4">G4<br />E-Learning</h3>
+                    <img src="./img/withbg.jpg" alt="" />
+                    <p class="text-sm text-gray-300">
+                        Just Smart with<br />
+                        Hard
+                    </p>
+                </div>
+
+                <!-- Contact Section -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <div class="flex space-x-3">
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                            <i class="fab fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors">
+                            <i class="fab fa-instagram text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+                            <i class="fas fa-envelope text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
