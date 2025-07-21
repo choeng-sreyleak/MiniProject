@@ -1,358 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'inter': ['Inter', 'sans-serif'],
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.8s ease-in-out',
-                        'slide-up': 'slideUp 0.8s ease-out',
-                        'pulse-custom': 'pulseCustom 2s infinite',
-                        'shimmer': 'shimmer 1.5s infinite',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            from: { opacity: 0, transform: 'translateY(20px)' },
-                            to: { opacity: 1, transform: 'translateY(0)' },
-                        },
-                        slideUp: {
-                            from: { opacity: 0, transform: 'translateY(50px)' },
-                            to: { opacity: 1, transform: 'translateY(0)' },
-                        },
-                        pulseCustom: {
-                            '0%, 100%': { transform: 'scale(1)' },
-                            '50%': { transform: 'scale(1.1)' },
-                        },
-                        shimmer: {
-                            '0%': { transform: 'translateX(-100%)' },
-                            '100%': { transform: 'translateX(100%)' },
-                        }
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.8s ease-in-out",
+              "slide-up": "slideUp 0.8s ease-out",
+              "pulse-custom": "pulseCustom 2s infinite",
+              shimmer: "shimmer 1.5s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                from: { opacity: 0, transform: "translateY(20px)" },
+                to: { opacity: 1, transform: "translateY(0)" },
+              },
+              slideUp: {
+                from: { opacity: 0, transform: "translateY(50px)" },
+                to: { opacity: 1, transform: "translateY(0)" },
+              },
+              pulseCustom: {
+                "0%, 100%": { transform: "scale(1)" },
+                "50%": { transform: "scale(1.1)" },
+              },
+              shimmer: {
+                "0%": { transform: "translateX(-100%)" },
+                "100%": { transform: "translateX(100%)" },
+              },
+            },
+          },
+        },
+      };
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
-        .text-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+      .text-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
 
-        .shimmer-effect::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
+      .shimmer-effect::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s;
+      }
 
-        .shimmer-effect:hover::before {
-            left: 100%;
-        }
+      .shimmer-effect:hover::before {
+        left: 100%;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <!-- Navbar -->
-        <nav class="bg-[#575366] text-white">
-            <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                    <div class="bg-[#7F95D1] rounded-full w-9 h-9">
-                        <img src="./imgs/Ellipse 4.png" alt="" />
-                    </div>
-                    <span class="text-lg font-bold">Learnode</span>
-                </div>
-                <ul class="hidden md:flex space-x-6">
-                    <li><a href="../index.html" class="hover:text-purple-400">Home</a></li>
-                    <li><a href="CourseEducation.html" class="hover:text-purple-400">Courses</a></li>
-                    <li><a href="Training Course.html" class="hover:text-purple-400">About</a></li>
-                    <li><a href="#" class="hover:text-purple-400">Contact</a></li>
-                </ul>
-                <button class="bg-[#7F95D1] px-4 py-2 rounded text-white hover:bg-purple-500">
-                    Login
-                </button>
+      <!-- Navbar -->
+      <nav class="bg-[#575366] text-white">
+        <div
+          class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+        >
+          <div class="flex items-center space-x-2">
+            <div class="bg-[#7F95D1] rounded-full w-9 h-9">
+              <img src="./imgs/Ellipse 4.png" alt="" />
             </div>
-        </nav>
-        <div class="bg-[#7F95D1] text-white text-center py-3">
-            <p class="text-sm font-medium">Explore our new website today!</p>
+            <span class="text-lg font-bold">Learnode</span>
+          </div>
+          <ul class="hidden md:flex space-x-6">
+            <li>
+              <a href="../index.html" class="hover:text-purple-400">Home</a>
+            </li>
+            <li>
+              <a href="CourseEducation.html" class="hover:text-purple-400"
+                >Courses</a
+              >
+            </li>
+            <li>
+              <a href="Training Course.html" class="hover:text-purple-400"
+                >About</a
+              >
+            </li>
+            <li><a href="#" class="hover:text-purple-400">Contact</a></li>
+          </ul>
+          <button
+            class="bg-[#7F95D1] px-4 py-2 rounded text-white hover:bg-purple-500"
+            onclick="location.href='./LogIn_SignUp.html';"
+          >
+            Login
+          </button>
         </div>
+      </nav>
+      <div class="bg-[#7F95D1] text-white text-center py-3">
+        <p class="text-sm font-medium">Explore our new website today!</p>
+      </div>
     </header>
     <main class="max-w-7xl mx-auto px-4 py-8">
-        <!-- Navigation -->
-        <div class="text-gray-600 flex items-center mb-8 animate-fade-in">
-            <a href="#" class="hover:text-blue-600 transition-colors duration-300">
-                <h3 class="hover:underline">Home</h3>
-            </a>
-            <span class="mx-2">></span>
-            <a href="#" class="hover:text-blue-600 transition-colors duration-300">
-                <h3 class="hover:underline">Contact Us</h3>
-            </a>
+      <!-- Navigation -->
+      <div class="text-gray-600 flex items-center mb-8 animate-fade-in">
+        <a href="#" class="hover:text-blue-600 transition-colors duration-300">
+          <h3 class="hover:underline">Home</h3>
+        </a>
+        <span class="mx-2">></span>
+        <a href="#" class="hover:text-blue-600 transition-colors duration-300">
+          <h3 class="hover:underline">Contact Us</h3>
+        </a>
+      </div>
+
+      <!-- Header Section -->
+      <section class="text-center mb-12 animate-fade-in">
+        <h1 class="text-5xl font-bold mb-6">Get in Touch</h1>
+        <p class="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
+          Have questions or need assistance? We are here to help. Reach out to
+          us through any of the forms below, email or phone and we will get back
+          to you as soon as possible. We look forward to hearing from you.
+        </p>
+      </section>
+
+      <!-- Contact Cards -->
+      <section class="mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Help & Support Card -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 animate-slide-up"
+          >
+            <div class="p-6 text-center">
+              <div class="mb-6">
+                <div
+                  class="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center animate-pulse-custom"
+                >
+                  <img src="../img/images (2).png" alt="" />
+                </div>
+              </div>
+              <h5 class="mb-4 text-2xl font-bold text-gray-900">
+                Help & Support
+              </h5>
+              <p class="mb-6 text-gray-600 leading-relaxed">
+                If you're having difficulty purchasing our products online,
+                logging in or using our courses or software then we are here to
+                help.
+              </p>
+              <a href="#" class="inline-block w-full">
+                <button
+                  class="bg-[#7F95D1] hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden shimmer-effect"
+                >
+                  Help Centre
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <!-- Product Info Card -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 animate-slide-up delay-200"
+          >
+            <div class="p-6 text-center">
+              <div class="mb-6">
+                <div
+                  class="w-16 h-16 mx-auto bg-[#7F95D1] rounded-full flex items-center justify-center animate-pulse-custom delay-100"
+                >
+                  <img src="../img/images (3).png" alt="" />
+                </div>
+              </div>
+              <h5 class="mb-4 text-2xl font-bold text-gray-900">
+                Info about our products
+              </h5>
+              <p class="mb-6 text-gray-600 leading-relaxed">
+                If you want to learn more about how our services can help your
+                organisation meet its training needs, then please get in touch.
+              </p>
+              <a href="#" class="inline-block w-full">
+                <button
+                  class="bg-[#7F95D1] hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden shimmer-effect"
+                >
+                  Sales Enquiry
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <!-- Work with us Card -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 animate-slide-up delay-500"
+          >
+            <div class="p-6 text-center">
+              <div class="mb-6">
+                <div
+                  class="w-16 h-16 mx-auto bg-bg-blue-600 rounded-full flex items-center justify-center animate-pulse-custom delay-300"
+                >
+                  <img src="../img/images (4).png" alt="" />
+                </div>
+              </div>
+              <h5 class="mb-4 text-2xl font-bold text-gray-900">
+                Work with us
+              </h5>
+              <p class="mb-6 text-gray-600 leading-relaxed">
+                Looking to work with us? Submit your request for proposal and
+                one of our bids team will be in touch to discuss the perfect
+                solution for you.
+              </p>
+              <a href="#" class="inline-block w-full">
+                <button
+                  class="bg-[#7F95D1] hover:bg-purple-600 text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden shimmer-effect"
+                >
+                  Submit your RFP
+                </button>
+              </a>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <!-- Header Section -->
-        <section class="text-center mb-12 animate-fade-in">
-            <h1 class="text-5xl font-bold  mb-6">Get in Touch</h1>
-            <p class="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
-                Have questions or need assistance? We are here to help. Reach out to us through any of the
-                forms below, email or phone and we will get back to you as soon as possible. We look forward to
-                hearing from you.
-            </p>
-        </section>
+      <!-- Contact Details & Map -->
+      <section class="mb-12 animate-slide-up">
+        <div class="flex flex-col lg:flex-row items-start gap-12">
+          <!-- Map -->
+          <div
+            class="flex-1 rounded-3xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.6314046837424!2d104.8992118758446!3d11.578259843890716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951e96d257a6f%3A0x6b66703c5fc0c7cc!2sScience%20and%20Technology%20Advanced%20Development%20Co.%2C%20Ltd.!5e0!3m2!1sen!2skh!4v1752877735403!5m2!1sen!2skh"
+              width="100%"
+              height="400"
+              class="border-0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
 
-        <!-- Contact Cards -->
-        <section class="mb-16">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Help & Support Card -->
+          <!-- Contact Details -->
+          <div class="flex-1 bg-white rounded-2xl shadow-lg p-8">
+            <h2 class="text-3xl text-black font-bold mb-8">Contact Details</h2>
+            <div class="space-y-6">
+              <!-- Email -->
+              <div class="flex items-start space-x-4 group">
                 <div
-                    class="bg-white border border-gray-200 rounded-2xl shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 animate-slide-up">
-                    <div class="p-6 text-center">
-                        <div class="mb-6">
-                            <div
-                                class="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center animate-pulse-custom">
-                                <img src="../img/images (2).png" alt="">
-                            </div>
-                        </div>
-                        <h5 class="mb-4 text-2xl font-bold text-gray-900">Help & Support</h5>
-                        <p class="mb-6 text-gray-600 leading-relaxed">
-                            If you're having difficulty purchasing our products online, logging in or using our
-                            courses or software then we are here to help.
-                        </p>
-                        <a href="#" class="inline-block w-full">
-                            <button
-                                class="bg-[#7F95D1] hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden shimmer-effect">
-                                Help Centre
-                            </button>
-                        </a>
-                    </div>
+                  class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-colors duration-300"
+                >
+                  <i class="fas fa-envelope"></i>
                 </div>
+                <div>
+                  <a
+                    href="mailto:info@virtual-college.co.uk"
+                    class="text-blue-600 hover:underline hover:text-blue-800 transition-colors duration-300"
+                  >
+                    <p>info@learnode-college.co.uk</p>
+                  </a>
+                </div>
+              </div>
 
-                <!-- Product Info Card -->
+              <!-- Phone -->
+              <div class="flex items-start space-x-4 group">
                 <div
-                    class="bg-white border border-gray-200 rounded-2xl shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 animate-slide-up delay-200">
-                    <div class="p-6 text-center">
-                        <div class="mb-6">
-                            <div
-                                class="w-16 h-16 mx-auto bg-[#7F95D1] rounded-full flex items-center justify-center animate-pulse-custom delay-100">
-                                <img src="../img/images (3).png" alt="">
-                            </div>
-                        </div>
-                        <h5 class="mb-4 text-2xl font-bold text-gray-900">Info about our products</h5>
-                        <p class="mb-6 text-gray-600 leading-relaxed">
-                            If you want to learn more about how our services can help your organisation
-                            meet its training needs, then please get in touch.
-                        </p>
-                        <a href="#" class="inline-block w-full">
-                            <button
-                                class="bg-[#7F95D1] hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden shimmer-effect">
-                                Sales Enquiry
-                            </button>
-                        </a>
-                    </div>
+                  class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-green-200 transition-colors duration-300"
+                >
+                  <i class="fas fa-phone"></i>
                 </div>
+                <div>
+                  <p class="font-semibold">01943 885085</p>
+                  <p class="text-gray-600 text-sm">
+                    Weekdays: Monday to Friday from 9:00 to 17:00
+                  </p>
+                </div>
+              </div>
 
-                <!-- Work with us Card -->
+              <!-- Location -->
+              <div class="flex items-start space-x-4 group">
                 <div
-                    class="bg-white border border-gray-200 rounded-2xl shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 animate-slide-up delay-500">
-                    <div class="p-6 text-center">
-                        <div class="mb-6">
-                            <div
-                                class="w-16 h-16 mx-auto bg-bg-blue-600 rounded-full flex items-center justify-center animate-pulse-custom delay-300">
-                                <img src="../img/images (4).png" alt="">
-                            </div>
-                        </div>
-                        <h5 class="mb-4 text-2xl font-bold text-gray-900">Work with us</h5>
-                        <p class="mb-6 text-gray-600 leading-relaxed">
-                            Looking to work with us? Submit your request for proposal and one of our bids
-                            team will be in touch to discuss the perfect solution for you.
-                        </p>
-                        <a href="#" class="inline-block w-full">
-                            <button
-                                class="bg-[#7F95D1] hover:bg-purple-600 text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden shimmer-effect">
-                                Submit your RFP
-                            </button>
-                        </a>
-                    </div>
+                  class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-red-200 transition-colors duration-300"
+                >
+                  <i class="fas fa-map-marker-alt"></i>
                 </div>
+                <div>
+                  <p class="font-semibold">Leeds - UK Head Office</p>
+                  <p class="text-gray-600">
+                    The Coach Works, 21 The Calls, Leeds, LS2 7EH
+                  </p>
+                </div>
+              </div>
             </div>
-        </section>
 
-        <!-- Contact Details & Map -->
-        <section class="mb-12 animate-slide-up">
-            <div class="flex flex-col lg:flex-row items-start gap-12">
-                <!-- Map -->
-                <div
-                    class="flex-1 rounded-3xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.6314046837424!2d104.8992118758446!3d11.578259843890716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951e96d257a6f%3A0x6b66703c5fc0c7cc!2sScience%20and%20Technology%20Advanced%20Development%20Co.%2C%20Ltd.!5e0!3m2!1sen!2skh!4v1752877735403!5m2!1sen!2skh"
-                        width="100%" height="400" class="border-0" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-
-                <!-- Contact Details -->
-                <div class="flex-1 bg-white rounded-2xl shadow-lg p-8">
-                    <h2 class="text-3xl text-black font-bold mb-8">Contact Details</h2>
-                    <div class="space-y-6">
-                        <!-- Email -->
-                        <div class="flex items-start space-x-4 group">
-                            <div
-                                class="w-8 h-8  rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-colors duration-300">
-                                <i class="fas fa-envelope "></i>
-                            </div>
-                            <div>
-                                <a href="mailto:info@virtual-college.co.uk"
-                                    class="text-blue-600 hover:underline hover:text-blue-800 transition-colors duration-300">
-                                    <p> info@virtual-college.co.uk</p>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Phone -->
-                        <div class="flex items-start space-x-4 group">
-                            <div
-                                class="w-8 h-8  rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-green-200 transition-colors duration-300">
-                                <i class="fas fa-phone "></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold">01943 885085</p>
-                                <p class="text-gray-600 text-sm">Weekdays: Monday to Friday from 9:00 to 17:00</p>
-                            </div>
-                        </div>
-
-                        <!-- Location -->
-                        <div class="flex items-start space-x-4 group">
-                            <div
-                                class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-red-200 transition-colors duration-300">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold">Leeds - UK Head Office</p>
-                                <p class="text-gray-600">The Coach Works, 21 The Calls, Leeds, LS2 7EH</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Company Info -->
-                    <div class="mt-8 pt-8 border-t border-gray-200">
-                        <p class="text-gray-700 mb-6 leading-relaxed">
-                            Virtual College by Netex is part of the Netex Learning family.
-                            Together we're going to take our vision of learning that drives change even further.
-                        </p>
-                        <button
-                            class=" bg-[#575366] from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white py-3 px-8 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg">
-                            Meet the Netex Family
-                        </button>
-                    </div>
-                </div>
+            <!-- Company Info -->
+            <div class="mt-8 pt-8 border-t border-gray-200">
+              <p class="text-gray-700 mb-6 leading-relaxed">
+                Learnode College by Netex is part of the Netex Learning family.
+                Together we're going to take our vision of learning that drives
+                change even further.
+              </p>
+              <button
+                class="bg-[#575366] from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white py-3 px-8 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                Meet the Netex Family
+              </button>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
 
-
-
-
-
-
     <footer class="w-full bg-gray-700 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-                <!-- Organized by Section -->
-                <div class="flex flex-col items-center text-center">
-                    <h3 class="text-lg font-semibold mb-4">Organized by</h3>
-                    <img src="./imgs/ISTAD_Logo.jpg" alt="logo" class="w-24 h-24 mb-4 rounded-full" />
-                    <p class="text-sm text-gray-300 leading-relaxed">
-                        Institute of Science and Technology<br />
-                        Advanced Development
-                    </p>
-                </div>
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <!-- Organized by Section -->
+          <div class="flex flex-col items-center text-center">
+            <h3 class="text-lg font-semibold mb-4">Organized by</h3>
+            <img
+              src="./imgs/ISTAD_Logo.jpg"
+              alt="logo"
+              class="w-24 h-24 mb-4 rounded-full"
+            />
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Institute of Science and Technology<br />
+              Advanced Development
+            </p>
+          </div>
 
-                <!-- Solutions Section -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Solutions</h3>
-                    <ul class="space-y-2 text-sm text-gray-300">
-                        <li>
-                            <a href="#" class="hover:text-white transition-colors">Our Learning Philosophy</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:text-white transition-colors">Our Training Platform</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:text-white transition-colors">Bespoke Training Solutions -
-                                Notes</a>
-                        </li>
-                    </ul>
-                </div>
+          <!-- Solutions Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Solutions</h3>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Our Learning Philosophy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Our Training Platform</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Bespoke Training Solutions - Notes</a
+                >
+              </li>
+            </ul>
+          </div>
 
-                <!-- Legal Section -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
-                    <ul class="space-y-2 text-sm text-gray-300">
-                        <li>
-                            <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
-                        </li>
-                    </ul>
-                </div>
+          <!-- Legal Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Legal</h3>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Cookie Policy</a
+                >
+              </li>
+            </ul>
+          </div>
 
-                <!-- G4 E-Learning Section -->
-                <div class="flex flex-col items-center text-center">
-                    <h3 class="text-lg font-semibold mb-4">G4<br />E-Learning</h3>
-                    <img src="./imgs/Ellipse 4.png" alt="" />
-                    <p class="text-sm text-gray-300">
-                        Just Smart with<br />
-                        Hard
-                    </p>
-                </div>
+          <!-- G4 E-Learning Section -->
+          <div class="flex flex-col items-center text-center">
+            <h3 class="text-lg font-semibold mb-4">G4<br />E-Learning</h3>
+            <img src="./imgs/Ellipse 4.png" alt="" />
+            <p class="text-sm text-gray-300">
+              Just Smart with<br />
+              Hard
+            </p>
+          </div>
 
-                <!-- Contact Section -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <div class="flex space-x-3">
-                        <a href="#"
-                            class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-                            <i class="fab fa-facebook-f text-sm"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors">
-                            <i class="fab fa-instagram text-sm"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors">
-                            <i class="fab fa-twitter text-sm"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
-                            <i class="fas fa-envelope text-sm"></i>
-                        </a>
-                    </div>
-                </div>
+          <!-- Contact Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact</h3>
+            <div class="flex space-x-3">
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
+              >
+                <i class="fab fa-facebook-f text-sm"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"
+              >
+                <i class="fab fa-instagram text-sm"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors"
+              >
+                <i class="fab fa-twitter text-sm"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors"
+              >
+                <i class="fas fa-envelope text-sm"></i>
+              </a>
             </div>
+          </div>
         </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
