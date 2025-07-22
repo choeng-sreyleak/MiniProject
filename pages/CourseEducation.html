@@ -228,36 +228,175 @@
   <body class="font-sans bg-white text-gray-800">
     <header>
       <!-- Navbar -->
-      <nav class="bg-[#575366] text-white">
-        <div
-          class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
-        >
-          <div class="flex items-center space-x-2">
-            <div class="bg-[#7F95D1] rounded-full w-9 h-9">
-              <img src="./imgs/Ellipse 4.png" alt="" />
+      <nav
+        class="bg-white shadow-lg border-b border-gray-200 sticky top-0 z-50"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex justify-between items-center h-16">
+            <!-- Logo Section -->
+            <div class="flex items-center space-x-3">
+              <div class="">
+                <i class="fas fa-graduation-cap text-white text-lg"></i>
+              </div>
+              <div class="flex items-center">
+                <img
+                  src="../pages/img/Learnode.png"
+                  alt="Learnode"
+                  class="w-16 h-16 rounded-full flex items-center justify-center"
+                />
+                <h1 class="text-2xl font-bold">Learnode</h1>
+              </div>
             </div>
-            <span class="text-lg font-bold">Learnode</span>
-          </div>
-          <ul class="hidden md:flex space-x-6">
-            <li>
-              <a href="../index.html" class="hover:text-purple-400">Home</a>
-            </li>
-            <li><a href="#" class="hover:text-purple-400">Courses</a></li>
-            <li>
-              <a href="Training Course.html" class="hover:text-purple-400"
-                >About</a
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center space-x-8">
+              <a
+                href="/"
+                class="nav-link group relative flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-300"
               >
-            </li>
-            <li>
-              <a href="ContactUs.html" class="hover:text-purple-400">Contact</a>
-            </li>
-          </ul>
-          <button
-            class="bg-[#7F95D1] px-4 py-2 rounded text-white hover:bg-purple-500"
-            onclick="location.href='./LogIn_SignUp.html';"
-          >
-            Login
-          </button>
+                <i
+                  class="fas fa-home text-sm group-hover:scale-110 transition-transform duration-300"
+                ></i>
+                <span class="font-semibold">Home</span>
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+
+              <a
+                href="../pages/CourseEducation.html"
+                class="nav-link group relative flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-book text-sm group-hover:scale-110 transition-transform duration-300"
+                ></i>
+                <span class="font-semibold">Courses</span>
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+
+              <a
+                href="../pages/Training Course.html"
+                class="nav-link group relative flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-info-circle text-sm group-hover:scale-110 transition-transform duration-300"
+                ></i>
+                <span class="font-semibold">About</span>
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+
+              <a
+                href="../pages/ContactUs.html"
+                class="nav-link group relative flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-phone text-sm group-hover:scale-110 transition-transform duration-300"
+                ></i>
+                <span class="font-semibold">Contact</span>
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+            </div>
+
+            <!-- Right Section -->
+            <div class="flex items-center space-x-4">
+              <!-- Search Button (Desktop) -->
+              <button
+                class="hidden md:flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all duration-300"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+
+              <!-- Notifications -->
+              <button
+                class="hidden md:flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all duration-300 relative"
+              >
+                <i class="fas fa-bell"></i>
+                <div
+                  class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"
+                ></div>
+              </button>
+
+              <!-- Login Button -->
+              <button
+                class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+              >
+                <a href="../pages/LogIn_SignUp.html">
+                  <i class="fas fa-sign-in-alt mr-2"></i>Login
+                </a>
+              </button>
+
+              <!-- Mobile Menu Button -->
+              <button
+                id="mobile-menu-button"
+                class="md:hidden flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all duration-300"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden bg-white border-t border-gray-200"
+        >
+          <div class="px-6 py-4 space-y-3">
+            <a
+              href="/"
+              class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"
+            >
+              <i class="fas fa-home text-blue-500"></i>
+              <span class="font-medium">Home</span>
+            </a>
+
+            <a
+              href="/courses"
+              class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"
+            >
+              <i class="fas fa-book text-blue-500"></i>
+              <span class="font-medium">Courses</span>
+            </a>
+
+            <a
+              href="/about"
+              class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"
+            >
+              <i class="fas fa-info-circle text-blue-500"></i>
+              <span class="font-medium">About</span>
+            </a>
+
+            <a
+              href="/contact"
+              class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"
+            >
+              <i class="fas fa-phone text-blue-500"></i>
+              <span class="font-medium">Contact</span>
+            </a>
+
+            <div class="pt-3 border-t border-gray-200">
+              <button
+                class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300 w-full"
+              >
+                <i class="fas fa-search text-blue-500"></i>
+                <span class="font-medium">Search</span>
+              </button>
+
+              <button
+                class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300 w-full"
+              >
+                <i class="fas fa-bell text-blue-500"></i>
+                <span class="font-medium">Notifications</span>
+                <div class="ml-auto w-1 h-1 bg-red-500 rounded-full"></div>
+              </button>
+            </div>
+          </div>
         </div>
       </nav>
       <div class="bg-[#7F95D1] text-white text-center py-3">
@@ -291,49 +430,30 @@
                 <h1
                   class="text-5xl text-shadow-md font-bold mb-4 fade-element animate-fade-in-left delay-1"
                 >
-                  Education Courses
+                Explore All Courses on Learnode
                 </h1>
 
                 <p
                   class="mb-6 text-lg opacity-95 leading-relaxed text-shadow-soft fade-element animate-fade-in-up delay-3"
                 >
-                  Our collection of CPD approved education training courses
-                  <br />
-                  cover everything you need to ensure those working in education
-                  <br />such as Teachers, Teaching Assistants, Office and
-                  Catering <br />Requirements are met.
+                  Our courses are built for every type of learner—whether you're
+                  looking to explore a new interest or prepare for a new career.
+                  Browse by category, level, or popularity.
                 </p>
               </div>
             </div>
           </div>
 
           <!-- Corner accent elements -->
-          <div
-            class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-400 to-transparent opacity-30"
-          ></div>
-          <div
-            class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-500 to-transparent opacity-20"
-          ></div>
+          
+         
         </div>
       </section>
-
-      <!-- Sort Section -->
-      <div class="flex justify-end mb-6">
-        <select
-          class="border border-gray-300 rounded-lg px-4 py-2 text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          <option>Sort By</option>
-          <option>Price: Low to High</option>
-          <option>Price: High to Low</option>
-          <option>Duration</option>
-          <option>Popularity</option>
-        </select>
-      </div>
-      <!-- Popular Courses -->
+      <!-- Courses -->
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-5xl font-bold text-gray-800 leading-tight mb-10">
-            Popular Courses
+            Courses
           </h2>
 
           <div
@@ -487,7 +607,6 @@
                     <p class="text-sm text-gray-600">3-4 Hours</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-sm line-through text-red-500">$39.00</p>
                     <p class="text-2xl font-bold text-gray-900">
                       $72.00
                       <span class="text-sm text-gray-500 font-normal"
@@ -954,181 +1073,153 @@
         <div
           class="bg-white rounded-3xl p-20 flex flex-col justify-between relative overflow-hidden"
         >
-          <!-- Header -->
-          <div class="text-center mb-12">
-            <h2 class="text-5xl font-bold text-gray-800 leading-tight">
-              Whilst we think our training is great<br />
-              <span class="text-gray-600">don't just take our word for it</span>
-            </h2>
-          </div>
 
           <!-- Testimonials Grid -->
-          <div class="grid grid-cols-3 gap-10 mb-12">
-            <!-- Testimonial 1 -->
-            <div
-              class="bg-gray-50 rounded-2xl p-8 border-l-4 border-[var(--primary-color)] hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
-            >
-              <div class="flex mb-4">
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-              </div>
-              <div class="text-sm text-gray-500 mb-2">13th July 2025</div>
-              <h3
-                class="text-lg font-semibold text-gray-800 mb-4 leading-tight"
-              >
-                Easy to find a course
-              </h3>
-              <p class="text-gray-600 text-sm leading-relaxed mb-12">
-                Easy to find a course and purchase. Can have a refund and return
-                when you want.
-              </p>
-              <div class="flex items-center justify-between">
-                <span class="text-sm text-gray-500 font-medium"
-                  >Dawn Lockyer</span
-                >
-                <div class="flex items-center text-xs text-green-600">
-                  <div
-                    class="w-4 h-4 bg-green-600 rounded-full flex items-center justify-center text-white text-xs mr-1"
-                  >
-                    ✓
-                  </div>
-                  Verified
-                </div>
-              </div>
+          <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Our Students Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover why thousands of students choose Learnode for their learning journey</p>
             </div>
-
-            <!-- Testimonial 2 -->
-            <div
-              class="bg-gray-50 rounded-2xl p-8 border-l-4 border-[var(--primary-color)] hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
-            >
-              <div class="flex mb-4">
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 mb-12">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-2xl p-6 md:p-8 border-l-4 border-[var(--primary-color)] hover:shadow-xl hover:-translate-y-2 transition-all duration-300 shadow-md">
+                    <!-- Star Rating -->
+                    <div class="flex mb-4 gap-1">
+                        <div class="w-4 h-4 md:w-5 md:h-5 bg-[var(--primary-color)] flex items-center justify-center rounded-sm">
+                            <i class="fa-solid fa-star text-white text-xs"></i>
+                        </div>
+                        <div class="w-4 h-4 md:w-5 md:h-5 bg-[var(--primary-color)] flex items-center justify-center rounded-sm">
+                            <i class="fa-solid fa-star text-white text-xs"></i>
+                        </div>
+                        <div class="w-4 h-4 md:w-5 md:h-5 bg-[var(--primary-color)] flex items-center justify-center rounded-sm">
+                            <i class="fa-solid fa-star text-white text-xs"></i>
+                        </div>
+                        <div class="w-4 h-4 md:w-5 md:h-5 bg-[var(--primary-color)] flex items-center justify-center rounded-sm">
+                            <i class="fa-solid fa-star text-white text-xs"></i>
+                        </div>
+                        <div class="w-4 h-4 md:w-5 md:h-5 bg-[var(--primary-color)] flex items-center justify-center rounded-sm">
+                            <i class="fa-solid fa-star text-white text-xs"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-3 md:mb-4 leading-tight">
+                        Easy to find a course
+                    </h3>
+                    <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8 flex-grow">
+                        Easy to find a course and purchase. Can have a refund and return when you want.
+                    </p>
+                    
+                    <!-- Footer -->
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                                <span class="text-white text-sm font-semibold">D</span>
+                            </div>
+                            <span class="text-sm md:text-base text-gray-700 font-medium">Dawn Lockyer</span>
+                        </div>
+                        <div class="flex items-center text-xs md:text-sm text-green-600">
+                            <div class="w-4 h-4 bg-green-600 rounded-full flex items-center justify-center text-white text-xs mr-2">
+                                ✓
+                            </div>
+                            <span class="hidden sm:inline">Verified</span>
+                        </div>
+                    </div>
                 </div>
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+    
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-2xl p-6 md:p-8 border-l-4 border-[var(--primary-color)] hover:shadow-xl hover:-translate-y-2 transition-all duration-300 shadow-md">
+                    <!-- Star Rating -->
+                    <div class="flex mb-4 gap-1">
+                        <div class="w-4 h-4 md:w-5 md:h-5 bg-[var(--primary-color)] flex items-center justify-center rounded-sm">
+                            <i class="fa-solid fa-star text-white text-xs"></i>
+                        </div>
+                        <div class="w-4 h-4 md:w-5 md:h-5 bg-[var(--primary-color)] flex items-center justify-center rounded-sm">
+                            <i class="fa-solid fa-star text-white text-xs"></i>
+                        </div>
+                        <div class="w-4 h-4 md:w-5 md:h-5 bg-[var(--primary-color)] flex items-center justify-center rounded-sm">
+                            <i class="fa-solid fa-star text-white text-xs"></i>
+                        </div>
+                        <div class="w-4 h-4 md:w-5 md:h-5 bg-[var(--primary-color)] flex items-center justify-center rounded-sm">
+                            <i class="fa-solid fa-star text-white text-xs"></i>
+                        </div>
+                        <div class="w-4 h-4 md:w-5 md:h-5 bg-[var(--primary-color)] flex items-center justify-center rounded-sm">
+                            <i class="fa-solid fa-star text-white text-xs"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-3 md:mb-4 leading-tight">
+                        Quick and easy process
+                    </h3>
+                    <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8">
+                        It was a quick and easy process to complete the course. The interface is intuitive and user-friendly.
+                    </p>
+                    
+                    <!-- Footer -->
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center">
+                                <span class="text-white text-sm font-semibold">S</span>
+                            </div>
+                            <span class="text-sm md:text-base text-gray-700 font-medium">San Tse</span>
+                        </div>
+                        <div class="flex items-center text-xs md:text-sm text-green-600">
+                            <div class="w-4 h-4 bg-green-600 rounded-full flex items-center justify-center text-white text-xs mr-2">
+                                ✓
+                            </div>
+                            <span class="hidden sm:inline">Verified</span>
+                        </div>
+                    </div>
                 </div>
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
+    
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-2xl p-6 md:p-8 border-l-4 border-[var(--primary-color)] hover:shadow-xl hover:-translate-y-2 transition-all duration-300 shadow-md">
+                    <!-- Star Rating -->
+                    <div class="flex mb-4 gap-1">
+                        <div class="w-4 h-4 md:w-5 md:h-5 bg-[var(--primary-color)] flex items-center justify-center rounded-sm">
+                            <i class="fa-solid fa-star text-white text-xs"></i>
+                        </div>
+                        <div class="w-4 h-4 md:w-5 md:h-5 bg-[var(--primary-color)] flex items-center justify-center rounded-sm">
+                            <i class="fa-solid fa-star text-white text-xs"></i>
+                        </div>
+                        <div class="w-4 h-4 md:w-5 md:h-5 bg-[var(--primary-color)] flex items-center justify-center rounded-sm">
+                            <i class="fa-solid fa-star text-white text-xs"></i>
+                        </div>
+                        <div class="w-4 h-4 md:w-5 md:h-5 bg-[var(--primary-color)] flex items-center justify-center rounded-sm">
+                            <i class="fa-solid fa-star text-white text-xs"></i>
+                        </div>
+                        <div class="w-4 h-4 md:w-5 md:h-5 bg-[var(--primary-color)] flex items-center justify-center rounded-sm">
+                            <i class="fa-solid fa-star text-white text-xs"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-3 md:mb-4 leading-tight">
+                        Excellent and affordable
+                    </h3>
+                    <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8">
+                        L2 Food Safety and Hygiene for Catering course was comprehensive and reasonably priced.
+                    </p>
+                    
+                    <!-- Footer -->
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
+                                <span class="text-white text-sm font-semibold">J</span>
+                            </div>
+                            <span class="text-sm md:text-base text-gray-700 font-medium">Jimmy Chan</span>
+                        </div>
+                        <div class="flex items-center text-xs md:text-sm text-green-600">
+                            <div class="w-4 h-4 bg-green-600 rounded-full flex items-center justify-center text-white text-xs mr-2">
+                                ✓
+                            </div>
+                            <span class="hidden sm:inline">Verified</span>
+                        </div>
+                    </div>
                 </div>
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-              </div>
-              <div class="text-sm text-gray-500 mb-2">13th July 2025</div>
-              <h3
-                class="text-lg font-semibold text-gray-800 mb-4 leading-tight"
-              >
-                It was a quick and easy process to...
-              </h3>
-              <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                It was a quick and easy process to complete the course.
-              </p>
-              <div class="flex items-center justify-between">
-                <span class="text-sm text-gray-500 font-medium">San Tse</span>
-                <div class="flex items-center text-xs text-green-600">
-                  <div
-                    class="w-4 h-4 bg-green-600 rounded-full flex items-center justify-center text-white text-xs mr-1"
-                  >
-                    ✓
-                  </div>
-                  Verified
-                </div>
-              </div>
             </div>
-
-            <!-- Testimonial 3 -->
-            <div
-              class="bg-gray-50 rounded-2xl p-8 border-l-4 border-[var(--primary-color)] hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
-            >
-              <div class="flex mb-4">
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-                <div
-                  <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-              </div>
-              <div class="text-sm text-gray-500 mb-2">12th July 2025</div>
-              <h3
-                class="text-lg font-semibold text-gray-800 mb-4 leading-tight"
-              >
-                Excellent and affordable
-              </h3>
-              <p class="text-gray-600 text-sm leading-relaxed mb-16">
-                L2 Food Safety and Hygiene for Catering<br />
-              </p>
-              <div class="flex items-center justify-between">
-                <span class="text-sm text-gray-500 font-medium"
-                  >Jimmy Chan</span
-                >
-                <div class="flex items-center text-xs text-green-600">
-                  <div
-                    class="w-4 h-4 bg-green-600 rounded-full flex items-center justify-center text-white text-xs mr-1"
-                  >
-                    ✓
-                  </div>
-                  Verified
-                </div>
-              </div>
-            </div>
-          </div>
 
           <!-- Carousel Navigation -->
           <div class="flex items-center justify-center mb-8">
@@ -1165,339 +1256,17 @@
 
           <!-- Trustpilot Section -->
           <div class="text-center">
-            <div
-              class="inline-flex items-center bg-trustpilot-green text-black px-4 py-2 rounded-md font-semibold mb-4"
-            >
-              <span class="mr-5">Excellent</span>
-              <div class="flex mr-3">
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star mr-1 flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-                <div
-                  class="w-5 h-5 bg-[var(--primary-color)] star flex items-center justify-center"
-                >
-                  <i class="fa-solid fa-star-half-stroke text-white"></i>
-                </div>
-              </div>
-
-              <span class="ml-3 text-lg font-bold">4.7 out of 5</span>
-            </div>
+            
 
             <div class="text-gray-700 mb-2">
               <span class="font-semibold">15840</span> Reviews on
-              <span class="inline-flex items-center">
-                <div class="w-4 h-4 bg-trustpilot-green star mr-1"></div>
-                <span class="font-semibold">Trustpilot</span>
-              </span>
             </div>
 
             <button
               class="bg-[var(--primary-color)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-600 hover:-translate-y-1 transition-all duration-300 shadow-lg"
             >
-              See all reviews on Trustpilot
+              See all reviews
             </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Why Choose Virtual College Section -->
-      <section class="enhanced-bg py-20 relative">
-        <!-- Floating particles -->
-        <div class="particles" id="particles"></div>
-
-        <!-- Decorative blobs -->
-        <div
-          class="decorative-blob w-64 h-64 -top-32 -left-32 absolute"
-          style="animation-delay: 0s"
-        ></div>
-        <div
-          class="decorative-blob w-48 h-48 -bottom-24 -right-24 absolute"
-          style="animation-delay: 2s"
-        ></div>
-        <div
-          class="decorative-blob w-32 h-32 top-1/3 -right-16 absolute"
-          style="animation-delay: 4s"
-        ></div>
-
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <!-- Left Content -->
-            <div class="space-y-10">
-              <!-- Header -->
-              <div class="fade-element animate-fade-in-left">
-                <h2
-                  class="text-5xl lg:text-5xl font-bold gradient-text mb-6 leading-tight"
-                >
-                  Why choose Learnode College?
-                </h2>
-                <div
-                  class="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mb-4"
-                ></div>
-                <p class="text-xl text-vc-gray leading-relaxed">
-                  We stand out by offering:
-                </p>
-              </div>
-
-              <!-- Enhanced Features List -->
-              <div class="space-y-4 fade-element animate-fade-in-up delay-2">
-                <div
-                  class="feature-item fade-element animate-slide-in-bottom delay-1"
-                >
-                  <div class="flex items-start space-x-4">
-                    <div
-                      class="check-icon flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1"
-                    >
-                      <svg
-                        class="w-5 h-5 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="3"
-                          d="M5 13l4 4L19 7"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-gray-700 font-semibold text-lg">
-                      Over 350 accredited and certified courses
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="feature-item fade-element animate-slide-in-bottom delay-2"
-                >
-                  <div class="flex items-start space-x-4">
-                    <div
-                      class="check-icon flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1"
-                    >
-                      <svg
-                        class="w-5 h-5 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="3"
-                          d="M5 13l4 4L19 7"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-gray-700 font-semibold text-lg">
-                      Bitesize, engaging content
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="feature-item fade-element animate-slide-in-bottom delay-3"
-                >
-                  <div class="flex items-start space-x-4">
-                    <div
-                      class="check-icon flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1"
-                    >
-                      <svg
-                        class="w-5 h-5 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="3"
-                          d="M5 13l4 4L19 7"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-gray-700 font-semibold text-lg">
-                      Developed with industry experts
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="feature-item fade-element animate-slide-in-bottom delay-4"
-                >
-                  <div class="flex items-start space-x-4">
-                    <div
-                      class="check-icon flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1"
-                    >
-                      <svg
-                        class="w-5 h-5 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="3"
-                          d="M5 13l4 4L19 7"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-gray-700 font-semibold text-lg">
-                      Instant certification upon completion
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="feature-item fade-element animate-slide-in-bottom delay-5"
-                >
-                  <div class="flex items-start space-x-4">
-                    <div
-                      class="check-icon flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1"
-                    >
-                      <svg
-                        class="w-5 h-5 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="3"
-                          d="M5 13l4 4L19 7"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-gray-700 font-semibold text-lg">
-                      Flexible, anytime learning, anywhere
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="feature-item fade-element animate-slide-in-bottom delay-6"
-                >
-                  <div class="flex items-start space-x-4">
-                    <div
-                      class="check-icon flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1"
-                    >
-                      <svg
-                        class="w-5 h-5 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="3"
-                          d="M5 13l4 4L19 7"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-gray-700 font-semibold text-lg">
-                      Always up to date content
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="feature-item fade-element animate-slide-in-bottom delay-7"
-                >
-                  <div class="flex items-start space-x-4">
-                    <div
-                      class="check-icon flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1"
-                    >
-                      <svg
-                        class="w-5 h-5 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="3"
-                          d="M5 13l4 4L19 7"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-gray-700 font-semibold text-lg">
-                      Experienced and dedicated team
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Enhanced Action Buttons -->
-              <div
-                class="flex flex-wrap gap-6 fade-element animate-fade-in-up delay-8"
-              >
-                <button
-                  class="enhanced-button bg-[#7f95d1] text-white px-8 py-4 rounded-xl font-semibold hover:bg-indigo-700 transition-all duration-300 shadow-lg"
-                >
-                  Search for a course
-                </button>
-                <button
-                  class="enhanced-button bg-[#6b7280] text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-600 transition-all duration-300 shadow-lg"
-                >
-                  About us
-                </button>
-              </div>
-            </div>
-
-            <!-- Enhanced Right Image -->
-            <div class="lg:pl-8 fade-element animate-fade-in-right delay-4">
-              <div class="relative image-container animate-float">
-                <div
-                  class="bg-gradient-to-br from-gray-100 via-white to-gray-200 rounded-3xl p-10 shadow-2xl glass-container"
-                >
-                  <div
-                    class="image-card bg-white rounded-2xl p-6 shadow-xl transform rotate-3 hover:rotate-0 transition-all duration-500 relative overflow-hidden"
-                  >
-                    <!-- Shimmer effect on image card -->
-                    <div
-                      class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 hover:opacity-20 transition-opacity duration-500 transform -skew-x-12 hover:animate-pulse"
-                    ></div>
-                    <img
-                      src="./imgs/pic12.jpg"
-                      alt="Virtual College Learning Experience"
-                      class="w-full h-64 object-cover rounded-xl transition-transform duration-500 hover:scale-105"
-                    />
-                  </div>
-                  <!-- Floating decorative elements around image -->
-                  <div
-                    class="absolute -top-3 -right-3 w-6 h-6 bg-green-400 rounded-full animate-bounce-custom opacity-70"
-                  ></div>
-                  <div
-                    class="absolute -bottom-2 -left-2 w-4 h-4 bg-blue-400 rounded-full animate-bounce-custom opacity-70"
-                    style="animation-delay: 1s"
-                  ></div>
-                  <div
-                    class="absolute top-1/2 -right-4 w-3 h-3 bg-purple-400 rounded-full animate-bounce-custom opacity-70"
-                    style="animation-delay: 0.5s"
-                  ></div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -1608,109 +1377,159 @@
     </main>
 
     <!-- Footer -->
-    <footer class="w-full bg-gray-700 text-white py-12">
-      <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          <!-- Organized by Section -->
-          <div class="flex flex-col items-center text-center">
-            <h3 class="text-lg font-semibold mb-4">Organized by</h3>
-            <img
-              src="./imgs/ISTAD_Logo.jpg"
-              alt="logo"
-              class="w-24 h-24 mb-4 rounded-full"
-            />
-            <p class="text-sm text-gray-300 leading-relaxed">
-              Institute of Science and Technology<br />
-              Advanced Development
+    <footer class="bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- About Section -->
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <img
+                src="../pages/img/Learnode.png"
+                alt="Learnode"
+                class="w-14 h-14 rounded-full flex items-center justify-center"
+              />
+              <h3 class="text-2xl font-bold">Learnode</h3>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Empowering students through innovative e-learning solutions. Built
+              by passionate students from ISTAD for the future of education.
             </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
           </div>
 
-          <!-- Solutions Section -->
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Solutions</h3>
-            <ul class="space-y-2 text-sm text-gray-300">
+          <!-- Quick Links Section -->
+          <div class="space-y-4">
+            <h4 class="text-lg font-semibold text-blue-400 mb-4">
+              Quick Links
+            </h4>
+            <ul class="space-y-3">
               <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Our Learning Philosophy</a
+                <a
+                  href="../index.html"
+                  class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2"
                 >
+                  <i class="fas fa-home text-blue-400 text-sm"></i>
+                  <span>Home</span>
+                </a>
               </li>
               <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Our Training Platform</a
+                <a
+                  href="../pages/CourseEducation.html"
+                  class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2"
                 >
+                  <i class="fas fa-book text-blue-400 text-sm"></i>
+                  <span>Courses</span>
+                </a>
               </li>
               <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Bespoke Training Solutions - Notes</a
+                <a
+                  href="../pages/Training Course.html"
+                  class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2"
                 >
+                  <i class="fas fa-info-circle text-blue-400 text-sm"></i>
+                  <span>About</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../pages/ContactUs.html"
+                  class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2"
+                >
+                  <i class="fas fa-phone text-blue-400 text-sm"></i>
+                  <span>Contact</span>
+                </a>
               </li>
             </ul>
           </div>
 
-          <!-- Legal Section -->
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Legal</h3>
-            <ul class="space-y-2 text-sm text-gray-300">
-              <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Privacy Policy</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Terms of Service</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Cookie Policy</a
-                >
-              </li>
-            </ul>
+          <!-- Organization Section -->
+          <div class="space-y-4">
+            <h4 class="text-lg font-semibold text-blue-400 mb-4">
+              Supported by
+            </h4>
+            <div class="flex items-center space-x-3 mb-4">
+              <img src="../pages/img/logoistad.png" alt="" class="w-16 h-16 rounded-full flex items-center justify-center">
+              <div>
+                <h5 class="font-semibold text-white">ISTAD</h5>
+                <p class="text-sm text-gray-400">
+                  Institute of Science and Technology Advanced Development
+                </p>
+              </div>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4">
+              <h5 class="text-sm font-semibold text-blue-400 mb-2">
+                Contact Info
+              </h5>
+              <div class="space-y-2 text-sm text-gray-300">
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-envelope text-blue-400"></i>
+                  <span>info.istad@gmail.com</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-phone text-blue-400"></i>
+                  <span>(+855) 95-990-910</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-map-marker-alt text-blue-400"></i>
+                  <span>Phnom Penh, Cambodia</span>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <!-- G4 E-Learning Section -->
-          <div class="flex flex-col items-center text-center">
-            <h3 class="text-lg font-semibold mb-4">G4<br />E-Learning</h3>
-            <img src="./imgs/Ellipse 4.png" alt="" />
-            <p class="text-sm text-gray-300">
-              Just Smart with<br />
-              Hard
-            </p>
-          </div>
-
-          <!-- Contact Section -->
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Contact</h3>
-            <div class="flex space-x-3">
-              <a
-                href="#"
-                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
+        <!-- Bottom Section -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          >
+            <div class="text-sm text-gray-400">
+              © 2025 <span class="text-white font-semibold">Learnode</span>. All
+              rights reserved.
+              <span class="text-blue-400"
+                >Proudly developed by ISTAD students.</span
               >
-                <i class="fab fa-facebook-f text-sm"></i>
-              </a>
-              <a
-                href="#"
-                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"
-              >
-                <i class="fab fa-instagram text-sm"></i>
-              </a>
-              <a
-                href="#"
-                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors"
-              >
-                <i class="fab fa-twitter text-sm"></i>
-              </a>
-              <a
-                href="#"
-                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors"
-              >
-                <i class="fas fa-envelope text-sm"></i>
-              </a>
+            </div>
+            <div class="flex items-center space-x-6 text-sm text-gray-400">
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-heart text-red-500 animate-pulse"></i>
+                <span>Made with passion</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-code text-blue-400"></i>
+                <span>Built for students, by students</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      
     </footer>
     <script>
       // Intersection Observer for animations

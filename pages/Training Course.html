@@ -1,511 +1,744 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- nav -->
     <header>
-        <nav class="bg-[#575366] text-white">
-            <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                    <div class="bg-white-600 rounded-full w-9 h-8">
-                        <img src="./img/logoimg.png" alt="" />
-                    </div>
-                    <span class="text-lg font-bold">Learnode</span>
-                </div>
-                <ul class="hidden md:flex space-x-6">
-                    <li><a href="../index.html" class="hover:text-purple-400">Home</a></li>
-                    <li><a href="CourseEducation.html" class="hover:text-purple-400">Courses</a></li>
-                    <li><a href="Training Course.html" class="hover:text-purple-400">About</a></li>
-                    <li><a href="ContactUs.html" class="hover:text-purple-400">Contact</a></li>
-                </ul>
-                <button
-            class="bg-[#7F95D1] px-4 py-2 rounded text-white hover:bg-purple-500"
-            onclick="location.href='./LogIn_SignUp.html';"
-          >
-            Login
-          </button>
+      <nav
+        class="bg-white shadow-lg border-b border-gray-200 sticky top-0 z-50"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex justify-between items-center h-16">
+            <!-- Logo Section -->
+            <div class="flex items-center space-x-3">
+              <div class="">
+                <i class="fas fa-graduation-cap text-white text-lg"></i>
+              </div>
+              <div class="flex items-center">
+                <img
+                  src="../pages/img/Learnode.png"
+                  alt="Learnode"
+                  class="w-16 h-16 rounded-full flex items-center justify-center"
+                />
+                <h1 class="text-2xl font-bold">Learnode</h1>
+              </div>
             </div>
-        </nav>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center space-x-8">
+              <a
+                href="/"
+                class="nav-link group relative flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-home text-sm group-hover:scale-110 transition-transform duration-300"
+                ></i>
+                <span class="font-semibold">Home</span>
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+
+              <a
+                href="../pages/CourseEducation.html"
+                class="nav-link group relative flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-book text-sm group-hover:scale-110 transition-transform duration-300"
+                ></i>
+                <span class="font-semibold">Courses</span>
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+
+              <a
+                href="../pages/Training Course.html"
+                class="nav-link group relative flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-info-circle text-sm group-hover:scale-110 transition-transform duration-300"
+                ></i>
+                <span class="font-semibold">About</span>
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+
+              <a
+                href="../pages/ContactUs.html"
+                class="nav-link group relative flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-phone text-sm group-hover:scale-110 transition-transform duration-300"
+                ></i>
+                <span class="font-semibold">Contact</span>
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+            </div>
+
+            <!-- Right Section -->
+            <div class="flex items-center space-x-4">
+              <!-- Search Button (Desktop) -->
+              <button
+                class="hidden md:flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all duration-300"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+
+              <!-- Notifications -->
+              <button
+                class="hidden md:flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all duration-300 relative"
+              >
+                <i class="fas fa-bell"></i>
+                <div
+                  class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"
+                ></div>
+              </button>
+
+              <!-- Login Button -->
+              <button
+                class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+              >
+                <a href="../pages/LogIn_SignUp.html">
+                  <i class="fas fa-sign-in-alt mr-2"></i>Login
+                </a>
+              </button>
+
+              <!-- Mobile Menu Button -->
+              <button
+                id="mobile-menu-button"
+                class="md:hidden flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all duration-300"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden bg-white border-t border-gray-200"
+        >
+          <div class="px-6 py-4 space-y-3">
+            <a
+              href="/"
+              class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"
+            >
+              <i class="fas fa-home text-blue-500"></i>
+              <span class="font-medium">Home</span>
+            </a>
+
+            <a
+              href="/courses"
+              class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"
+            >
+              <i class="fas fa-book text-blue-500"></i>
+              <span class="font-medium">Courses</span>
+            </a>
+
+            <a
+              href="/about"
+              class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"
+            >
+              <i class="fas fa-info-circle text-blue-500"></i>
+              <span class="font-medium">About</span>
+            </a>
+
+            <a
+              href="/contact"
+              class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"
+            >
+              <i class="fas fa-phone text-blue-500"></i>
+              <span class="font-medium">Contact</span>
+            </a>
+
+            <div class="pt-3 border-t border-gray-200">
+              <button
+                class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300 w-full"
+              >
+                <i class="fas fa-search text-blue-500"></i>
+                <span class="font-medium">Search</span>
+              </button>
+
+              <button
+                class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300 w-full"
+              >
+                <i class="fas fa-bell text-blue-500"></i>
+                <span class="font-medium">Notifications</span>
+                <div class="ml-auto w-1 h-1 bg-red-500 rounded-full"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="bg-[#7F95D1] text-white text-center py-3">
+        <p class="text-sm font-medium">Explore our new website today!</p>
+      </div>
     </header>
-    <main>
-        <section class="bg-gray-50">
-            <!-- Hero Section -->
-            <div class="relative bg-gray-100 py-16 h-screen">
-                <!-- <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-600/10"></div> -->
-                <div class="relative max-w-7xl mx-auto px-6 h-full flex items-center justify-center">
-                    <div class="flex-1">
-                        <img src="./img/pic1.jpg" alt="Hero Image"
-                            class="w-full h-full object-cover rounded-lg shadow-lg" />
-                    </div>
+    <main class="max-w-7xl mx-auto px-4 py-8">
+      <section class="bg-white py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div class="space-y-6">
+              <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">
+                About Learnode
+              </h2>
+
+              <p class="text-gray-600 text-lg">
+                Learnode is a student-built e-learning platform designed to make
+                education more accessible, engaging, and affordable. Whether
+                you're a beginner exploring new topics or a student deepening
+                your skills, Learnode offers a flexible and friendly space to
+                learn at your own pace — anytime, anywhere.
+              </p>
+
+              <div class="space-y-4 text-gray-600">
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
+                  <div>
+                    <p class="text-gray-600">Built by Students, for Students</p>
+                  </div>
                 </div>
+
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
+                  <div>
+                    <p class="text-gray-600">Free & Affordable Learning</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
+                  <div>
+                    <p class="text-gray-600">Easy-to-Use Platform</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
+                  <div>
+                    <h3 class="text-gray-600">Community-Driven Growth</h3>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
+                  <div>
+                    <h3 class="text-gray-600">Learning That Fits Your Life</h3>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="bg-[#7F95D1] text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              >
+                Explore courses
+              </button>
             </div>
-            <div class="listpay">
-                <div class="pricing-container">
-                    <div class="pricing-card">
-                        <div class="plan-title">Up to 100 users</div>
-                        <div class="plan-subtitle">Per User</div>
-                        <div class="price">$22</div>
-                        <div class="price-period">Per Year</div>
-                        <a href="#" class="cta-button">Get Started</a>
-                    </div>
-
-                    <div class="pricing-card">
-                        <div class="plan-title">Up to 200 Users</div>
-                        <div class="plan-subtitle">Per User</div>
-                        <div class="price">$18</div>
-                        <div class="price-period">Per Year</div>
-                        <a href="#" class="cta-button">Get Started</a>
-                    </div>
-
-                    <div class="pricing-card">
-                        <div class="plan-title">Up to 300 Users</div>
-                        <div class="plan-subtitle">Per User</div>
-                        <div class="price">$8</div>
-                        <div class="price-period">Per Year</div>
-                        <a href="#" class="cta-button">Get Started</a>
-                    </div>
-
-                    <div class="pricing-card">
-                        <div class="plan-title">400+ Users</div>
-                        <div class="plan-subtitle">Per User</div>
-                        <div class="price">$4</div>
-                        <div class="price-period">Per Year</div>
-                        <a href="#" class="cta-button">Get Started</a>
-                    </div>
-                </div>
-                <!-- Features Column -->
-                <div class="lg:col-span-2">
-                    <div class="border-green-500 rounded-lg p-8 h-full">
-                        <h3 class="text-2xl font-bold text-white mb-8">
-                            Features & Services for All Plans
-                        </h3>
-
-                        <div class="space-y-6">
-                            <div class="flex items-start space-x-3">
-                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
-                                <p class="text-gray-300 leading-relaxed">
-                                    Access to our full training catalogue
-                                </p>
-                            </div>
-
-                            <div class="flex items-start space-x-3">
-                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
-                                <p class="text-gray-300 leading-relaxed">
-                                    Dedicated account manager and onboarding
-                                </p>
-                            </div>
-
-                            <div class="flex items-start space-x-3">
-                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
-                                <p class="text-gray-300 leading-relaxed">
-                                    communication support from day one
-                                </p>
-                            </div>
-
-                            <div class="flex items-start space-x-3">
-                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
-                                <p class="text-gray-300 leading-relaxed">
-                                    Flexible branding to match your organisation
-                                </p>
-                            </div>
-
-                            <div class="flex items-start space-x-3">
-                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
-                                <p class="text-gray-300 leading-relaxed">
-                                    Self-enroll or automated training allocation
-                                </p>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
-                                <p class="text-gray-300 leading-relaxed">
-                                    Set your own deadlines with auto reminders
-                                </p>
-                            </div>
-
-                            <div class="flex items-start space-x-3">
-                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
-                                <p class="text-gray-300 leading-relaxed">
-                                    Bespoke learning plans and categories
-                                </p>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
-                                <p class="text-gray-300 leading-relaxed">
-                                    Upload your own training materials
-                                </p>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
-                                <p class="text-gray-300 leading-relaxed">
-                                    Behavioural compliance tracking and reports
-                                </p>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
-                                <p class="text-gray-300 leading-relaxed">
-                                    Line Manager tools for department oversight
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Right Image -->
+            <div>
+              <img
+                src="../images/mission.jpg"
+                alt="Students collaborating and learning"
+                class="w-full h-80 object-cover rounded-2xl shadow-lg"
+              />
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="bg-gray-50">
-            <!-- Hero Section -->
-            <div class="bg-white py-16 px-6">
-                <div class="max-w-6xl mx-auto">
-                    <div class="grid lg:grid-cols-2 gap-12 items-center">
-                        <!-- Left Content -->
-                        <div class="space-y-6">
-                            <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                                Why choose our subscription?
-                            </h1>
+      <section class="flex flex-col md:flex-row items-center gap-10">
+        <img
+          src="../images/about.jpg"
+          alt="E-learning"
+          class="w-full md:w-1/2 rounded-xl shadow-md"
+        />
+        <div>
+          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 pb-5">Our Mission</h2>
+          <p class="text-lg leading-relaxed">
+            Our mission is to break down barriers to education by providing
+            high-quality, accessible online courses to learners of all ages and
+            backgrounds. Whether you're in a city or a rural area, Learnode
+            helps you grow your skills anywhere.
+          </p>
+        </div>
+      </section>
+      <!--  Our Team -->
+      <section>
+        <h2 class="text-3xl font-bold mb-10 text-center pt-20  lg:text-4xl  text-gray-900">
+          Our Team
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <!-- Team Card -->
+          <div
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center"
+          >
+            <img
+              src=""
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+              alt="img"
+            />
+            <h3 class="text-xl font-semibold">Choeng Sreyleak</h3>
+            <p class="text-sm text-gray-600">UC</p>
+          </div>
 
-                            <div class="space-y-4 text-gray-600 ">
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-2 h-2"></div>
-                                    <p>
-                                        Perfect for organisations that require ongoing training
-                                        and compliance <br />management
-                                    </p>
-                                </div>
+          <div
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center"
+          >
+            <img
+              src=""
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+              alt="img"
+            />
+            <h3 class="text-xl font-semibold">San Sopheak</h3>
+            <p class="text-sm text-gray-600">RUPP</p>
+          </div>
 
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
-                                    <p>
-                                        Full Library Access – Unlimited access to our entire
-                                        catalogue of <br />accredited and certified courses.
-                                    </p>
-                                </div>
+          <div
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center"
+          >
+            <img
+              src=""
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+              alt="img"
+            />
+            <h3 class="text-xl font-semibold">Chea Phirum</h3>
+            <p class="text-sm text-gray-600">IDK</p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center"
+          >
+            <img
+              src=""
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+              alt="img"
+            />
+            <h3 class="text-xl font-semibold">Koy Sokkea</h3>
+            <p class="text-sm text-gray-600">IDK</p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center"
+          >
+            <img
+              src=""
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+              alt="img"
+            />
+            <h3 class="text-xl font-semibold">Nol Monyrathanak</h3>
+            <p class="text-sm text-gray-600">RUPP</p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center"
+          >
+            <img
+              src=""
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+              alt="img"
+            />
+            <h3 class="text-xl font-semibold">Chhorn Seavleng</h3>
+            <p class="text-sm text-gray-600">RUPP</p>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center"
+          >
+            <img src="" class="w-24 h-24 mx-auto rounded-full mb-4" alt="img" />
+            <h3 class="text-xl font-semibold">Tak Sreytim</h3>
+            <p class="text-sm text-gray-600">AUPP</p>
+          </div>
+        </div>
+      </section>
 
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
-                                    <p>
-                                        Effortless Compliance Tracking – Monitor employee progress
-                                        with <br />user-friendly dashboards and reporting tools.
-                                    </p>
-                                </div>
+      <!-- 4. Our Values -->
+      <section class="pb-20">
+        <h2 class="text-3xl font-bold  mb-10 text-center pt-20">
+          Our Values
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <!-- Value Card 1 -->
+          <div
+            class="bg-gradient-to-tr from-white to-blue-100 p-6 rounded-xl shadow-md hover:shadow-lg transition text-center"
+          >
+            <div class="text-4xl mb-3">🤝</div>
+            <h3 class="font-bold text-xl mb-2">Inclusivity</h3>
+            <p class="text-sm text-gray-700">
+              Everyone deserves a chance to learn and grow, regardless of
+              background or situation.
+            </p>
+          </div>
 
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
-                                    <p>
-                                        Flexible Training Packages – Tailored to fit your
-                                        organisation’s <br />specific compliance needs.
-                                    </p>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
-                                    <p>
-                                        Rapid Deployment – Get your teams trained and compliant in
-                                        as little <br />as 48 hours.
-                                    </p>
-                                </div>
+          <!-- Value Card 2 -->
+          <div
+            class="bg-gradient-to-tr from-white to-yellow-100 p-6 rounded-xl shadow-md hover:shadow-lg transition text-center"
+          >
+            <div class="text-4xl mb-3">💡</div>
+            <h3 class="font-bold text-xl mb-2">Innovation</h3>
+            <p class="text-sm text-gray-700">
+              We embrace new tools and ideas to make learning smarter and more
+              effective.
+            </p>
+          </div>
 
-                                <div class="flex items-start space-x-3">
-                                    <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
-                                    <p>
-                                        Simplify Learning Management – Consolidate all learning
-                                        activities <br />in one easy-to-use system.
-                                    </p>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
-                                <p>
-                                    Dedicated Account Management – maximise the value of the
-                                    training <br />platform with expert guidance from day one.
-                                </p>
-                            </div>
-                            </div>
+          <!-- Value Card 3 -->
+          <div
+            class="bg-gradient-to-tr from-white to-green-100 p-6 rounded-xl shadow-md hover:shadow-lg transition text-center"
+          >
+            <div class="text-4xl mb-3">🌱</div>
+            <h3 class="font-bold text-xl mb-2">Community</h3>
+            <p class="text-sm text-gray-700">
+              We grow together by sharing knowledge, listening to feedback, and
+              lifting others up.
+            </p>
+          </div>
+        </div>
+      </section>
 
-                            
-                            <button
-                                class="bg-[#7F95D1] text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
-                                Enquire now
-                            </button>
-                        </div>
-                        <!-- Right Image -->
-                        <div class="flex justify-center">
-                            <img src="./img/pic2.jpg" alt="Hero Image"
-                                class="w-full h-full object-cover rounded-lg shadow-lg" />
-                        </div>
-                    </div>
-                </div>
-        </section>
-
-        <!-- Training Benefits Section -->
-        <section class="bg-[#575366] text-white py-16 px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <!-- Left Image -->
-                    <div>
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
-                            alt="Business training session" class="w-full h-80 object-cover rounded-2xl" />
-                    </div>
-
-                    <!-- Right Content -->
-                    <div class="space-y-6">
-                        <h2 class="text-3xl lg:text-4xl font-bold">
-                            Key benefits of a training subscription
-                        </h2>
-
-                        <div class="space-y-4">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-2">
-                                    <span class="text-[#7F95D1] text-md font-bold">.</span>
-                                </div>
-                                <div>
-                                    <p class="text-gray-300">
-                                        Predictable Budgeting – Fixed pricing plans to help you
-                                        <br />
-                                        control costs <br />efficiently.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <span class="text-[#7F95D1] text-sm font-bold">.</span>
-                                </div>
-                                <div>
-                                    <p class="text-gray-300">
-                                        Cost-Effective & Scalable – Reduce face-to-face training
-                                        expenses <br />without compromising quality.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <span class="text-[#7F95D1] text-sm font-bold">.</span>
-                                </div>
-                                <div>
-                                    <p class="text-gray-300">
-                                        Continuous Development – Keep employees up to date with
-                                        the <br />latest industry trends and evolving regulations.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <span class="text-[#7F95D1] text-sm ">.</span>
-                                </div>
-                                <div>
-                                    <p class="text-gray-300">
-                                        Risk Mitigation – Ensure compliance and adapt training as
-                                        your <br />
-                                        business needs evolve.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!-- Training Benefits Section -->
+      <section class="bg-[#575366] text-white py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Image -->
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                alt="Business training session"
+                class="w-full h-80 object-cover rounded-2xl"
+              />
             </div>
-        </section>
 
-        <!-- Learning Solution Section -->
-        <section class="bg-white py-16 px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <!-- Left Content -->
-                    <div class="space-y-6">
-                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">
-                            Our learning solution
-                        </h2>
+            <!-- Right Content -->
+            <div class="space-y-6">
+              <h2 class="text-3xl lg:text-4xl font-bold">
+                Key Benefits of Using Learnode
+              </h2>
 
-                        <p class="text-gray-600 text-lg ">
-                            Our training is designed to upskill and reskill employees at all
-                            levels, addressing critical business challenges.
-                        </p>
-
-                        <div class="space-y-4 text-gray-600">
-                            <div class="flex items-start space-x-3">
-                                <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
-                                <div>
-                                    <p class=" text-gray-600">
-                                        Onboarding New Employees – Ensuring seamless integration
-                                        and compliance readiness.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-3">
-                                <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
-                                <div>
-                                    <p class=" text-gray-600">
-                                        Leadership & Management Development – Building confident,
-                                        <br />effective leaders.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-3">
-                                <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
-                                <div>
-                                    <p class=" text-gray-600">
-                                        Health & Safety Compliance – Meeting workplace safety and
-                                        legal requirements.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-3">
-                                <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
-                                <div>
-                                    <h3 class=" text-gray-600">
-                                        Progress tracking & feedback
-                                    </h3>
-                                    <p>
-                                        Monitor your learning journey with detailed analytics and
-                                        personalized feedback.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-3">
-                                <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
-                                <div>
-                                    <h3 class=" text-gray-600">
-                                        Community support
-                                    </h3>
-                                    <p>
-                                        Connect with fellow learners and get support from our
-                                        active community.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <button
-                            class="bg-[#7F95D1] text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
-                            Explore courses
-                        </button>
-                    </div>
-                    <!-- Right Image -->
-                    <div>
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
-                            alt="Students collaborating and learning"
-                            class="w-full h-80 object-cover rounded-2xl shadow-lg" />
-                    </div>
+              <div class="space-y-4">
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-2"
+                  >
+                    <span class="text-[#7F95D1] text-md font-bold"></span>
+                  </div>
+                  <div>
+                    <p class="text-gray-300">Learn at Your Own Pace</p>
+                  </div>
                 </div>
-            </div>
-        </section>
-        <section class="bg-[#7F95D1] py-16 px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-white text-3xl md:text-4xl font-bold mb-6">
-                    Speak to us today
-                </h2>
 
-                <p class="text-white text-base md:text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
-                    If you would like a demo of our training platform or would like to
-                    speak to<br />
-                    someone about your specific training requirements get in touch. Our
-                    skilled and<br />
-                    knowledgeable team are always happy to helps. To find out more about
-                    now <br />
-                    you can save with us view our special offers and volume discounts.
-                </p>
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                  >
+                    <span class="text-[#7F95D1] text-sm font-bold"></span>
+                  </div>
+                  <div>
+                    <p class="text-gray-300">Always Free or Affordable</p>
+                  </div>
+                </div>
 
-                <button
-                    class="bg-[#575366] text-[#7F95D1] font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition-colors duration-200">
-                    Contact us
-                </button>
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                  >
+                    <span class="text-[#7F95D1] text-sm font-bold"></span>
+                  </div>
+                  <div>
+                    <p class="text-gray-300">Grow Skills, Not Just Grades</p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                  >
+                    <span class="text-[#7F95D1] text-sm"></span>
+                  </div>
+                  <div>
+                    <p class="text-gray-300">Supportive Learning Community</p>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- Learning Solution Section -->
+      <section class="bg-white py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div class="space-y-6">
+              <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">
+                Our learning solution
+              </h2>
+
+              <p class="text-gray-600 text-lg">
+                Our platform is built to help learners grow confidently, whether
+                you're starting fresh or leveling up your skills. We focus on
+                solving real learning challenges — together.
+              </p>
+
+              <div class="space-y-4 text-gray-600">
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
+                  <div>
+                    <p class="text-gray-600">
+                        Smooth Onboarding for New Learners
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
+                  <div>
+                    <p class="text-gray-600">
+                        Leadership & Personal Growth
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
+                  <div>
+                    <p class="text-gray-600">
+                        Digital & Safety Awareness
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
+                  <div>
+                    <h3 class="text-gray-600">Progress Tracking & Feedback
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
+                  <div>
+                    <h3 class="text-gray-600">Community support</h3>
+                    <p>
+                        Community Support
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="bg-[#7F95D1] text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              >
+              <a href="../pages/CourseEducation.html">Explore courses</a>
+                
+              </button>
+            </div>
+            <!-- Right Image -->
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+                alt="Students collaborating and learning"
+                class="w-full h-80 object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-[#7F95D1] py-16 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-white text-3xl md:text-4xl font-bold mb-6">
+            Speak to us today
+          </h2>
+
+          <p
+            class="text-white text-base md:text-lg leading-relaxed mb-8 max-w-3xl mx-auto"
+          >
+            If you would like a demo of our training platform or would like to
+            speak to<br />
+            someone about your specific training requirements get in touch. Our
+            skilled and<br />
+            knowledgeable team are always happy to helps. To find out more about
+            now <br />
+            you can save with us view our special offers and volume discounts.
+          </p>
+
+          <button
+            class="hover:bg-[#575366] text-[#7F95D1] font-semibold px-8 py-3 rounded-md bg-gray-100 transition-colors duration-200"
+          >
+            Contact us
+          </button>
+        </div>
+      </section>
     </main>
     <!-- Footer -->
-    <footer class="w-full bg-[#575366] text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-                <!-- Organized by Section -->
-                <div class="flex flex-col items-center text-center">
-                    <h3 class="text-lg font-semibold mb-4">Organized by</h3>
-                    <img src="./img/logoistad.png" alt="logo" class="w-24 h-24 mb-4 rounded-full" />
-                    <p class="text-sm text-gray-300 leading-relaxed">
-                        Institute of Science and Technology<br />
-                        Advanced Development
-                    </p>
-                </div>
-
-                <!-- Solutions Section -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Solutions</h3>
-                    <ul class="space-y-2 text-sm text-gray-300">
-                        <li>
-                            <a href="#" class="hover:text-white transition-colors">Our Learning Philosophy</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:text-white transition-colors">Our Training Platform</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:text-white transition-colors">Bespoke Training Solutions -
-                                Notes</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Legal Section -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
-                    <ul class="space-y-2 text-sm text-gray-300">
-                        <li>
-                            <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- G4 E-Learning Section -->
-                <div class="flex flex-col items-center text-center">
-                    <h3 class="text-lg font-semibold mb-4">G4<br />E-Learning</h3>
-                    <div class="img"><img src="./img/withbg.jpg" alt="" /></div>
-                    <p class="text-sm text-gray-300">
-                        Just Smart with<br />
-                        Hard
-                    </p>
-                </div>
-
-                <!-- Contact Section -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <div class="flex space-x-3">
-                        <a href="#"
-                            class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-                            <i class="fab fa-facebook-f text-sm"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors">
-                            <i class="fab fa-instagram text-sm"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors">
-                            <i class="fab fa-twitter text-sm"></i>
-                        </a>
-                        <a href="#"
-                            class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
-                            <i class="fas fa-envelope text-sm"></i>
-                        </a>
-                    </div>
-                </div>
+    <footer class="bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- About Section -->
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <img
+                src="../pages/img/Learnode.png"
+                alt="Learnode"
+                class="w-14 h-14 rounded-full flex items-center justify-center"
+              />
+              <h3 class="text-2xl font-bold">Learnode</h3>
             </div>
-        </div>
-    </footer>
-</body>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Empowering students through innovative e-learning solutions. Built
+              by passionate students from ISTAD for the future of education.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
 
+          <!-- Quick Links Section -->
+          <div class="space-y-4">
+            <h4 class="text-lg font-semibold text-blue-400 mb-4">
+              Quick Links
+            </h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="../index.html"
+                  class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2"
+                >
+                  <i class="fas fa-home text-blue-400 text-sm"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../pages/CourseEducation.html"
+                  class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2"
+                >
+                  <i class="fas fa-book text-blue-400 text-sm"></i>
+                  <span>Courses</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../pages/Training Course.html"
+                  class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2"
+                >
+                  <i class="fas fa-info-circle text-blue-400 text-sm"></i>
+                  <span>About</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../pages/ContactUs.html"
+                  class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2"
+                >
+                  <i class="fas fa-phone text-blue-400 text-sm"></i>
+                  <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Organization Section -->
+          <div class="space-y-4">
+            <h4 class="text-lg font-semibold text-blue-400 mb-4">
+              Supported by
+            </h4>
+            <div class="flex items-center space-x-3 mb-4">
+              <img
+                src="../pages/img/logoistad.png"
+                alt=""
+                class="w-16 h-16 rounded-full flex items-center justify-center"
+              />
+              <div>
+                <h5 class="font-semibold text-white">ISTAD</h5>
+                <p class="text-sm text-gray-400">
+                  Institute of Science and Technology Advanced Development
+                </p>
+              </div>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4">
+              <h5 class="text-sm font-semibold text-blue-400 mb-2">
+                Contact Info
+              </h5>
+              <div class="space-y-2 text-sm text-gray-300">
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-envelope text-blue-400"></i>
+                  <span>info.istad@gmail.com</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-phone text-blue-400"></i>
+                  <span>(+855) 95-990-910</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-map-marker-alt text-blue-400"></i>
+                  <span>Phnom Penh, Cambodia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          >
+            <div class="text-sm text-gray-400">
+              © 2025 <span class="text-white font-semibold">Learnode</span>. All
+              rights reserved.
+              <span class="text-blue-400"
+                >Proudly developed by ISTAD students.</span
+              >
+            </div>
+            <div class="flex items-center space-x-6 text-sm text-gray-400">
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-heart text-red-500 animate-pulse"></i>
+                <span>Made with passion</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-code text-blue-400"></i>
+                <span>Built for students, by students</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

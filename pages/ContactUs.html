@@ -80,38 +80,175 @@
   <body>
     <header>
       <!-- Navbar -->
-      <nav class="bg-[#575366] text-white">
-        <div
-          class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
-        >
-          <div class="flex items-center space-x-2">
-            <div class="bg-[#7F95D1] rounded-full w-9 h-9">
-              <img src="./imgs/Ellipse 4.png" alt="" />
+      <nav
+        class="bg-white shadow-lg border-b border-gray-200 sticky top-0 z-50"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex justify-between items-center h-16">
+            <!-- Logo Section -->
+            <div class="flex items-center space-x-3">
+              <div class="">
+                <i class="fas fa-graduation-cap text-white text-lg"></i>
+              </div>
+              <div class="flex items-center">
+                <img
+                  src="../pages/img/Learnode.png"
+                  alt="Learnode"
+                  class="w-16 h-16 rounded-full flex items-center justify-center"
+                />
+                <h1 class="text-2xl font-bold">Learnode</h1>
+              </div>
             </div>
-            <span class="text-lg font-bold">Learnode</span>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center space-x-8">
+              <a
+                href="/"
+                class="nav-link group relative flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-home text-sm group-hover:scale-110 transition-transform duration-300"
+                ></i>
+                <span class="font-semibold">Home</span>
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+
+              <a
+                href="../pages/CourseEducation.html"
+                class="nav-link group relative flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-book text-sm group-hover:scale-110 transition-transform duration-300"
+                ></i>
+                <span class="font-semibold">Courses</span>
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+
+              <a
+                href="../pages/Training Course.html"
+                class="nav-link group relative flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-info-circle text-sm group-hover:scale-110 transition-transform duration-300"
+                ></i>
+                <span class="font-semibold">About</span>
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+
+              <a
+                href="../pages/ContactUs.html"
+                class="nav-link group relative flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-phone text-sm group-hover:scale-110 transition-transform duration-300"
+                ></i>
+                <span class="font-semibold">Contact</span>
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+            </div>
+
+            <!-- Right Section -->
+            <div class="flex items-center space-x-4">
+              <!-- Search Button (Desktop) -->
+              <button
+                class="hidden md:flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all duration-300"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+
+              <!-- Notifications -->
+              <button
+                class="hidden md:flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all duration-300 relative"
+              >
+                <i class="fas fa-bell"></i>
+                <div
+                  class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"
+                ></div>
+              </button>
+
+              <!-- Login Button -->
+              <button
+                class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+              >
+                <a href="../pages/LogIn_SignUp.html">
+                  <i class="fas fa-sign-in-alt mr-2"></i>Login
+                </a>
+              </button>
+
+              <!-- Mobile Menu Button -->
+              <button
+                id="mobile-menu-button"
+                class="md:hidden flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all duration-300"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
           </div>
-          <ul class="hidden md:flex space-x-6">
-            <li>
-              <a href="../index.html" class="hover:text-purple-400">Home</a>
-            </li>
-            <li>
-              <a href="CourseEducation.html" class="hover:text-purple-400"
-                >Courses</a
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden bg-white border-t border-gray-200"
+        >
+          <div class="px-6 py-4 space-y-3">
+            <a
+              href="/"
+              class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"
+            >
+              <i class="fas fa-home text-blue-500"></i>
+              <span class="font-medium">Home</span>
+            </a>
+
+            <a
+              href="/courses"
+              class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"
+            >
+              <i class="fas fa-book text-blue-500"></i>
+              <span class="font-medium">Courses</span>
+            </a>
+
+            <a
+              href="/about"
+              class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"
+            >
+              <i class="fas fa-info-circle text-blue-500"></i>
+              <span class="font-medium">About</span>
+            </a>
+
+            <a
+              href="/contact"
+              class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"
+            >
+              <i class="fas fa-phone text-blue-500"></i>
+              <span class="font-medium">Contact</span>
+            </a>
+
+            <div class="pt-3 border-t border-gray-200">
+              <button
+                class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300 w-full"
               >
-            </li>
-            <li>
-              <a href="Training Course.html" class="hover:text-purple-400"
-                >About</a
+                <i class="fas fa-search text-blue-500"></i>
+                <span class="font-medium">Search</span>
+              </button>
+
+              <button
+                class="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300 w-full"
               >
-            </li>
-            <li><a href="#" class="hover:text-purple-400">Contact</a></li>
-          </ul>
-          <button
-            class="bg-[#7F95D1] px-4 py-2 rounded text-white hover:bg-purple-500"
-            onclick="location.href='./LogIn_SignUp.html';"
-          >
-            Login
-          </button>
+                <i class="fas fa-bell text-blue-500"></i>
+                <span class="font-medium">Notifications</span>
+                <div class="ml-auto w-1 h-1 bg-red-500 rounded-full"></div>
+              </button>
+            </div>
+          </div>
         </div>
       </nav>
       <div class="bg-[#7F95D1] text-white text-center py-3">
@@ -119,17 +256,6 @@
       </div>
     </header>
     <main class="max-w-7xl mx-auto px-4 py-8">
-      <!-- Navigation -->
-      <div class="text-gray-600 flex items-center mb-8 animate-fade-in">
-        <a href="#" class="hover:text-blue-600 transition-colors duration-300">
-          <h3 class="hover:underline">Home</h3>
-        </a>
-        <span class="mx-2">></span>
-        <a href="#" class="hover:text-blue-600 transition-colors duration-300">
-          <h3 class="hover:underline">Contact Us</h3>
-        </a>
-      </div>
-
       <!-- Header Section -->
       <section class="text-center mb-12 animate-fade-in">
         <h1 class="text-5xl font-bold mb-6">Get in Touch</h1>
@@ -156,18 +282,18 @@
                 </div>
               </div>
               <h5 class="mb-4 text-2xl font-bold text-gray-900">
-                Help & Support
+                General Inquiries
               </h5>
               <p class="mb-6 text-gray-600 leading-relaxed">
-                If you're having difficulty purchasing our products online,
-                logging in or using our courses or software then we are here to
-                help.
+                If you have questions about our platform, want to know more
+                about Learnode, or simply want to say hello, we’re here to
+                listen and help.
               </p>
               <a href="#" class="inline-block w-full">
                 <button
                   class="bg-[#7F95D1] hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden shimmer-effect"
                 >
-                  Help Centre
+                  Send Message
                 </button>
               </a>
             </div>
@@ -186,17 +312,18 @@
                 </div>
               </div>
               <h5 class="mb-4 text-2xl font-bold text-gray-900">
-                Info about our products
+                Technical Support
               </h5>
               <p class="mb-6 text-gray-600 leading-relaxed">
-                If you want to learn more about how our services can help your
-                organisation meet its training needs, then please get in touch.
+                Facing issues with your account, courses, or the website? Our
+                support team is ready to assist you and solve your problems as
+                quickly as possible.
               </p>
               <a href="#" class="inline-block w-full">
                 <button
                   class="bg-[#7F95D1] hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden shimmer-effect"
                 >
-                  Sales Enquiry
+                  Get Help
                 </button>
               </a>
             </div>
@@ -215,18 +342,18 @@
                 </div>
               </div>
               <h5 class="mb-4 text-2xl font-bold text-gray-900">
-                Work with us
+                Collaboration & Partnerships
               </h5>
               <p class="mb-6 text-gray-600 leading-relaxed">
-                Looking to work with us? Submit your request for proposal and
-                one of our bids team will be in touch to discuss the perfect
-                solution for you.
+                Interested in working with us, joining as a mentor, or
+                collaborating on educational content? Let’s connect and build
+                something impactful together.
               </p>
               <a href="#" class="inline-block w-full">
                 <button
                   class="bg-[#7F95D1] hover:bg-purple-600 text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden shimmer-effect"
                 >
-                  Submit your RFP
+                Partner With Us
                 </button>
               </a>
             </div>
@@ -269,7 +396,7 @@
                     href="mailto:info@virtual-college.co.uk"
                     class="text-blue-600 hover:underline hover:text-blue-800 transition-colors duration-300"
                   >
-                    <p>info@learnode-college.co.uk</p>
+                    <p>info.istad@gmail.com</p>
                   </a>
                 </div>
               </div>
@@ -282,9 +409,9 @@
                   <i class="fas fa-phone"></i>
                 </div>
                 <div>
-                  <p class="font-semibold">01943 885085</p>
+                  <p class="font-semibold">(+855) 95-990-910</p>
                   <p class="text-gray-600 text-sm">
-                    Weekdays: Monday to Friday from 9:00 to 17:00
+                    Our visiting hours: Mon–Fri, 9:00 AM to 5:00 PM
                   </p>
                 </div>
               </div>
@@ -297,9 +424,10 @@
                   <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <div>
-                  <p class="font-semibold">Leeds - UK Head Office</p>
+                  <p class="font-semibold">Learnode Office</p>
                   <p class="text-gray-600">
-                    The Coach Works, 21 The Calls, Leeds, LS2 7EH
+                    Institute of Science and Technology Advanced Development
+                    (ISTAD), Phnom Penh, Cambodia
                   </p>
                 </div>
               </div>
@@ -307,15 +435,11 @@
 
             <!-- Company Info -->
             <div class="mt-8 pt-8 border-t border-gray-200">
-              <p class="text-gray-700 mb-6 leading-relaxed">
-                Learnode College by Netex is part of the Netex Learning family.
-                Together we're going to take our vision of learning that drives
-                change even further.
-              </p>
+             
               <button
                 class="bg-[#575366] from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white py-3 px-8 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
               >
-                Meet the Netex Family
+                Email Us
               </button>
             </div>
           </div>
@@ -323,105 +447,157 @@
       </section>
     </main>
 
-    <footer class="w-full bg-gray-700 text-white py-12">
-      <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          <!-- Organized by Section -->
-          <div class="flex flex-col items-center text-center">
-            <h3 class="text-lg font-semibold mb-4">Organized by</h3>
-            <img
-              src="./imgs/ISTAD_Logo.jpg"
-              alt="logo"
-              class="w-24 h-24 mb-4 rounded-full"
-            />
-            <p class="text-sm text-gray-300 leading-relaxed">
-              Institute of Science and Technology<br />
-              Advanced Development
+    <footer class="bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- About Section -->
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <img
+                src="../pages/img/Learnode.png"
+                alt="Learnode"
+                class="w-14 h-14 rounded-full flex items-center justify-center"
+              />
+              <h3 class="text-2xl font-bold">Learnode</h3>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Empowering students through innovative e-learning solutions. Built
+              by passionate students from ISTAD for the future of education.
             </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
           </div>
 
-          <!-- Solutions Section -->
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Solutions</h3>
-            <ul class="space-y-2 text-sm text-gray-300">
+          <!-- Quick Links Section -->
+          <div class="space-y-4">
+            <h4 class="text-lg font-semibold text-blue-400 mb-4">
+              Quick Links
+            </h4>
+            <ul class="space-y-3">
               <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Our Learning Philosophy</a
+                <a
+                  href="../index.html"
+                  class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2"
                 >
+                  <i class="fas fa-home text-blue-400 text-sm"></i>
+                  <span>Home</span>
+                </a>
               </li>
               <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Our Training Platform</a
+                <a
+                  href="../pages/CourseEducation.html"
+                  class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2"
                 >
+                  <i class="fas fa-book text-blue-400 text-sm"></i>
+                  <span>Courses</span>
+                </a>
               </li>
               <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Bespoke Training Solutions - Notes</a
+                <a
+                  href="../pages/Training Course.html"
+                  class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2"
                 >
+                  <i class="fas fa-info-circle text-blue-400 text-sm"></i>
+                  <span>About</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../pages/ContactUs.html"
+                  class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2"
+                >
+                  <i class="fas fa-phone text-blue-400 text-sm"></i>
+                  <span>Contact</span>
+                </a>
               </li>
             </ul>
           </div>
 
-          <!-- Legal Section -->
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Legal</h3>
-            <ul class="space-y-2 text-sm text-gray-300">
-              <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Privacy Policy</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Terms of Service</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Cookie Policy</a
-                >
-              </li>
-            </ul>
+          <!-- Organization Section -->
+          <div class="space-y-4">
+            <h4 class="text-lg font-semibold text-blue-400 mb-4">
+              Supported by
+            </h4>
+            <div class="flex items-center space-x-3 mb-4">
+              <img
+                src="../pages/img/logoistad.png"
+                alt=""
+                class="w-16 h-16 rounded-full flex items-center justify-center"
+              />
+              <div>
+                <h5 class="font-semibold text-white">ISTAD</h5>
+                <p class="text-sm text-gray-400">
+                  Institute of Science and Technology Advanced Development
+                </p>
+              </div>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4">
+              <h5 class="text-sm font-semibold text-blue-400 mb-2">
+                Contact Info
+              </h5>
+              <div class="space-y-2 text-sm text-gray-300">
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-envelope text-blue-400"></i>
+                  <span>info.istad@gmail.com</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-phone text-blue-400"></i>
+                  <span>(+855) 95-990-910</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-map-marker-alt text-blue-400"></i>
+                  <span>Phnom Penh, Cambodia</span>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <!-- G4 E-Learning Section -->
-          <div class="flex flex-col items-center text-center">
-            <h3 class="text-lg font-semibold mb-4">G4<br />E-Learning</h3>
-            <img src="./imgs/Ellipse 4.png" alt="" />
-            <p class="text-sm text-gray-300">
-              Just Smart with<br />
-              Hard
-            </p>
-          </div>
-
-          <!-- Contact Section -->
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Contact</h3>
-            <div class="flex space-x-3">
-              <a
-                href="#"
-                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
+        <!-- Bottom Section -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          >
+            <div class="text-sm text-gray-400">
+              © 2025 <span class="text-white font-semibold">Learnode</span>. All
+              rights reserved.
+              <span class="text-blue-400"
+                >Proudly developed by ISTAD students.</span
               >
-                <i class="fab fa-facebook-f text-sm"></i>
-              </a>
-              <a
-                href="#"
-                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"
-              >
-                <i class="fab fa-instagram text-sm"></i>
-              </a>
-              <a
-                href="#"
-                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors"
-              >
-                <i class="fab fa-twitter text-sm"></i>
-              </a>
-              <a
-                href="#"
-                class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors"
-              >
-                <i class="fas fa-envelope text-sm"></i>
-              </a>
+            </div>
+            <div class="flex items-center space-x-6 text-sm text-gray-400">
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-heart text-red-500 animate-pulse"></i>
+                <span>Made with passion</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-code text-blue-400"></i>
+                <span>Built for students, by students</span>
+              </div>
             </div>
           </div>
         </div>
