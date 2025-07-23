@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
     <link rel=" icon" href="../images/Learnode111.png" type="image/x-icon" />
-     <meta
+    <meta
       name="description"
       content="Join Learnode – a modern platform to learn tech skills, online courses, and educational resources. Learn anywhere, anytime."
     />
@@ -118,99 +118,159 @@
   <body>
     <header>
       <!-- Navbar -->
-     <nav class="bg-white shadow-lg border-b border-gray-200 sticky top-0 z-50 ">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex justify-between items-center h-16">
-      <!-- Logo -->
-      <div class="flex items-center space-x-3">
-        <!-- <i class="fas fa-graduation-cap text-blue-600 text-lg"></i> -->
-        <div class="flex items-center">
-          <img src="../pages/img/Learnode.png" alt="Learnode" class="w-16 h-16 rounded-full" />
-          <h1 class="text-2xl font-bold ml-2  ">Learnode</h1>
+      <nav
+        class="bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+              <!-- <i class="fas fa-graduation-cap text-blue-600 text-lg"></i> -->
+              <div class="flex items-center">
+                <img
+                  src="../pages/img/Learnode.png"
+                  alt="Learnode"
+                  class="w-16 h-16 rounded-full"
+                />
+                <h1 class="text-2xl font-bold ml-2">Learnode</h1>
+              </div>
+            </div>
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-0">
+              <a
+                href="../index.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+              >
+                Home
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="../pages/CourseEducation.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+              >
+                Courses
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="../pages/Training Course.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+              >
+                About
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="../pages/ContactUs.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+              >
+                Contact
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+            </div>
+
+            <!-- Right Side -->
+            <div class="flex items-center space-x-4">
+              <button
+                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+              <button
+                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full relative"
+              >
+                <i class="fas fa-bell"></i>
+                <div
+                  class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"
+                ></div>
+              </button>
+
+              <!-- Desktop Login -->
+              <a
+                href="../pages/LogIn_SignUp.html"
+                class="hidden md:inline-block bg-[#7F95D1] hover:bg-blue-400 text-white px-3 py-2 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-md"
+              >
+                <i class="fas fa-sign-in-alt mr-2"></i>Login
+              </a>
+
+              <!-- Mobile Menu Toggle -->
+              <div class="md:hidden">
+                <input type="checkbox" id="mobile-toggle" class="hidden peer" />
+                <label
+                  for="mobile-toggle"
+                  class="flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full cursor-pointer"
+                >
+                  <i class="fas fa-bars"></i>
+                </label>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <!-- Desktop Links -->
-      <div class="hidden md:flex items-center space-x-0 ">
-        <a href="../index.html" class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold">
-          Home
-          <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></div>
-        </a>
-        <a href="../pages/CourseEducation.html" class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold">
-          Courses
-          <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></div>
-        </a>
-        <a href="../pages/Training Course.html" class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold">
-          About
-          <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></div>
-        </a>
-        <a href="../pages/ContactUs.html" class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold">
-          Contact
-          <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></div>
-        </a>
-      </div>
 
-      <!-- Right Side -->
-      <div class="flex items-center space-x-4">
-        <button class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full">
-          <i class="fas fa-search"></i>
-        </button>
-        <button class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full relative">
-          <i class="fas fa-bell"></i>
-          <div class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></div>
-        </button>
+        <!-- Mobile Menu -->
+        <div
+          class="md:hidden peer-checked:block hidden bg-white border-t border-gray-200"
+          id="mobile-menu"
+        >
+          <!-- Mobile Login Left -->
+          <div class="flex justify-start px-6 py-3">
+            <a
+              href="../pages/LogIn_SignUp.html"
+              class="bg-blue-500 text-white text-sm px-4 py-1 rounded-full font-medium hover:bg-blue-600 transition-all duration-300 shadow"
+            >
+              <i class="fas fa-sign-in-alt mr-1"></i>Login
+            </a>
+          </div>
 
-        <!-- Desktop Login -->
-        <a href="../pages/LogIn_SignUp.html" class="hidden md:inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-2 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-md">
-          <i class="fas fa-sign-in-alt mr-2"></i>Login
-        </a>
+          <div class="px-6 pb-4 space-y-3">
+            <a
+              href="/index.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg"
+            >
+              <i class="fas fa-home text-blue-500 mr-2"></i>Home
+            </a>
+            <a
+              href="../pages/CourseEducation.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg"
+            >
+              <i class="fas fa-book text-blue-500 mr-2"></i>Courses
+            </a>
+            <a
+              href="../pages/Training Course.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg"
+            >
+              <i class="fas fa-info-circle text-blue-500 mr-2"></i>About
+            </a>
+            <a
+              href="../pages/ContactUs.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg"
+            >
+              <i class="fas fa-phone text-blue-500 mr-2"></i>Contact
+            </a>
 
-        <!-- Mobile Menu Toggle -->
-        <div class="md:hidden">
-          <input type="checkbox" id="mobile-toggle" class="hidden peer" />
-          <label for="mobile-toggle" class="flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full cursor-pointer">
-            <i class="fas fa-bars"></i>
-          </label>
+            <div class="pt-3 border-t border-gray-200">
+              <button
+                class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg w-full"
+              >
+                <i class="fas fa-search text-blue-500 mr-2"></i>Search
+              </button>
+              <button
+                class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg w-full"
+              >
+                <i class="fas fa-bell text-blue-500 mr-2"></i>Notifications
+                <span class="ml-auto w-2 h-2 bg-red-500 rounded-full"></span>
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div class="md:hidden peer-checked:block hidden bg-white border-t border-gray-200" id="mobile-menu">
-    <!-- Mobile Login Left -->
-    <div class="flex justify-start px-6 py-3">
-      <a href="../pages/LogIn_SignUp.html" class="bg-blue-500 text-white text-sm px-4 py-1 rounded-full font-medium hover:bg-blue-600 transition-all duration-300 shadow ">
-        <i class="fas fa-sign-in-alt mr-1"></i>Login
-      </a>
-    </div>
-
-    <div class="px-6 pb-4 space-y-3">
-      <a href="/index.html" class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg">
-        <i class="fas fa-home text-blue-500 mr-2"></i>Home
-      </a>
-      <a href="../pages/CourseEducation.html" class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg">
-        <i class="fas fa-book text-blue-500 mr-2"></i>Courses
-      </a>
-      <a href="../pages/Training Course.html" class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg">
-        <i class="fas fa-info-circle text-blue-500 mr-2"></i>About
-      </a>
-      <a href="../pages/ContactUs.html" class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg">
-        <i class="fas fa-phone text-blue-500 mr-2"></i>Contact
-      </a>
-
-      <div class="pt-3 border-t border-gray-200">
-        <button class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg w-full">
-          <i class="fas fa-search text-blue-500 mr-2"></i>Search
-        </button>
-        <button class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg w-full">
-          <i class="fas fa-bell text-blue-500 mr-2"></i>Notifications
-          <span class="ml-auto w-2 h-2 bg-red-500 rounded-full"></span>
-        </button>
-      </div>
-    </div>
-  </div>
-</nav>
-      <div class="bg-[#7F95D1] text-white text-center py-3">
+      </nav>
+      <div class="bg-[#7F95D1] text-white text-center py-3 mt-16">
         <p class="text-sm font-medium">Explore our new website today!</p>
       </div>
     </header>
@@ -230,7 +290,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Help & Support Card -->
           <div
-            class="bg-white border border-gray-200 rounded-2xl shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 animate-slide-up"
+            class="bg-white border border-gray-200 rounded-2xl shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300 animate-slide-up"
           >
             <div class="p-6 text-center">
               <div class="mb-6">
@@ -250,7 +310,7 @@
               </p>
               <a href="#" class="inline-block w-full">
                 <button
-                  class="bg-[#7F95D1] hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden shimmer-effect"
+                  class="bg-[#7F95D1] hover:bg-blue-400 shimmer-effect text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden "
                 >
                   Send Message
                 </button>
@@ -260,7 +320,7 @@
 
           <!-- Product Info Card -->
           <div
-            class="bg-white border border-gray-200 rounded-2xl shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 animate-slide-up delay-200"
+            class="bg-white border border-gray-200 rounded-2xl shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300 animate-slide-up delay-200"
           >
             <div class="p-6 text-center">
               <div class="mb-6">
@@ -280,7 +340,7 @@
               </p>
               <a href="#" class="inline-block w-full">
                 <button
-                  class="bg-[#7F95D1] hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden shimmer-effect"
+                  class="bg-[#7F95D1] hover:bg-blue-400 text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden shimmer-effect"
                 >
                   Get Help
                 </button>
@@ -290,7 +350,7 @@
 
           <!-- Work with us Card -->
           <div
-            class="bg-white border border-gray-200 rounded-2xl shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 animate-slide-up delay-500"
+            class="bg-white border border-gray-200 rounded-2xl shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300 animate-slide-up delay-500"
           >
             <div class="p-6 text-center">
               <div class="mb-6">
@@ -310,9 +370,9 @@
               </p>
               <a href="#" class="inline-block w-full">
                 <button
-                  class="bg-[#7F95D1] hover:bg-purple-600 text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden shimmer-effect"
+                  class="bg-[#7F95D1] hover:bg-blue-400 text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden shimmer-effect"
                 >
-                Partner With Us
+                  Partner With Us
                 </button>
               </a>
             </div>
@@ -394,7 +454,6 @@
 
             <!-- Company Info -->
             <div class="mt-8 pt-8 border-t border-gray-200">
-             
               <button
                 class="bg-[#575366] from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white py-3 px-8 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
               >
@@ -406,7 +465,7 @@
       </section>
     </main>
 
-   <footer class="bg-gray-900 text-white">
+    <footer class="bg-gray-900 text-white">
       <div class="max-w-7xl mx-auto px-6 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- About Section -->
@@ -502,7 +561,11 @@
               Supported by
             </h4>
             <div class="flex items-center space-x-3 mb-4">
-              <img src="../pages/img/logoistad.png" alt="" class="w-16 h-16 rounded-full flex items-center justify-center">
+              <img
+                src="../pages/img/logoistad.png"
+                alt=""
+                class="w-16 h-16 rounded-full flex items-center justify-center"
+              />
               <div>
                 <h5 class="font-semibold text-white">ISTAD</h5>
                 <p class="text-sm text-gray-400">
@@ -556,7 +619,7 @@
             </div>
           </div>
         </div>
-      </div>    
+      </div>
     </footer>
   </body>
 </html>
