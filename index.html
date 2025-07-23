@@ -467,6 +467,7 @@
         </div>
       </section>
 
+      <!-- ============================ Course Section ========================================== -->
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold mb-10">Popular Courses</h2>
@@ -525,6 +526,7 @@
                     </button>
                   </div>
                   <button
+                    onclick="openPaymentModal('Premium Plan', '$50.00')"
                     class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                   >
                     Enroll Now
@@ -583,6 +585,7 @@
                     </button>
                   </div>
                   <button
+                    onclick="openPaymentModal('Premium Plan', '$79.00')"
                     class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                   >
                     Enroll Now
@@ -641,6 +644,7 @@
                     </button>
                   </div>
                   <button
+                    onclick="openPaymentModal('Premium Plan', '$70.80')"
                     class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                   >
                     Enroll Now
@@ -699,6 +703,7 @@
                     </button>
                   </div>
                   <button
+                    onclick="openPaymentModal('Premium Plan', '$70.80')"
                     class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                   >
                     Enroll Now
@@ -757,6 +762,7 @@
                     </button>
                   </div>
                   <button
+                    onclick="openPaymentModal('Premium Plan', '$55.00')"
                     class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                   >
                     Enroll Now
@@ -816,6 +822,7 @@
                     </button>
                   </div>
                   <button
+                    onclick="openPaymentModal('Premium Plan', '$65.00')"
                     class="bg-[#7F95D1] hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                   >
                     Enroll Now
@@ -824,6 +831,252 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <!--======================================Payment Section============================================= -->
+      <!-- Modal Overlay -->
+      <section
+        id="modalOverlay"
+        class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50 opacity-0 invisible transition-all duration-300"
+        onclick="closeModal(event)"
+      >
+        <!-- Payment Modal -->
+        <div
+          class="bg-white rounded-2xl shadow-2xl w-full max-w-lg mx-4 max-h-screen overflow-y-auto transform scale-95 opacity-0 transition-all duration-300"
+          onclick="event.stopPropagation()"
+          id="paymentModal"
+        >
+          <!-- Modal Header -->
+          <div class="relative bg-[#7F95D1] text-white p-6 rounded-t-2xl">
+            <button
+              onclick="closeModal()"
+              class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-white hover:bg-opacity-20 transition-colors duration-200"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+            <div class="text-center">
+              <h2 class="text-2xl font-bold mb-2">Complete Your Purchase</h2>
+              <p id="selectedPlan" class="text-purple-100">
+                Premium Plan - $29.99
+              </p>
+            </div>
+          </div>
+
+          <!-- Payment Form -->
+          <form
+            id="paymentForm"
+            onsubmit="processPayment(event)"
+            class="p-6 space-y-6"
+          >
+            <!-- Email -->
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-semibold text-gray-700 mb-2"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200 bg-gray-50 focus:bg-white"
+              />
+            </div>
+
+            <!-- Cardholder Name -->
+            <div>
+              <label
+                for="cardName"
+                class="block text-sm font-semibold text-gray-700 mb-2"
+                >Cardholder Name</label
+              >
+              <input
+                type="text"
+                id="cardName"
+                name="cardName"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200 bg-gray-50 focus:bg-white"
+              />
+            </div>
+
+            <!-- Card Number -->
+            <div>
+              <label
+                for="cardNumber"
+                class="block text-sm font-semibold text-gray-700 mb-2"
+                >Card Number</label
+              >
+              <div class="relative">
+                <input
+                  type="text"
+                  id="cardNumber"
+                  name="cardNumber"
+                  placeholder="1234 5678 9012 3456"
+                  required
+                  maxlength="19"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200 bg-gray-50 focus:bg-white"
+                />
+                <div
+                  class="absolute right-3 top-1/2 transform -translate-y-1/2"
+                >
+                  <svg class="w-8 h-5" viewBox="0 0 32 20" fill="none">
+                    <rect width="32" height="20" rx="4" fill="#1434CB" />
+                    <rect x="13" y="7" width="6" height="6" fill="white" />
+                    <rect x="9" y="7" width="6" height="6" fill="#EB001B" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Expiry and CVV -->
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label
+                  for="expiry"
+                  class="block text-sm font-semibold text-gray-700 mb-2"
+                  >Expiry Date</label
+                >
+                <input
+                  type="text"
+                  id="expiry"
+                  name="expiry"
+                  placeholder="MM/YY"
+                  required
+                  maxlength="5"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200 bg-gray-50 focus:bg-white"
+                />
+              </div>
+              <div>
+                <label
+                  for="cvv"
+                  class="block text-sm font-semibold text-gray-700 mb-2"
+                  >CVV</label
+                >
+                <input
+                  type="text"
+                  id="cvv"
+                  name="cvv"
+                  placeholder="123"
+                  required
+                  maxlength="4"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200 bg-gray-50 focus:bg-white"
+                />
+              </div>
+            </div>
+
+            <!-- Billing Address -->
+            <div>
+              <label
+                for="billingAddress"
+                class="block text-sm font-semibold text-gray-700 mb-2"
+                >Billing Address</label
+              >
+              <input
+                type="text"
+                id="billingAddress"
+                name="billingAddress"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200 bg-gray-50 focus:bg-white"
+              />
+            </div>
+
+            <!-- City and ZIP -->
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label
+                  for="city"
+                  class="block text-sm font-semibold text-gray-700 mb-2"
+                  >City</label
+                >
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200 bg-gray-50 focus:bg-white"
+                />
+              </div>
+              <div>
+                <label
+                  for="zipCode"
+                  class="block text-sm font-semibold text-gray-700 mb-2"
+                  >ZIP Code</label
+                >
+                <input
+                  type="text"
+                  id="zipCode"
+                  name="zipCode"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200 bg-gray-50 focus:bg-white"
+                />
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              id="submitBtn"
+              class="w-full bg-[#7F95D1] text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-700 hover:to-blue-700 transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+            >
+              <span id="submitText">Complete Payment</span>
+              <div id="loadingSpinner" class="hidden inline-flex items-center">
+                <svg
+                  class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    class="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="4"
+                  ></circle>
+                  <path
+                    class="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+                Processing...
+              </div>
+            </button>
+
+            <!-- Security Info -->
+            <div
+              class="flex items-center justify-center text-sm text-gray-500 space-x-2"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                ></path>
+              </svg>
+              <span>Your payment information is secure and encrypted</span>
+            </div>
+          </form>
         </div>
       </section>
       <!-- Why Choose Us -->
@@ -1271,5 +1524,129 @@
         </div>
       </div>
     </footer>
+    <script>
+      //   ================================== Payment Section ===============================================
+      let selectedPlan = "";
+      let selectedPrice = "";
+
+      function openPaymentModal(planName, price) {
+        selectedPlan = planName;
+        selectedPrice = price;
+        document.getElementById(
+          "selectedPlan"
+        ).textContent = `${planName} - ${price}`;
+
+        const overlay = document.getElementById("modalOverlay");
+        const modal = document.getElementById("paymentModal");
+
+        // Show overlay
+        overlay.classList.remove("opacity-0", "invisible");
+        overlay.classList.add("opacity-100", "visible");
+
+        // Show modal with animation
+        setTimeout(() => {
+          modal.classList.remove("scale-95", "opacity-0");
+          modal.classList.add("scale-100", "opacity-100");
+        }, 50);
+
+        // Prevent background scrolling
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal(event) {
+        if (
+          event &&
+          event.target !== event.currentTarget &&
+          !event.target.closest("button")
+        ) {
+          return;
+        }
+
+        const overlay = document.getElementById("modalOverlay");
+        const modal = document.getElementById("paymentModal");
+
+        // Hide modal with animation
+        modal.classList.remove("scale-100", "opacity-100");
+        modal.classList.add("scale-95", "opacity-0");
+
+        // Hide overlay after animation
+        setTimeout(() => {
+          overlay.classList.remove("opacity-100", "visible");
+          overlay.classList.add("opacity-0", "invisible");
+        }, 200);
+
+        // Restore scrolling
+        document.body.style.overflow = "auto";
+
+        // Reset form
+        document.getElementById("paymentForm").reset();
+      }
+
+      function processPayment(event) {
+        event.preventDefault();
+
+        const submitBtn = document.getElementById("submitBtn");
+        const submitText = document.getElementById("submitText");
+        const loadingSpinner = document.getElementById("loadingSpinner");
+
+        // Show loading state
+        submitBtn.disabled = true;
+        submitText.classList.add("hidden");
+        loadingSpinner.classList.remove("hidden");
+
+        // Simulate payment processing
+        setTimeout(() => {
+          // Success state
+          submitBtn.classList.remove("from-purple-600", "to-blue-600");
+          submitBtn.classList.add("from-green-500", "to-green-600");
+          loadingSpinner.classList.add("hidden");
+          submitText.textContent = "Payment Successful!";
+          submitText.classList.remove("hidden");
+
+          setTimeout(() => {
+            alert(
+              `Payment successful for ${selectedPlan}! Thank you for your purchase.`
+            );
+            closeModal();
+
+            // Reset button state
+            submitBtn.disabled = false;
+            submitBtn.classList.remove("from-green-500", "to-green-600");
+            submitBtn.classList.add("from-purple-600", "to-blue-600");
+            submitText.textContent = "Complete Payment";
+          }, 1500);
+        }, 2000);
+      }
+
+      // Format card number input
+      document
+        .getElementById("cardNumber")
+        .addEventListener("input", function (e) {
+          let value = e.target.value.replace(/\s/g, "").replace(/[^0-9]/gi, "");
+          let formattedValue = value.match(/.{1,4}/g)?.join(" ") || value;
+          e.target.value = formattedValue;
+        });
+
+      // Format expiry date input
+      document.getElementById("expiry").addEventListener("input", function (e) {
+        let value = e.target.value.replace(/\D/g, "");
+        if (value.length >= 2) {
+          value = value.substring(0, 2) + "/" + value.substring(2, 4);
+        }
+        e.target.value = value;
+      });
+
+      // Only allow numbers in CVV
+      document.getElementById("cvv").addEventListener("input", function (e) {
+        e.target.value = e.target.value.replace(/\D/g, "");
+      });
+
+      // Close modal with Escape key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeModal();
+        }
+      });
+    </script>
   </body>
 </html>
