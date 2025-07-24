@@ -43,19 +43,31 @@
       content="https://choeng-sreyleak.github.io/MiniProject/images/preview.png"
     />
     <title>Document</title>
+
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
   </head>
 
-  <body>
+  <body
+     class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
+  >
     <!-- nav -->
     <header>
       <nav
-        class="bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50"
+        class="bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
       >
         <div class="max-w-7xl mx-auto px-6">
           <div class="flex justify-between items-center h-16">
@@ -75,7 +87,7 @@
             <div class="hidden md:flex items-center space-x-0">
               <a
                 href="../index.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white"
               >
                 Home
                 <div
@@ -84,7 +96,7 @@
               </a>
               <a
                 href="../pages/CourseEducation.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white"
               >
                 Courses
                 <div
@@ -93,7 +105,7 @@
               </a>
               <a
                 href="../pages/Training Course.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white"
               >
                 About
                 <div
@@ -102,7 +114,7 @@
               </a>
               <a
                 href="../pages/ContactUs.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white"
               >
                 Contact
                 <div
@@ -113,13 +125,42 @@
 
             <!-- Right Side -->
             <div class="flex items-center space-x-4">
+              <!-- Dark Mode Toggle Button -->
               <button
-                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full"
+                id="darkModeToggle"
+                class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+                aria-label="Toggle dark mode"
+              >
+                <svg
+                  id="sunIcon"
+                  class="w-5 h-5 hidden dark:block"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <svg
+                  id="moonIcon"
+                  class="w-5 h-5 block dark:hidden"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                  ></path>
+                </svg>
+              </button>
+              <button
+                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full dark:text-white"
               >
                 <i class="fas fa-search"></i>
               </button>
               <button
-                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full relative"
+                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full relative dark:text-white"
               >
                 <i class="fas fa-bell"></i>
                 <div
@@ -130,7 +171,7 @@
               <!-- Desktop Login -->
               <a
                 href="../pages/LogIn_SignUp.html"
-                class="hidden md:inline-block bg-[#7F95D1] hover:bg-blue-400  text-white px-3 py-2 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-md shimmer-effect"
+                class="hidden md:inline-block bg-[#7F95D1] hover:bg-blue-400 text-white px-3 py-2 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-md shimmer-effect"
               >
                 <i class="fas fa-sign-in-alt mr-2"></i>Login
               </a>
@@ -206,21 +247,21 @@
           </div>
         </div>
       </nav>
-      <div class="bg-[#7F95D1] text-white text-center py-3 mt-16">
+      <div class="bg-[#7F95D1] text-white text-center py-3 mt-16 dark:bg-gray-700">
         <p class="text-sm font-medium">Explore our new website today!</p>
       </div>
     </header>
     <main class="max-w-7xl mx-auto px-4 py-8">
-      <section class="bg-white py-16 px-6">
+      <section class="bg-white py-16 px-6 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         <div class="max-w-6xl mx-auto">
           <div class="grid lg:grid-cols-2 gap-12 items-center">
             <!-- Left Content -->
             <div class="space-y-6">
-              <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">
+              <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
                 About Learnode
               </h2>
 
-              <p class="text-gray-600 text-lg">
+              <p class="text-gray-600 text-lg dark:text-white">
                 Learnode is a student-built e-learning platform designed to make
                 education more accessible, engaging, and affordable. Whether
                 you're a beginner exploring new topics or a student deepening
@@ -230,43 +271,43 @@
 
               <div class="space-y-4 text-gray-600">
                 <div class="flex items-start space-x-3">
-                  <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
+                  <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2 "></div>
                   <div>
-                    <p class="text-gray-600">Built by Students, for Students</p>
+                    <p class="text-gray-600 dark:text-white">Built by Students, for Students</p>
                   </div>
                 </div>
 
                 <div class="flex items-start space-x-3">
                   <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
                   <div>
-                    <p class="text-gray-600">Free & Affordable Learning</p>
+                    <p class="text-gray-600 dark:text-white">Free & Affordable Learning</p>
                   </div>
                 </div>
 
                 <div class="flex items-start space-x-3">
                   <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
                   <div>
-                    <p class="text-gray-600">Easy-to-Use Platform</p>
+                    <p class="text-gray-600 dark:text-white">Easy-to-Use Platform</p>
                   </div>
                 </div>
 
                 <div class="flex items-start space-x-3">
                   <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
                   <div>
-                    <h3 class="text-gray-600">Community-Driven Growth</h3>
+                    <h3 class="text-gray-600 dark:text-white">Community-Driven Growth</h3>
                   </div>
                 </div>
 
                 <div class="flex items-start space-x-3">
                   <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
                   <div>
-                    <h3 class="text-gray-600">Learning That Fits Your Life</h3>
+                    <h3 class="text-gray-600 dark:text-white">Learning That Fits Your Life</h3>
                   </div>
                 </div>
               </div>
 
               <button
-                class="bg-[#7F95D1] text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                class="bg-[#7F95D1] text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors dark:text-white"
               >
                 Explore courses
               </button>
@@ -304,14 +345,14 @@
       <!--  Our Team -->
       <section>
         <h2
-          class="text-3xl font-bold mb-10 text-center pt-20 lg:text-4xl text-gray-900"
+          class="text-3xl font-bold mb-10 text-center pt-20 lg:text-4xl text-gray-900 dark:text-white"
         >
           Our Team
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <!-- Team Card -->
           <div
-            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center"
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300"
           >
             <img
               src="../images/team.jpg"
@@ -319,11 +360,11 @@
               alt="img"
             />
             <h3 class="text-xl font-semibold">Choeng Sreyleak</h3>
-            <p class="text-sm text-gray-600">UC</p>
+            <p class="text-sm text-gray-600 dark:text-white">UC</p>
           </div>
 
           <div
-            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center"
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300"
           >
             <img
               src="../images/team.jpg"
@@ -331,11 +372,11 @@
               alt="img"
             />
             <h3 class="text-xl font-semibold">San Sopheak</h3>
-            <p class="text-sm text-gray-600">RUPP</p>
+            <p class="text-sm text-gray-600 dark:text-white">RUPP</p>
           </div>
 
           <div
-            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center"
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center dark:bg-gray-800 text-gray-800 dark:text-gray-100 transition-colors duration-300"
           >
             <img
               src="../images/team.jpg"
@@ -343,10 +384,10 @@
               alt="img"
             />
             <h3 class="text-xl font-semibold">Chea Phirum</h3>
-            <p class="text-sm text-gray-600">IDK</p>
+            <p class="text-sm text-gray-600 dark:text-white dark:text-white">IDK</p>
           </div>
           <div
-            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center"
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300"
           >
             <img
               src="../images/team.jpg"
@@ -354,10 +395,10 @@
               alt="img"
             />
             <h3 class="text-xl font-semibold">Koy Sokkea</h3>
-            <p class="text-sm text-gray-600">IDK</p>
+            <p class="text-sm text-gray-600 dark:text-white">IDK</p>
           </div>
           <div
-            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center"
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300"
           >
             <img
               src="../images/team.jpg"
@@ -365,10 +406,10 @@
               alt="img"
             />
             <h3 class="text-xl font-semibold">Nol Monyrathanak</h3>
-            <p class="text-sm text-gray-600">RUPP</p>
+            <p class="text-sm text-gray-600 dark:text-white">RUPP</p>
           </div>
           <div
-            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center"
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300"
           >
             <img
               src="../images/team.jpg"
@@ -376,10 +417,10 @@
               alt="img"
             />
             <h3 class="text-xl font-semibold">Chhorn Seavleng</h3>
-            <p class="text-sm text-gray-600">RUPP</p>
+            <p class="text-sm text-gray-600 dark:text-white">RUPP</p>
           </div>
           <div
-            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center"
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300"
           >
             <img
               src="../images/team.jpg"
@@ -387,21 +428,21 @@
               alt="img"
             />
             <h3 class="text-xl font-semibold">Tak Sreytim</h3>
-            <p class="text-sm text-gray-600">AUPP</p>
+            <p class="text-sm text-gray-600 dark:text-white">AUPP</p>
           </div>
         </div>
       </section>
 
       <!-- 4. Our Values -->
-      <section class="pb-20">
+      <section class="pb-20 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         <h2 class="text-3xl font-bold mb-10 text-center pt-20">Our Values</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <!-- Value Card 1 -->
           <div
-            class="bg-gradient-to-tr from-white to-blue-100 p-6 rounded-xl shadow-md hover:shadow-lg transition text-center"
+            class="bg-gradient-to-tr from-white to-blue-100 p-6 rounded-xl shadow-md hover:shadow-lg transition text-center  "
           >
             <div class="text-4xl mb-3">🤝</div>
-            <h3 class="font-bold text-xl mb-2">Inclusivity</h3>
+            <h3 class="font-bold text-xl mb-2 dark:text-black">Inclusivity</h3>
             <p class="text-sm text-gray-700">
               Everyone deserves a chance to learn and grow, regardless of
               background or situation.
@@ -413,7 +454,7 @@
             class="bg-gradient-to-tr from-white to-yellow-100 p-6 rounded-xl shadow-md hover:shadow-lg transition text-center"
           >
             <div class="text-4xl mb-3">💡</div>
-            <h3 class="font-bold text-xl mb-2">Innovation</h3>
+            <h3 class="font-bold text-xl mb-2 dark:text-black">Innovation</h3>
             <p class="text-sm text-gray-700">
               We embrace new tools and ideas to make learning smarter and more
               effective.
@@ -425,7 +466,7 @@
             class="bg-gradient-to-tr from-white to-green-100 p-6 rounded-xl shadow-md hover:shadow-lg transition text-center"
           >
             <div class="text-4xl mb-3">🌱</div>
-            <h3 class="font-bold text-xl mb-2">Community</h3>
+            <h3 class="font-bold text-xl mb-2 dark:text-black">Community</h3>
             <p class="text-sm text-gray-700">
               We grow together by sharing knowledge, listening to feedback, and
               lifting others up.
@@ -435,7 +476,7 @@
       </section>
 
       <!-- Training Benefits Section -->
-      <section class="bg-[#575366] text-white py-16 px-6">
+      <section class="bg-[#575366] text-white py-16 px-6 dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         <div class="max-w-6xl mx-auto">
           <div class="grid lg:grid-cols-2 gap-12 items-center">
             <!-- Left Image -->
@@ -503,16 +544,16 @@
       </section>
 
       <!-- Learning Solution Section -->
-      <section class="bg-white py-16 px-6">
+      <section class="bg-white py-16 px-6 dark:bg-gray-800 to-gray-900 dark:border-1 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         <div class="max-w-6xl mx-auto">
           <div class="grid lg:grid-cols-2 gap-12 items-center">
             <!-- Left Content -->
             <div class="space-y-6">
-              <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">
+              <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
                 Our learning solution
               </h2>
 
-              <p class="text-gray-600 text-lg">
+              <p class="text-gray-600 text-lg dark:text-white">
                 Our platform is built to help learners grow confidently, whether
                 you're starting fresh or leveling up your skills. We focus on
                 solving real learning challenges — together.
@@ -522,7 +563,7 @@
                 <div class="flex items-start space-x-3">
                   <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
                   <div>
-                    <p class="text-gray-600">
+                    <p class="text-gray-600 dark:text-white">
                       Smooth Onboarding for New Learners
                     </p>
                   </div>
@@ -531,29 +572,29 @@
                 <div class="flex items-start space-x-3">
                   <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
                   <div>
-                    <p class="text-gray-600">Leadership & Personal Growth</p>
+                    <p class="text-gray-600 dark:text-white">Leadership & Personal Growth</p>
                   </div>
                 </div>
 
                 <div class="flex items-start space-x-3">
                   <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
                   <div>
-                    <p class="text-gray-600">Digital & Safety Awareness</p>
+                    <p class="text-gray-600 dark:text-white">Digital & Safety Awareness</p>
                   </div>
                 </div>
 
                 <div class="flex items-start space-x-3">
                   <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
                   <div>
-                    <h3 class="text-gray-600">Progress Tracking & Feedback</h3>
+                    <h3 class="text-gray-600 dark:text-white">Progress Tracking & Feedback</h3>
                   </div>
                 </div>
 
                 <div class="flex items-start space-x-3">
                   <div class="w-2 h-2 bg-[#7F95D1] rounded-full mt-2"></div>
                   <div>
-                    <h3 class="text-gray-600">Community support</h3>
-                    <p>Community Support</p>
+                    <h3 class="text-gray-600 dark:text-white">Community support</h3>
+                    
                   </div>
                 </div>
               </div>
@@ -575,7 +616,7 @@
           </div>
         </div>
       </section>
-      <section class="bg-[#7F95D1] py-16 px-6">
+      <section class="bg-[#7F95D1] py-16 px-6 dark:bg-gray-700 dark:text-gray-100 transition-colors duration-200">
         <div class="max-w-4xl mx-auto text-center">
           <h2 class="text-white text-3xl md:text-4xl font-bold mb-6">
             Speak to us today
@@ -602,7 +643,7 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white">
+    <footer class="bg-gray-900 text-white dark:bg-gray-800  transition-colors duration-200">
       <div class="max-w-7xl mx-auto px-6 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- About Section -->
@@ -758,5 +799,57 @@
         </div>
       </div>
     </footer>
+    <script>
+      // ==================================================
+      // Dark mode toggle functionality
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const html = document.documentElement;
+
+      // Check for saved theme preference or default to system preference
+      function initializeTheme() {
+        const savedTheme = localStorage.getItem("theme");
+        const systemPrefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+
+        if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
+          html.classList.add("dark");
+        } else {
+          html.classList.remove("dark");
+        }
+      }
+
+      // Toggle dark mode
+      function toggleDarkMode() {
+        const isDark = html.classList.contains("dark");
+
+        if (isDark) {
+          html.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+        } else {
+          html.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        }
+      }
+
+      // Event listeners
+      darkModeToggle.addEventListener("click", toggleDarkMode);
+
+      // Listen for system theme changes
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          if (!localStorage.getItem("theme")) {
+            if (e.matches) {
+              html.classList.add("dark");
+            } else {
+              html.classList.remove("dark");
+            }
+          }
+        });
+
+      // Initialize theme on page load
+      initializeTheme();
+    </script>
   </body>
 </html>

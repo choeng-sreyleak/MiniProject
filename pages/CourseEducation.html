@@ -263,12 +263,22 @@
         }
       }
     </style>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
   </head>
-  <body class="font-sans bg-white text-gray-800">
+  <body
+    class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white transition-colors duration-300"
+  >
     <header>
       <!-- Navbar -->
       <nav
-        class="bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50"
+        class="bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
       >
         <div class="max-w-7xl mx-auto px-6">
           <div class="flex justify-between items-center h-16">
@@ -288,7 +298,7 @@
             <div class="hidden md:flex items-center space-x-0">
               <a
                 href="../index.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white"
               >
                 Home
                 <div
@@ -297,7 +307,7 @@
               </a>
               <a
                 href="../pages/CourseEducation.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white"
               >
                 Courses
                 <div
@@ -306,7 +316,7 @@
               </a>
               <a
                 href="../pages/Training Course.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white"
               >
                 About
                 <div
@@ -315,7 +325,7 @@
               </a>
               <a
                 href="../pages/ContactUs.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white"
               >
                 Contact
                 <div
@@ -326,13 +336,42 @@
 
             <!-- Right Side -->
             <div class="flex items-center space-x-4">
+              <!-- Dark Mode Toggle Button -->
               <button
-                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full"
+                id="darkModeToggle"
+                class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+                aria-label="Toggle dark mode"
+              >
+                <svg
+                  id="sunIcon"
+                  class="w-5 h-5 hidden dark:block"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <svg
+                  id="moonIcon"
+                  class="w-5 h-5 block dark:hidden"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                  ></path>
+                </svg>
+              </button>
+              <button
+                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full dark:text-white"
               >
                 <i class="fas fa-search"></i>
               </button>
               <button
-                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full relative"
+                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full relative dark:text-white"
               >
                 <i class="fas fa-bell"></i>
                 <div
@@ -419,12 +458,12 @@
           </div>
         </div>
       </nav>
-      <div class="bg-[#7F95D1] text-white text-center py-3 mt-16">
+      <div class="bg-[#7F95D1] text-white text-center py-3 mt-16 dark:bg-gray-700">
         <p class="text-sm font-medium">Explore our new website today!</p>
       </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 text-center">
+    <main class="max-w-7xl mx-auto px-4 text-center dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
       <!-- Hero -->
       <section class="mt-2 relative">
         <div
@@ -468,9 +507,9 @@
         </div>
       </section>
       <!-- =================================Courses Card ================================-->
-      <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-          <h2 class="text-5xl font-bold text-gray-800 leading-tight mb-10">
+      <section class="py-16 bg-white dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 text-center animate-fade-in-up delay-2">
+          <h2 class="text-5xl font-bold text-gray-800 leading-tight mb-10  dark:text-white">
             Courses
           </h2>
 
@@ -479,7 +518,7 @@
           >
             <!-- Course Card 1 -->
             <div
-              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img
                 src="./imgs/pic2.jpg"
@@ -487,7 +526,7 @@
                 class="w-full h-58 object-cover"
               />
               <div class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 dark:text-white">
                   Level 2 Food Safety & Hygiene for Catering
                 </h3>
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -502,12 +541,12 @@
                 </div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
-                    <p class="text-sm font-medium text-gray-900">Duration</p>
-                    <p class="text-sm text-gray-600">2-3 Hours</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Duration</p>
+                    <p class="text-sm text-gray-600 dark:text-white">2-3 Hours</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-2xl font-bold text-gray-900">
-                      $70.80<span class="text-sm text-gray-500 font-normal"
+                    <p class="text-2xl font-bold text-gray-900 dark:text-white">
+                      $70.80<span class="text-sm text-gray-200 font-normal"
                         >+ VAT</span
                       >
                     </p>
@@ -540,7 +579,7 @@
 
             <!-- Course Card 2 -->
             <div
-              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img
                 src="./imgs/pic3.jpg"
@@ -548,7 +587,7 @@
                 class="w-full h-58 object-cover"
               />
               <div class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-5">
+                <h3 class="text-lg font-semibold text-gray-900 mb-5 dark:text-white">
                   Level 3 Food Safety and Hygiene for Supervisors
                 </h3>
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -563,13 +602,13 @@
                 </div>
                 <div class="flex justify-between items-start mb-5">
                   <div>
-                    <p class="text-sm font-medium text-gray-900">Duration</p>
-                    <p class="text-sm text-gray-600">6-9 Hours</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Duration</p>
+                    <p class="text-sm text-gray-600 dark:text-white">6-9 Hours</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-2xl font-bold text-gray-900">
+                    <p class="text-2xl font-bold text-gray-900 dark:text-white">
                       $79.00
-                      <span class="text-sm text-gray-500 font-normal"
+                      <span class="text-sm text-gray-200 font-normal"
                         >+ VAT</span
                       >
                     </p>
@@ -600,7 +639,7 @@
             </div>
             <!-- Course Card 3 -->
             <div
-              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img
                 src="./imgs/pic4.jpg"
@@ -608,7 +647,7 @@
                 class="w-full h-58 object-cover"
               />
               <div class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-5">
+                <h3 class="text-lg font-semibold text-gray-900 mb-5 dark:text-white">
                   Food Allergy Awareness and Level 2 Food Hygiene Training
                   Package
                 </h3>
@@ -624,13 +663,13 @@
                 </div>
                 <div class="flex justify-between items-start mb-5">
                   <div>
-                    <p class="text-sm font-medium text-gray-900">Duration</p>
-                    <p class="text-sm text-gray-600">3-4 Hours</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Duration</p>
+                    <p class="text-sm text-gray-600 dark:text-white">3-4 Hours</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-2xl font-bold text-gray-900">
+                    <p class="text-2xl font-bold text-gray-900 dark:text-white">
                       $72.00
-                      <span class="text-sm text-gray-500 font-normal"
+                      <span class="text-sm text-gray-200 font-normal"
                         >+ VAT</span
                       >
                     </p>
@@ -661,7 +700,7 @@
             </div>
             <!-- Course Card 4 -->
             <div
-              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img
                 src="./imgs/pic5.jpg"
@@ -669,7 +708,7 @@
                 class="w-full h-58 object-cover"
               />
               <div class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 dark:text-white">
                   Level 2 Safeguarding Children
                 </h3>
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -680,13 +719,13 @@
                 </div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
-                    <p class="text-sm font-medium text-gray-900">Duration</p>
-                    <p class="text-sm text-gray-600">1-2 Hours</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Duration</p>
+                    <p class="text-sm text-gray-600 dark:text-white">1-2 Hours</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-2xl font-bold text-gray-900">
+                    <p class="text-2xl font-bold text-gray-900 dark:text-white">
                       $50.00
-                      <span class="text-sm text-gray-500 font-normal"
+                      <span class="text-sm text-gray-200 font-normal"
                         >+ VAT</span
                       >
                     </p>
@@ -718,7 +757,7 @@
 
             <!-- Course Card 5 -->
             <div
-              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img
                 src="./imgs/pic6.jpg"
@@ -726,7 +765,7 @@
                 class="w-full h-58 object-cover"
               />
               <div class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 dark:text-white">
                   Safeguarding Children Level 3
                 </h3>
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -737,13 +776,13 @@
                 </div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
-                    <p class="text-sm font-medium text-gray-900">Duration</p>
-                    <p class="text-sm text-gray-600">2-3 Hours</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Duration</p>
+                    <p class="text-sm text-gray-600 dark:text-white">2-3 Hours</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-2xl font-bold text-gray-900">
+                    <p class="text-2xl font-bold text-gray-900 dark:text-white">
                       $65.00
-                      <span class="text-sm text-gray-500 font-normal"
+                      <span class="text-sm text-gray-200 font-normal"
                         >+ VAT</span
                       >
                     </p>
@@ -774,7 +813,7 @@
             </div>
             <!-- Course Card 6 -->
             <div
-              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img
                 src="./imgs/pic7.jpg"
@@ -782,7 +821,7 @@
                 class="w-full h-58 object-cover"
               />
               <div class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 dark:text-white">
                   Level 1 Food Safety and Hygiene
                 </h3>
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -793,13 +832,13 @@
                 </div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
-                    <p class="text-sm font-medium text-gray-900">Duration</p>
-                    <p class="text-sm text-gray-600">1-2 Hours</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Duration</p>
+                    <p class="text-sm text-gray-600 dark:text-white">1-2 Hours</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-2xl font-bold text-gray-900">
+                    <p class="text-2xl font-bold text-gray-900 dark:text-white">
                       $55.80
-                      <span class="text-sm text-gray-500 font-normal"
+                      <span class="text-sm text-gray-200 font-normal"
                         >+ VAT</span
                       >
                     </p>
@@ -831,7 +870,7 @@
 
             <!-- Course Card 7 -->
             <div
-              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img
                 src="./imgs/pic8.jpg"
@@ -839,7 +878,7 @@
                 class="w-full h-58 object-cover"
               />
               <div class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 dark:text-white">
                   First Aid at Work Course: Primary Survey
                 </h3>
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -854,13 +893,13 @@
                 </div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
-                    <p class="text-sm font-medium text-gray-900">Duration</p>
-                    <p class="text-sm text-gray-600">30 - 45 Minutes</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Duration</p>
+                    <p class="text-sm text-gray-600 dark:text-white">30 - 45 Minutes</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-2xl font-bold text-gray-900">
+                    <p class="text-2xl font-bold text-gray-900 dark:text-white">
                       $60.90
-                      <span class="text-sm text-gray-500 font-normal"
+                      <span class="text-sm text-gray-200 font-normal"
                         >+ VAT</span
                       >
                     </p>
@@ -892,7 +931,7 @@
 
             <!-- Course Card 8 -->
             <div
-              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img
                 src="./imgs/pic9.jpg"
@@ -900,7 +939,7 @@
                 class="w-full h-58 object-cover"
               />
               <div class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 dark:text-white">
                   The Essentials of Data Protection (GDPR)
                 </h3>
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -911,13 +950,13 @@
                 </div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
-                    <p class="text-sm font-medium text-gray-900">Duration</p>
-                    <p class="text-sm text-gray-600">1-2 Hours</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Duration</p>
+                    <p class="text-sm text-gray-600 dark:text-white">1-2 Hours</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-2xl font-bold text-gray-900">
+                    <p class="text-2xl font-bold text-gray-900 dark:text-white">
                       $59.00
-                      <span class="text-sm text-gray-500 font-normal"
+                      <span class="text-sm text-gray-200 font-normal"
                         >+ VAT</span
                       >
                     </p>
@@ -948,7 +987,7 @@
             </div>
             <!-- Course Card 9 - Container -->
             <div
-              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-2"
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1  dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img
                 src="./imgs/pic10.jpg"
@@ -956,7 +995,7 @@
                 class="w-full h-58 object-cover"
               />
               <div class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 dark:text-white">
                   Manual Handling in the Workplace
                 </h3>
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -971,13 +1010,13 @@
                 </div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
-                    <p class="text-sm font-medium text-gray-900">Duration</p>
-                    <p class="text-sm text-gray-600">30 - 45 Minutes</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Duration</p>
+                    <p class="text-sm text-gray-600 dark:text-white">30 - 45 Minutes</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-2xl font-bold text-gray-900">
+                    <p class="text-2xl font-bold text-gray-900 dark:text-white">
                       $64.70
-                      <span class="text-sm text-gray-500 font-normal"
+                      <span class="text-sm text-gray-200 font-normal"
                         >+ VAT</span
                       >
                     </p>
@@ -1272,9 +1311,9 @@
       </section>
 
       <!-- Call to Action Section -->
-      <section>
+      <section class="dark:bg-gray-900">
         <!-- Enhanced Bottom Hero Section -->
-        <div class="gradient-bg text-white mt-16 relative">
+        <div class="bg-[#7F95D1] text-white mt-16 relative dark:bg-gray-900">
           <!-- Floating particles background -->
           <div class="particles" id="particles"></div>
 
@@ -1345,15 +1384,15 @@
       <!-- class="max-w-7xl  mx-auto px-4 text-center" -->
       <section class="max-w-7xl mx-auto px-4 text-center">
         <div
-          class="bg-white rounded-3xl p-20 flex flex-col justify-between relative overflow-hidden"
+          class="bg-white rounded-3xl p-20 flex flex-col justify-between relative overflow-hidden dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300"
         >
           <!-- Testimonials Grid -->
           <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
-              <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 dark:text-white">
                 What Our Students Say
               </h2>
-              <p class="text-gray-600 max-w-2xl mx-auto">
+              <p class="text-gray-600 max-w-2xl mx-auto dark:text-white">
                 Discover why thousands of students choose Learnode for their
                 learning journey
               </p>
@@ -1364,7 +1403,7 @@
             >
               <!-- Testimonial 1 -->
               <div
-                class="bg-white rounded-2xl p-6 md:p-8 border-l-4 border-[var(--primary-color)] hover:shadow-xl hover:-translate-y-2 transition-all duration-300 shadow-md"
+                class="bg-white rounded-2xl p-6 md:p-8 border-l-4 border-[var(--primary-color)] hover:shadow-xl hover:-translate-y-2 transition-all duration-300 shadow-md dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
               >
                 <!-- Star Rating -->
                 <div class="flex mb-4 gap-1">
@@ -1397,12 +1436,12 @@
 
                 <!-- Content -->
                 <h3
-                  class="text-lg md:text-xl font-semibold text-gray-800 mb-3 md:mb-4 leading-tight"
+                  class="text-lg md:text-xl font-semibold text-gray-800 mb-3 md:mb-4 leading-tight dark:text-white"
                 >
                   Easy to find a course
                 </h3>
                 <p
-                  class="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8 flex-grow"
+                  class="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8 flex-grow dark:text-white"
                 >
                   Easy to find a course and purchase. Can have a refund and
                   return when you want.
@@ -1418,7 +1457,7 @@
                     >
                       <span class="text-white text-sm font-semibold">D</span>
                     </div>
-                    <span class="text-sm md:text-base text-gray-700 font-medium"
+                    <span class="text-sm md:text-base text-gray-700 font-medium dark:text-white"
                       >Dawn Lockyer</span
                     >
                   </div>
@@ -1437,7 +1476,7 @@
 
               <!-- Testimonial 2 -->
               <div
-                class="bg-white rounded-2xl p-6 md:p-8 border-l-4 border-[var(--primary-color)] hover:shadow-xl hover:-translate-y-2 transition-all duration-300 shadow-md"
+                class="bg-white rounded-2xl p-6 md:p-8 border-l-4 border-[var(--primary-color)] hover:shadow-xl hover:-translate-y-2 transition-all duration-300 shadow-md dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
               >
                 <!-- Star Rating -->
                 <div class="flex mb-4 gap-1">
@@ -1470,12 +1509,12 @@
 
                 <!-- Content -->
                 <h3
-                  class="text-lg md:text-xl font-semibold text-gray-800 mb-3 md:mb-4 leading-tight"
+                  class="text-lg md:text-xl font-semibold text-gray-800 mb-3 md:mb-4 leading-tight dark:text-white"
                 >
                   Quick and easy process
                 </h3>
                 <p
-                  class="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8"
+                  class="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8 dark:text-white"
                 >
                   It was a quick and easy process to complete the course. The
                   interface is intuitive and user-friendly.
@@ -1491,7 +1530,7 @@
                     >
                       <span class="text-white text-sm font-semibold">S</span>
                     </div>
-                    <span class="text-sm md:text-base text-gray-700 font-medium"
+                    <span class="text-sm md:text-base text-gray-700 font-medium dark:text-white"
                       >San Tse</span
                     >
                   </div>
@@ -1510,7 +1549,7 @@
 
               <!-- Testimonial 3 -->
               <div
-                class="bg-white rounded-2xl p-6 md:p-8 border-l-4 border-[var(--primary-color)] hover:shadow-xl hover:-translate-y-2 transition-all duration-300 shadow-md"
+                class="bg-white rounded-2xl p-6 md:p-8 border-l-4 border-[var(--primary-color)] hover:shadow-xl hover:-translate-y-2 transition-all duration-300 shadow-md dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
               >
                 <!-- Star Rating -->
                 <div class="flex mb-4 gap-1">
@@ -1543,12 +1582,12 @@
 
                 <!-- Content -->
                 <h3
-                  class="text-lg md:text-xl font-semibold text-gray-800 mb-3 md:mb-4 leading-tight"
+                  class="text-lg md:text-xl font-semibold text-gray-800 mb-3 md:mb-4 leading-tight dark:text-white"
                 >
                   Excellent and affordable
                 </h3>
                 <p
-                  class="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8"
+                  class="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8 dark:text-white"
                 >
                   L2 Food Safety and Hygiene for Catering course was
                   comprehensive and reasonably priced.
@@ -1564,7 +1603,7 @@
                     >
                       <span class="text-white text-sm font-semibold">J</span>
                     </div>
-                    <span class="text-sm md:text-base text-gray-700 font-medium"
+                    <span class="text-sm md:text-base text-gray-700 font-medium dark:text-white"
                       >Jimmy Chan</span
                     >
                   </div>
@@ -1572,7 +1611,7 @@
                     class="flex items-center text-xs md:text-sm text-green-600"
                   >
                     <div
-                      class="w-4 h-4 bg-green-600 rounded-full flex items-center justify-center text-white text-xs mr-2"
+                      class="w-4 h-4 bg-green-600 rounded-full flex items-center justify-center text-white text-xs mr-2 dark:text-white"
                     >
                       ✓
                     </div>
@@ -1587,7 +1626,7 @@
               <div
                 class="w-10 h-10 rounded-full bg-gray-100 border-2 border-gray-300 flex items-center justify-center cursor-pointer hover:bg-emerald-400 hover:border-emerald-400 hover:text-white transition-all duration-300 mr-4"
               >
-                <span class="text-lg">‹</span>
+                <span class="text-lg dark:text-black">‹</span>
               </div>
 
               <div class="flex space-x-3">
@@ -1611,14 +1650,14 @@
               <div
                 class="w-10 h-10 rounded-full bg-gray-100 border-2 border-gray-300 flex items-center justify-center cursor-pointer hover:bg-emerald-400 hover:border-emerald-400 hover:text-white transition-all duration-300 ml-4"
               >
-                <span class="text-lg">›</span>
+                <span class="text-lg dark:text-black">›</span>
               </div>
             </div>
 
             <!-- Trustpilot Section -->
             <div class="text-center">
-              <div class="text-gray-700 mb-2">
-                <span class="font-semibold">15840</span> Reviews on
+              <div class="text-gray-700 mb-2 dark:text-white">
+                <span class="font-semibold dark:text-white">15840</span> Reviews on
               </div>
 
               <button
@@ -1631,13 +1670,13 @@
         </div>
       </section>
 
-      <section class="bg-gray-50 py-16">
+      <section class="bg-gray-50 py-16 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <!-- Section Header -->
           <div class="flex justify-between items-center mb-12">
-            <h2 class="text-5xl font-bold text-gray-800">Featured Resources</h2>
+            <h2 class="text-5xl font-bold text-gray-800 dark:text-white">Featured Resources</h2>
             <button
-              class="bg-vc-blue text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors duration-300"
+              class="bg-[#7F95D1] text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors duration-300"
             >
               View all resources
             </button>
@@ -1647,12 +1686,12 @@
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Resource Card 1 -->
             <div
-              class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img src="./imgs/pic13.jpg" alt="" />
               <div class="p-6">
                 <h3
-                  class="text-xl font-semibold text-gray-800 mb-3 leading-tight"
+                  class="text-xl font-semibold text-gray-800 mb-3 leading-tight dark:text-white"
                 >
                   Safeguarding in Education - Remaining Compliant and Driving
                   Standards
@@ -1676,12 +1715,12 @@
 
             <!-- Resource Card 2 -->
             <div
-              class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img src="./imgs/pic14.jpg" alt="" />
               <div class="p-6">
                 <h3
-                  class="text-xl font-semibold text-gray-800 mb-3 leading-tight"
+                  class="text-xl font-semibold text-gray-800 mb-3 leading-tight dark:text-white"
                 >
                   E-learning to be at the forefront of education by 2025
                 </h3>
@@ -1704,12 +1743,12 @@
 
             <!-- Resource Card 3 -->
             <div
-              class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img src="./imgs/pic15.jpg" alt="" />
               <div class="p-6">
                 <h3
-                  class="text-xl font-semibold text-gray-800 mb-3 leading-tight"
+                  class="text-xl font-semibold text-gray-800 mb-3 leading-tight dark:text-white"
                 >
                   Higher education gives a nod to online learning benefits
                 </h3>
@@ -1736,7 +1775,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white">
+    <footer class="bg-gray-900 text-white dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300">
       <div class="max-w-7xl mx-auto px-6 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- About Section -->

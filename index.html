@@ -146,13 +146,23 @@
         animation: float 3s ease-in-out infinite;
       }
     </style>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
   </head>
 
-  <body>
+  <body
+    class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
+  >
     <header>
       <!-- Navbar -->
       <nav
-        class="bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50"
+        class="bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
       >
         <div class="max-w-7xl mx-auto px-6">
           <div class="flex justify-between items-center h-16">
@@ -172,7 +182,7 @@
             <div class="hidden md:flex items-center space-x-0">
               <a
                 href="#"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
               >
                 Home
                 <div
@@ -181,7 +191,7 @@
               </a>
               <a
                 href="./pages/CourseEducation.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
               >
                 Courses
                 <div
@@ -190,7 +200,7 @@
               </a>
               <a
                 href="./pages/Training Course.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
               >
                 About
                 <div
@@ -199,7 +209,7 @@
               </a>
               <a
                 href="./pages/ContactUs.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
               >
                 Contact
                 <div
@@ -210,13 +220,42 @@
 
             <!-- Right Side -->
             <div class="flex items-center space-x-4">
+              <!-- Dark Mode Toggle Button -->
               <button
-                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full"
+                id="darkModeToggle"
+                class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+                aria-label="Toggle dark mode"
+              >
+                <svg
+                  id="sunIcon"
+                  class="w-5 h-5 hidden dark:block"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <svg
+                  id="moonIcon"
+                  class="w-5 h-5 block dark:hidden"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                  ></path>
+                </svg>
+              </button>
+              <button
+                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full dark:text-white transition-colors duration-300"
               >
                 <i class="fas fa-search"></i>
               </button>
               <button
-                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full relative"
+                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full relative dark:text-white transition-colors duration-300"
               >
                 <i class="fas fa-bell"></i>
                 <div
@@ -303,7 +342,7 @@
           </div>
         </div>
       </nav>
-      <div class="bg-[#7F95D1] text-white text-center py-3 mt-16">
+      <div class="bg-[#7F95D1] text-white text-center py-3 mt-16 dark:bg-gray-700 transition-colors duration-300">
         <p class="text-sm font-medium">Explore our new website today!</p>
       </div>
     </header>
@@ -360,7 +399,7 @@
         </div>
       </section>
       <section
-        class="py-16 bg-gradient-to-r bg-[#7F95D1] text-white rounded-lg text-sm font-medium transition-colors"
+        class="py-16 bg-gradient-to-r bg-[#7F95D1] text-white rounded-lg text-sm font-medium transition-colors dark:bg-gray-800 dark:text-gray-200 transition-colors duration-300"
       >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
@@ -468,7 +507,7 @@
       </section>
 
       <!-- ============================ Course Section ========================================== -->
-      <section class="py-16 bg-white">
+      <section class="py-16 bg-white dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold mb-10">Popular Courses</h2>
 
@@ -477,7 +516,7 @@
           >
             <!-- Course Card 1 -->
             <div
-              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img
                 src="images/kidstudy.jpg"
@@ -485,7 +524,7 @@
                 class="w-full h-58 object-cover"
               />
               <div class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 dark:text-white">
                   Level 2 Safeguarding Children
                 </h3>
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -500,12 +539,12 @@
                 </div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
-                    <p class="text-sm font-medium text-gray-900">Duration</p>
-                    <p class="text-sm text-gray-600">1-2 Hours</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Duration</p>
+                    <p class="text-sm text-gray-600 dark:text-white">1-2 Hours</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-2xl font-bold text-gray-900">
-                      $50.00<span class="text-sm text-gray-500 font-normal"
+                    <p class="text-2xl font-bold text-gray-900 dark:text-white">
+                      $50.00<span class="text-sm text-gray-200 font-normal"
                         >+ VAT</span
                       >
                     </p>
@@ -536,7 +575,7 @@
             </div>
             <!-- Course Card2 -->
             <div
-              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img
                 src="pages/imgs/pic3.jpg"
@@ -544,7 +583,7 @@
                 class="w-full h-58 object-cover"
               />
               <div class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 dark:text-white">
                   Level 3 Food Safety and Hygiene for Supervisors
                 </h3>
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -559,12 +598,12 @@
                 </div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
-                    <p class="text-sm font-medium text-gray-900">Duration</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Duration</p>
                     <p class="text-sm text-gray-600">6-9 Hours</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-2xl font-bold text-gray-900">
-                      $79.00<span class="text-sm text-gray-500 font-normal"
+                    <p class="text-2xl font-bold text-gray-900 dark:text-white">
+                      $79.00<span class="text-sm text-gray-200 font-normal"
                         >+ VAT</span
                       >
                     </p>
@@ -595,7 +634,7 @@
             </div>
             <!-- Course Card 3 -->
             <div
-              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img
                 src="pages/imgs/pic2.jpg"
@@ -603,7 +642,7 @@
                 class="w-full h-58 object-cover"
               />
               <div class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 dark:text-white">
                   Level 2 Food Safety & Hygiene for Catering
                 </h3>
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -618,12 +657,12 @@
                 </div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
-                    <p class="text-sm font-medium text-gray-900">Duration</p>
-                    <p class="text-sm text-gray-600">2-3 Hours</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Duration</p>
+                    <p class="text-sm text-gray-600 dark:text-white">2-3 Hours</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-2xl font-bold text-gray-900">
-                      $70.80<span class="text-sm text-gray-500 font-normal"
+                    <p class="text-2xl font-bold text-gray-900 dark:text-white">
+                      $70.80<span class="text-sm text-gray-200 font-normal"
                         >+ VAT</span
                       >
                     </p>
@@ -654,7 +693,7 @@
             </div>
             <!-- Course Card4 -->
             <div
-              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img
                 src="pages/imgs/pic10.jpg"
@@ -662,7 +701,7 @@
                 class="w-full h-58 object-cover"
               />
               <div class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 dark:text-white">
                   Manual Handling in the Workplace
                 </h3>
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -677,12 +716,12 @@
                 </div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
-                    <p class="text-sm font-medium text-gray-900">Duration</p>
-                    <p class="text-sm text-gray-600">30 - 45 Minutes</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Duration</p>
+                    <p class="text-sm text-gray-600 dark:text-white">30 - 45 Minutes</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-2xl font-bold text-gray-900">
-                      $70.80<span class="text-sm text-gray-500 font-normal"
+                    <p class="text-2xl font-bold text-gray-900 dark:text-white">
+                      $70.80<span class="text-sm text-gray-200 font-normal"
                         >+ VAT</span
                       >
                     </p>
@@ -713,7 +752,7 @@
             </div>
             <!-- Course Card5 -->
             <div
-              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img
                 src="pages/imgs/pic9.jpg"
@@ -721,7 +760,7 @@
                 class="w-full h-58 object-cover"
               />
               <div class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 dark:text-white">
                   The Essentials of Data Protection (GDPR)
                 </h3>
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -736,12 +775,12 @@
                 </div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
-                    <p class="text-sm font-medium text-gray-900">Duration</p>
-                    <p class="text-sm text-gray-600">1-2 Hours</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Duration</p>
+                    <p class="text-sm text-gray-600 dark:text-white">1-2 Hours</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-2xl font-bold text-gray-900">
-                      $55.00<span class="text-sm text-gray-500 font-normal"
+                    <p class="text-2xl font-bold text-gray-900 dark:text-white">
+                      $55.00<span class="text-sm text-gray-200 font-normal"
                         >+ VAT</span
                       >
                     </p>
@@ -773,7 +812,7 @@
 
             <!-- Course Card 6 -->
             <div
-              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300"
             >
               <img
                 src="pages/imgs/pic6.jpg"
@@ -781,7 +820,7 @@
                 class="w-full h-58 object-cover"
               />
               <div class="p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 dark:text-white">
                   Safeguarding Children Level 3
                 </h3>
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -796,12 +835,12 @@
                 </div>
                 <div class="flex justify-between items-start mb-4">
                   <div>
-                    <p class="text-sm font-medium text-gray-900">Duration</p>
-                    <p class="text-sm text-gray-600">2-3 Hours</p>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Duration</p>
+                    <p class="text-sm text-gray-600 dark:text-white">2-3 Hours</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-2xl font-bold text-gray-900">
-                      $65.00<span class="text-sm text-gray-500 font-normal"
+                    <p class="text-2xl font-bold text-gray-900 dark:text-white">
+                      $65.00<span class="text-sm text-gray-200 font-normal"
                         >+ VAT</span
                       >
                     </p>
@@ -1080,7 +1119,7 @@
         </div>
       </section>
       <!-- Why Choose Us -->
-      <section class="enhanced-bg py-20 relative">
+      <section class="enhanced-bg py-20 relative dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
         <!-- Floating particles -->
         <div class="particles" id="particles"></div>
 
@@ -1140,7 +1179,7 @@
                         ></path>
                       </svg>
                     </div>
-                    <p class="text-gray-700 font-semibold text-lg">
+                    <p class="text-gray-700 font-semibold text-lg dark:text-white">
                       Over 350 accredited and certified courses
                     </p>
                   </div>
@@ -1167,7 +1206,7 @@
                         ></path>
                       </svg>
                     </div>
-                    <p class="text-gray-700 font-semibold text-lg">
+                    <p class="text-gray-700 font-semibold text-lg dark:text-white">
                       Bitesize, engaging content
                     </p>
                   </div>
@@ -1194,7 +1233,7 @@
                         ></path>
                       </svg>
                     </div>
-                    <p class="text-gray-700 font-semibold text-lg">
+                    <p class="text-gray-700 font-semibold text-lg dark:text-white">
                       Developed with industry experts
                     </p>
                   </div>
@@ -1221,7 +1260,7 @@
                         ></path>
                       </svg>
                     </div>
-                    <p class="text-gray-700 font-semibold text-lg">
+                    <p class="text-gray-700 font-semibold text-lg dark:text-white">
                       Instant certification upon completion
                     </p>
                   </div>
@@ -1248,7 +1287,7 @@
                         ></path>
                       </svg>
                     </div>
-                    <p class="text-gray-700 font-semibold text-lg">
+                    <p class="text-gray-700 font-semibold text-lg dark:text-white">
                       Flexible, anytime learning, anywhere
                     </p>
                   </div>
@@ -1275,7 +1314,7 @@
                         ></path>
                       </svg>
                     </div>
-                    <p class="text-gray-700 font-semibold text-lg">
+                    <p class="text-gray-700 font-semibold text-lg dark:text-white">
                       Always up to date content
                     </p>
                   </div>
@@ -1302,7 +1341,7 @@
                         ></path>
                       </svg>
                     </div>
-                    <p class="text-gray-700 font-semibold text-lg">
+                    <p class="text-gray-700 font-semibold text-lg dark:text-white">
                       Experienced and dedicated team
                     </p>
                   </div>
@@ -1368,7 +1407,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white">
+    <footer class="bg-gray-900 text-white dark:bg-gray-800 transiton-colors duration-300">
       <div class="max-w-7xl mx-auto px-6 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- About Section -->
@@ -1647,6 +1686,57 @@
           closeModal();
         }
       });
+
+      // ==================================================
+      // Dark mode toggle functionality
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const html = document.documentElement;
+
+      // Check for saved theme preference or default to system preference
+      function initializeTheme() {
+        const savedTheme = localStorage.getItem("theme");
+        const systemPrefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+
+        if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
+          html.classList.add("dark");
+        } else {
+          html.classList.remove("dark");
+        }
+      }
+
+      // Toggle dark mode
+      function toggleDarkMode() {
+        const isDark = html.classList.contains("dark");
+
+        if (isDark) {
+          html.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+        } else {
+          html.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        }
+      }
+
+      // Event listeners
+      darkModeToggle.addEventListener("click", toggleDarkMode);
+
+      // Listen for system theme changes
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          if (!localStorage.getItem("theme")) {
+            if (e.matches) {
+              html.classList.add("dark");
+            } else {
+              html.classList.remove("dark");
+            }
+          }
+        });
+
+      // Initialize theme on page load
+      initializeTheme();
     </script>
   </body>
 </html>

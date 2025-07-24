@@ -113,13 +113,24 @@
         left: 100%;
       }
     </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
   </head>
 
-  <body>
+  <body
+    class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
+  >
     <header>
       <!-- Navbar -->
       <nav
-        class="bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50"
+        class="bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
       >
         <div class="max-w-7xl mx-auto px-6">
           <div class="flex justify-between items-center h-16">
@@ -139,7 +150,7 @@
             <div class="hidden md:flex items-center space-x-0">
               <a
                 href="../index.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white"
               >
                 Home
                 <div
@@ -148,7 +159,7 @@
               </a>
               <a
                 href="../pages/CourseEducation.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white"
               >
                 Courses
                 <div
@@ -157,7 +168,7 @@
               </a>
               <a
                 href="../pages/Training Course.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white"
               >
                 About
                 <div
@@ -166,7 +177,7 @@
               </a>
               <a
                 href="../pages/ContactUs.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white"
               >
                 Contact
                 <div
@@ -177,13 +188,42 @@
 
             <!-- Right Side -->
             <div class="flex items-center space-x-4">
+              <!-- Dark Mode Toggle Button -->
               <button
-                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full"
+                id="darkModeToggle"
+                class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+                aria-label="Toggle dark mode"
+              >
+                <svg
+                  id="sunIcon"
+                  class="w-5 h-5 hidden dark:block"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <svg
+                  id="moonIcon"
+                  class="w-5 h-5 block dark:hidden"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                  ></path>
+                </svg>
+              </button>
+              <button
+                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full dark:text-white"
               >
                 <i class="fas fa-search"></i>
               </button>
               <button
-                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full relative"
+                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full relative dark:text-white"
               >
                 <i class="fas fa-bell"></i>
                 <div
@@ -270,15 +310,15 @@
           </div>
         </div>
       </nav>
-      <div class="bg-[#7F95D1] text-white text-center py-3 mt-16">
+      <div class="bg-[#7F95D1] text-white text-center py-3 mt-16 dark:bg-gray-700 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         <p class="text-sm font-medium">Explore our new website today!</p>
       </div>
     </header>
-    <main class="max-w-7xl mx-auto px-4 py-8">
+    <main class="max-w-7xl mx-auto px-4 py-8 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
       <!-- Header Section -->
       <section class="text-center mb-12 animate-fade-in">
         <h1 class="text-5xl font-bold mb-6">Get in Touch</h1>
-        <p class="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
+        <p class="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed dark:text-white">
           Have questions or need assistance? We are here to help. Reach out to
           us through any of the forms below, email or phone and we will get back
           to you as soon as possible. We look forward to hearing from you.
@@ -290,7 +330,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Help & Support Card -->
           <div
-            class="bg-white border border-gray-200 rounded-2xl shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300 animate-slide-up"
+            class="bg-white border border-gray-200 rounded-2xl shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300 animate-slide-up dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300"
           >
             <div class="p-6 text-center">
               <div class="mb-6">
@@ -300,17 +340,17 @@
                   <img src="../img/images (2).png" alt="" />
                 </div>
               </div>
-              <h5 class="mb-4 text-2xl font-bold text-gray-900">
+              <h5 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
                 General Inquiries
               </h5>
-              <p class="mb-6 text-gray-600 leading-relaxed">
+              <p class="mb-6 text-gray-600 leading-relaxed dark:text-white">
                 If you have questions about our platform, want to know more
                 about Learnode, or simply want to say hello, we’re here to
                 listen and help.
               </p>
               <a href="#" class="inline-block w-full">
                 <button
-                  class="bg-[#7F95D1] hover:bg-blue-400 shimmer-effect text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden "
+                  class="bg-[#7F95D1] hover:bg-blue-400 shimmer-effect text-white font-semibold py-3 px-8 rounded-full w-full transition-all duration-300 hover:scale-105 relative overflow-hidden"
                 >
                   Send Message
                 </button>
@@ -320,7 +360,7 @@
 
           <!-- Product Info Card -->
           <div
-            class="bg-white border border-gray-200 rounded-2xl shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300 animate-slide-up delay-200"
+            class="bg-white border border-gray-200 rounded-2xl shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300 animate-slide-up delay-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300"
           >
             <div class="p-6 text-center">
               <div class="mb-6">
@@ -330,10 +370,10 @@
                   <img src="../img/images (3).png" alt="" />
                 </div>
               </div>
-              <h5 class="mb-4 text-2xl font-bold text-gray-900">
+              <h5 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
                 Technical Support
               </h5>
-              <p class="mb-6 text-gray-600 leading-relaxed">
+              <p class="mb-6 text-gray-600 leading-relaxed dark:text-white">
                 Facing issues with your account, courses, or the website? Our
                 support team is ready to assist you and solve your problems as
                 quickly as possible.
@@ -350,7 +390,7 @@
 
           <!-- Work with us Card -->
           <div
-            class="bg-white border border-gray-200 rounded-2xl shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300 animate-slide-up delay-500"
+            class="bg-white border border-gray-200 rounded-2xl shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300 animate-slide-up delay-500 dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300"
           >
             <div class="p-6 text-center">
               <div class="mb-6">
@@ -360,10 +400,10 @@
                   <img src="../img/images (4).png" alt="" />
                 </div>
               </div>
-              <h5 class="mb-4 text-2xl font-bold text-gray-900">
+              <h5 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
                 Collaboration & Partnerships
               </h5>
-              <p class="mb-6 text-gray-600 leading-relaxed">
+              <p class="mb-6 text-gray-600 leading-relaxed dark:text-white">
                 Interested in working with us, joining as a mentor, or
                 collaborating on educational content? Let’s connect and build
                 something impactful together.
@@ -400,8 +440,8 @@
           </div>
 
           <!-- Contact Details -->
-          <div class="flex-1 bg-white rounded-2xl shadow-lg p-8">
-            <h2 class="text-3xl text-black font-bold mb-8">Contact Details</h2>
+          <div class="flex-1 bg-white rounded-2xl shadow-lg p-8 dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+            <h2 class="text-3xl text-black font-bold mb-8 dark:text-white">Contact Details</h2>
             <div class="space-y-6">
               <!-- Email -->
               <div class="flex items-start space-x-4 group">
@@ -429,7 +469,7 @@
                 </div>
                 <div>
                   <p class="font-semibold">(+855) 95-990-910</p>
-                  <p class="text-gray-600 text-sm">
+                  <p class="text-gray-600 text-sm dark:text-white">
                     Our visiting hours: Mon–Fri, 9:00 AM to 5:00 PM
                   </p>
                 </div>
@@ -444,7 +484,7 @@
                 </div>
                 <div>
                   <p class="font-semibold">Learnode Office</p>
-                  <p class="text-gray-600">
+                  <p class="text-gray-600 dark:text-white">
                     Institute of Science and Technology Advanced Development
                     (ISTAD), Phnom Penh, Cambodia
                   </p>
@@ -465,7 +505,7 @@
       </section>
     </main>
 
-    <footer class="bg-gray-900 text-white">
+    <footer class="bg-gray-900 text-white dark:bg-gray-800">
       <div class="max-w-7xl mx-auto px-6 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- About Section -->
@@ -621,5 +661,57 @@
         </div>
       </div>
     </footer>
+    <script>
+      // ==================================================
+      // Dark mode toggle functionality
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const html = document.documentElement;
+
+      // Check for saved theme preference or default to system preference
+      function initializeTheme() {
+        const savedTheme = localStorage.getItem("theme");
+        const systemPrefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+
+        if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
+          html.classList.add("dark");
+        } else {
+          html.classList.remove("dark");
+        }
+      }
+
+      // Toggle dark mode
+      function toggleDarkMode() {
+        const isDark = html.classList.contains("dark");
+
+        if (isDark) {
+          html.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+        } else {
+          html.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        }
+      }
+
+      // Event listeners
+      darkModeToggle.addEventListener("click", toggleDarkMode);
+
+      // Listen for system theme changes
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          if (!localStorage.getItem("theme")) {
+            if (e.matches) {
+              html.classList.add("dark");
+            } else {
+              html.classList.remove("dark");
+            }
+          }
+        });
+
+      // Initialize theme on page load
+      initializeTheme();
+    </script>
   </body>
 </html>
