@@ -85,7 +85,36 @@
     </script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+      /* ====================== Mobile menu =================================== */
+      .shimmer-effect {
+        background: linear-gradient(45deg, #7f95d1, #a8b8e8, #7f95d1);
+        background-size: 200% 200%;
+        animation: shimmer 2s infinite;
+      }
 
+      @keyframes shimmer {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Mobile menu transition */
+      .mobile-menu-transition {
+        transition: all 0.3s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      .mobile-menu-open {
+        max-height: 500px;
+      }
+      /* ========================================================================= */
       .text-gradient {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         -webkit-background-clip: text;
@@ -135,22 +164,20 @@
         <div class="max-w-7xl mx-auto px-6">
           <div class="flex justify-between items-center h-16">
             <!-- Logo -->
-            <div class="flex items-center space-x-3">
-              <!-- <i class="fas fa-graduation-cap text-blue-600 text-lg"></i> -->
-              <div class="flex items-center">
-                <img
-                  src="../pages/img/Learnode.png"
-                  alt="Learnode"
-                  class="w-16 h-16 rounded-full"
-                />
-                <h1 class="text-2xl font-bold ml-2">Learnode</h1>
-              </div>
+            <div class="flex items-center">
+              <img
+                src="img/Learnode.png"
+                alt="Learnode"
+                class="w-16 h-16 rounded-full"
+              />
+              <h1 class="text-2xl font-bold ml-2">Learnode</h1>
             </div>
+
             <!-- Desktop Links -->
             <div class="hidden md:flex items-center space-x-0">
               <a
                 href="../index.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
               >
                 Home
                 <div
@@ -158,8 +185,8 @@
                 ></div>
               </a>
               <a
-                href="../pages/CourseEducation.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white"
+                href="CourseEducation.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
               >
                 Courses
                 <div
@@ -167,8 +194,8 @@
                 ></div>
               </a>
               <a
-                href="../pages/Training Course.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white"
+                href="Training Course.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
               >
                 About
                 <div
@@ -176,8 +203,8 @@
                 ></div>
               </a>
               <a
-                href="../pages/ContactUs.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white"
+                href="#"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
               >
                 Contact
                 <div
@@ -217,13 +244,15 @@
                   ></path>
                 </svg>
               </button>
+
               <button
-                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full dark:text-white"
+                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full dark:text-white transition-colors duration-300"
               >
                 <i class="fas fa-search"></i>
               </button>
+
               <button
-                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full relative dark:text-white"
+                class="hidden md:flex w-10 h-10 items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full relative dark:text-white transition-colors duration-300"
               >
                 <i class="fas fa-bell"></i>
                 <div
@@ -233,35 +262,33 @@
 
               <!-- Desktop Login -->
               <a
-                href="../pages/LogIn_SignUp.html"
-                class="hidden md:inline-block bg-[#7F95D1] hover:bg-blue-400 text-white px-3 py-2 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-md"
+                href="./pages/LogIn_SignUp.html"
+                class="hidden md:inline-block bg-[#7F95D1] hover:bg-blue-400 shimmer-effect text-white px-3 py-2 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-md"
               >
                 <i class="fas fa-sign-in-alt mr-2"></i>Login
               </a>
 
               <!-- Mobile Menu Toggle -->
-              <div class="md:hidden">
-                <input type="checkbox" id="mobile-toggle" class="hidden peer" />
-                <label
-                  for="mobile-toggle"
-                  class="flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full cursor-pointer"
-                >
-                  <i class="fas fa-bars"></i>
-                </label>
-              </div>
+              <button
+                id="mobileMenuToggle"
+                class="md:hidden flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full cursor-pointer transition-colors duration-300 dark:text-white dark:hover:bg-gray-700"
+              >
+                <i id="hamburgerIcon" class="fas fa-bars"></i>
+                <i id="closeIcon" class="fas fa-times hidden"></i>
+              </button>
             </div>
           </div>
         </div>
 
         <!-- Mobile Menu -->
         <div
-          class="md:hidden peer-checked:block hidden bg-white border-t border-gray-200"
-          id="mobile-menu"
+          id="mobileMenu"
+          class="md:hidden bg-white border-t border-gray-200 dark:bg-gray-900 dark:border-gray-700 mobile-menu-transition"
         >
-          <!-- Mobile Login Left -->
+          <!-- Mobile Login -->
           <div class="flex justify-start px-6 py-3">
             <a
-              href="../pages/LogIn_SignUp.html"
+              href="LogIn_SignUp.html"
               class="bg-blue-500 text-white text-sm px-4 py-1 rounded-full font-medium hover:bg-blue-600 transition-all duration-300 shadow"
             >
               <i class="fas fa-sign-in-alt mr-1"></i>Login
@@ -270,38 +297,38 @@
 
           <div class="px-6 pb-4 space-y-3">
             <a
-              href="/index.html"
-              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg"
+              href="../index.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
             >
               <i class="fas fa-home text-blue-500 mr-2"></i>Home
             </a>
             <a
-              href="../pages/CourseEducation.html"
-              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg"
+              href="CourseEducation.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
             >
               <i class="fas fa-book text-blue-500 mr-2"></i>Courses
             </a>
             <a
-              href="../pages/Training Course.html"
-              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg"
+              href="Training Course.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
             >
               <i class="fas fa-info-circle text-blue-500 mr-2"></i>About
             </a>
             <a
-              href="../pages/ContactUs.html"
-              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg"
+              href="ContactUs.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
             >
               <i class="fas fa-phone text-blue-500 mr-2"></i>Contact
             </a>
 
-            <div class="pt-3 border-t border-gray-200">
+            <div class="pt-3 border-t border-gray-200 dark:border-gray-700">
               <button
-                class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg w-full"
+                class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg w-full dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
               >
                 <i class="fas fa-search text-blue-500 mr-2"></i>Search
               </button>
               <button
-                class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg w-full"
+                class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg w-full dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
               >
                 <i class="fas fa-bell text-blue-500 mr-2"></i>Notifications
                 <span class="ml-auto w-2 h-2 bg-red-500 rounded-full"></span>
@@ -310,15 +337,21 @@
           </div>
         </div>
       </nav>
-      <div class="bg-[#7F95D1] text-white text-center py-3 mt-16 dark:bg-gray-700 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+      <div
+        class="bg-[#7F95D1] text-white text-center py-3 mt-16 dark:bg-gray-700 text-gray-900 dark:text-gray-100 transition-colors duration-300"
+      >
         <p class="text-sm font-medium">Explore our new website today!</p>
       </div>
     </header>
-    <main class="max-w-7xl mx-auto px-4 py-8 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <main
+      class="max-w-7xl mx-auto px-4 py-8 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
+    >
       <!-- Header Section -->
       <section class="text-center mb-12 animate-fade-in">
         <h1 class="text-5xl font-bold mb-6">Get in Touch</h1>
-        <p class="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed dark:text-white">
+        <p
+          class="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed dark:text-white"
+        >
           Have questions or need assistance? We are here to help. Reach out to
           us through any of the forms below, email or phone and we will get back
           to you as soon as possible. We look forward to hearing from you.
@@ -440,8 +473,12 @@
           </div>
 
           <!-- Contact Details -->
-          <div class="flex-1 bg-white rounded-2xl shadow-lg p-8 dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-            <h2 class="text-3xl text-black font-bold mb-8 dark:text-white">Contact Details</h2>
+          <div
+            class="flex-1 bg-white rounded-2xl shadow-lg p-8 dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300"
+          >
+            <h2 class="text-3xl text-black font-bold mb-8 dark:text-white">
+              Contact Details
+            </h2>
             <div class="space-y-6">
               <!-- Email -->
               <div class="flex items-start space-x-4 group">
@@ -662,6 +699,38 @@
       </div>
     </footer>
     <script>
+      // Mobile menu toggle functionality
+      const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const hamburgerIcon = document.getElementById("hamburgerIcon");
+      const closeIcon = document.getElementById("closeIcon");
+
+      let isMenuOpen = false;
+
+      mobileMenuToggle.addEventListener("click", function () {
+        isMenuOpen = !isMenuOpen;
+
+        if (isMenuOpen) {
+          mobileMenu.classList.add("mobile-menu-open");
+          hamburgerIcon.classList.add("hidden");
+          closeIcon.classList.remove("hidden");
+        } else {
+          mobileMenu.classList.remove("mobile-menu-open");
+          hamburgerIcon.classList.remove("hidden");
+          closeIcon.classList.add("hidden");
+        }
+      });
+
+      // Close menu when clicking on a link (mobile)
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          isMenuOpen = false;
+          mobileMenu.classList.remove("mobile-menu-open");
+          hamburgerIcon.classList.remove("hidden");
+          closeIcon.classList.add("hidden");
+        });
+      });
       // ==================================================
       // Dark mode toggle functionality
       const darkModeToggle = document.getElementById("darkModeToggle");
